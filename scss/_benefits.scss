@@ -1,0 +1,37 @@
+.benefits {
+    background-color: var(--primary);
+    color: white;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.benefits-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.benefits-content p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.benefits-list {
+    list-style: none;
+}
+
+.benefits-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.benefits-list li i {
+    color: var(--secondary);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}

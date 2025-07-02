@@ -1,0 +1,63 @@
+@media (max-width: 992px) {
+    .dealership-container,
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-img {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-full {
+        grid-column: span 1;
+    }
+}

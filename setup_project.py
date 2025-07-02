@@ -1,0 +1,1049 @@
+import os
+from pathlib import Path
+
+def create_project_structure():
+    # Create directories
+    os.makedirs("scss", exist_ok=True)
+    os.makedirs("includes", exist_ok=True)
+    os.makedirs("css", exist_ok=True)
+
+    # Create SCSS files
+    create_scss_files()
+
+    # Create PHP include files
+    create_php_includes()
+
+    # Create index.php
+    create_index_php()
+
+    # Create README.md
+    create_readme()
+
+def create_scss_files():
+    scss_files = {
+        "_variables.scss": """:root {
+    --primary: #1a3a6c;
+    --secondary: #e63946;
+    --accent: #2a9d8f;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+}""",
+
+        "_base.scss": """* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--secondary);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c1121f;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}""",
+
+        "_header.scss": """header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--secondary);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}""",
+
+        "_hero.scss": """.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}""",
+
+        "_features.scss": """.features {
+    background-color: var(--light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}""",
+
+        "_explore.scss": """.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.explore-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.explore-card:hover {
+    transform: translateY(-10px);
+}
+
+.explore-img {
+    height: 200px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.explore-content {
+    padding: 25px;
+}
+
+.explore-content h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.explore-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+}""",
+
+        "_dealership.scss": """.dealership {
+    background-color: var(--light);
+}
+
+.dealership-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.dealership-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.dealership-content p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}""",
+
+        "_team.scss": """.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.team-img {
+    height: 300px;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 5rem;
+}
+
+.team-info {
+    padding: 25px;
+}
+
+.team-info h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.team-info p {
+    color: var(--gray);
+    font-style: italic;
+}""",
+
+        "_benefits.scss": """.benefits {
+    background-color: var(--primary);
+    color: white;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.benefits-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.benefits-content p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.benefits-list {
+    list-style: none;
+}
+
+.benefits-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.benefits-list li i {
+    color: var(--secondary);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}""",
+
+        "_contact.scss": """.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-full {
+    grid-column: span 2;
+}""",
+
+        "_footer.scss": """footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 70px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--secondary);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: var(--secondary);
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #aaa;
+}""",
+
+        "_responsive.scss": """@media (max-width: 992px) {
+    .dealership-container,
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-img {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-full {
+        grid-column: span 1;
+    }
+}""",
+
+        "main.scss": """@import 'variables';
+@import 'base';
+@import 'header';
+@import 'hero';
+@import 'features';
+@import 'explore';
+@import 'dealership';
+@import 'team';
+@import 'benefits';
+@import 'contact';
+@import 'footer';
+@import 'responsive';"""
+    }
+
+    for filename, content in scss_files.items():
+        with open(f"scss/{filename}", "w") as f:
+            f.write(content)
+
+def create_php_includes():
+    php_files = {
+        "header.php": """<header>
+    <div class="container header-container">
+        <a href="#" class="logo">Be<span>Motion</span></a>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Dealership</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>""",
+
+        "hero.php": """<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Premium Automotive Solutions</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <a href="#" class="btn">Contact Us</a>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+123 456 789</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>contact@bemotion.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Street 456 House</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>""",
+
+        "features.php": """<section class="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Advantages</h2>
+            <p>Why choose our services</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-smile"></i>
+                <h3>100% Satisfaction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Flexible & Cost Effective</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Annual Pass Programs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Trained Employees</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 30px;">
+            <div style="flex: 1;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">Tom Henders</h3>
+                <p style="font-style: italic; color: var(--gray);">CEO of Company</p>
+                <p style="margin-top: 15px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor, aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes."</p>
+            </div>
+            <div style="width: 100px; height: 100px; background: var(--light-gray); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--gray);">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </div>
+</section>""",
+
+        "explore.php": """<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>More Explore</h2>
+            <p>Discover our offerings</p>
+        </div>
+
+        <div class="explore-grid">
+            <div class="explore-card">
+                <div class="explore-img">01</div>
+                <div class="explore-content">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                    <a href="#" class="explore-link">Click here <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="explore-card">
+                <div class="explore-img">02</div>
+                <div class="explore-content">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                    <a href="#" class="explore-link">Click here <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="explore-card">
+                <div class="explore-img">03</div>
+                <div class="explore-content">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                    <a href="#" class="explore-link">Click here <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="explore-card">
+                <div class="explore-img">04</div>
+                <div class="explore-content">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                    <a href="#" class="explore-link">Click here <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>""",
+
+        "dealership.php": """<section class="dealership">
+    <div class="container">
+        <div class="dealership-container">
+            <div class="dealership-content">
+                <h2>Get Dealership</h2>
+                <p>Let's discuss on something together. I'm interested in dealership opportunities.</p>
+
+                <form>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" placeholder="Enter your phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter your address">
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="dealership-img" style="background: var(--primary); height: 100%; min-height: 500px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; text-align: center; padding: 20px;">
+                <div>
+                    <i class="fas fa-car" style="font-size: 5rem; margin-bottom: 20px;"></i>
+                    <p>Dealership Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>""",
+
+        "team.php": """<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Team</h2>
+            <p>Meet our professionals</p>
+        </div>
+
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Marc Chiasson</h3>
+                    <p>Lead Designer</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Qalim Thams</h3>
+                    <p>Marketing Director</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Millar Chiasson</h3>
+                    <p>Technical Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>""",
+
+        "benefits.php": """<section class="benefits">
+    <div class="container">
+        <div class="benefits-container">
+            <div class="benefits-content">
+                <h2>Lorem Ispurm Into Edlipoid</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> Early Engagement</li>
+                    <li><i class="fas fa-check-circle"></i> Started Journey</li>
+                    <li><i class="fas fa-check-circle"></i> Affordable Price upto 2 years</li>
+                </ul>
+            </div>
+
+            <div class="benefits-img" style="background: var(--secondary); height: 100%; min-height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center; color: white; padding: 20px;">
+                    <i class="fas fa-star" style="font-size: 5rem; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 2rem;">Special Benefits</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>""",
+
+        "contact.php": """<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our team</p>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter your first name">
+            </div>
+
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label>Location (City)</label>
+                <input type="text" placeholder="Enter your city">
+            </div>
+
+            <div class="form-group form-full">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label>Position</label>
+                <select>
+                    <option>Select position</option>
+                    <option>Dealership Inquiry</option>
+                    <option>General Inquiry</option>
+                    <option>Technical Support</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Portfolio / Website link</label>
+                <input type="text" placeholder="Enter your website">
+            </div>
+
+            <div class="form-group">
+                <label>Your expected salary</label>
+                <input type="text" placeholder="Enter expected salary">
+            </div>
+
+            <div class="form-group form-full">
+                <button type="submit" class="btn">Submit Now</button>
+            </div>
+        </form>
+    </div>
+</section>""",
+
+        "footer.php": """<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>BeMotion</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Lorem Ipsum</a></li>
+                    <li><a href="#">Lorem Ipsum</a></li>
+                    <li><a href="#">Lorem Ipsum</a></li>
+                    <li><a href="#">Lorem Ipsum</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Team Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+
+                <div style="margin-top: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-phone"></i>
+                    <p>+123-456-7890</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <div class="container">
+            <p>&copy; 2023 BeMotion. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: var(--secondary);"></i></p>
+        </div>
+    </div>
+</footer>"""
+    }
+
+    for filename, content in php_files.items():
+        with open(f"includes/{filename}", "w") as f:
+            f.write(content)
+
+def create_index_php():
+    content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeMotion - Automotive Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <?php include('includes/header.php'); ?>
+    <?php include('includes/hero.php'); ?>
+    <?php include('includes/features.php'); ?>
+    <?php include('includes/explore.php'); ?>
+    <?php include('includes/dealership.php'); ?>
+    <?php include('includes/team.php'); ?>
+    <?php include('includes/benefits.php'); ?>
+    <?php include('includes/contact.php'); ?>
+    <?php include('includes/footer.php'); ?>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>"""
+
+    with open("index.php", "w") as f:
+        f.write(content)
+
+def create_readme():
+    content = """ # BeMotion Website Project
+
+## Project Structure
+
+- `index.php`: Main entry point
+- `includes/`: PHP section files
+- `scss/`: SCSS source files
+- `css/`: Compiled CSS (generated by Sass)
+
+## Setup Instructions
+
+1. Install Sass if you haven't already:
+   ```bash
+   npm install -g sass
+"""
+
+create_project_structure()
+create_scss_files()
+create_php_includes()
+create_index_php()
+create_readme()
