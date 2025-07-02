@@ -52,18 +52,26 @@
         }
 
         .features-list {
+            display: flex;
+            //flex-direction: column;
+            gap: 50px;
             list-style: none;
             padding: 0;
             margin-bottom: 30px;
 
-            li {
+            .lists{
                 display: flex;
-                align-items: center;
-                margin-bottom: 10px;
+                flex-direction: column;
 
-                i {
-                    margin-right: 10px;
-                    color: var(--secondary);
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    i {
+                        margin-right: 10px;
+                        color: var(--secondary);
+                    }
                 }
             }
         }

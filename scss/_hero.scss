@@ -33,9 +33,10 @@
             flex: 1;
             min-width: 100px;
 
-            i {
-                font-size: 1.8rem;
-                color: var(--gray);
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
                 margin-bottom: 5px;
             }
 

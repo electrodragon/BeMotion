@@ -180,9 +180,10 @@ nav ul li a:hover::after {
   flex: 1;
   min-width: 100px;
 }
-.hero .company-bar .icon-box i {
-  font-size: 1.8rem;
-  color: var(--gray);
+.hero .company-bar .icon-box img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   margin-bottom: 5px;
 }
 .hero .company-bar .icon-box p {
@@ -238,16 +239,22 @@ nav ul li a:hover::after {
   margin-bottom: 20px;
 }
 .features .experience-right .features-list {
+  display: flex;
+  gap: 50px;
   list-style: none;
   padding: 0;
   margin-bottom: 30px;
 }
-.features .experience-right .features-list li {
+.features .experience-right .features-list .lists {
+  display: flex;
+  flex-direction: column;
+}
+.features .experience-right .features-list .lists li {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-.features .experience-right .features-list li i {
+.features .experience-right .features-list .lists li i {
   margin-right: 10px;
   color: var(--secondary);
 }
