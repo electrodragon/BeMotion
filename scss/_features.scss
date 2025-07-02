@@ -1,34 +1,92 @@
 .features {
-    background-color: var(--light);
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.feature-card {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: transform 0.3s;
-}
+    padding: 100px 0;
 
-.feature-card:hover {
-    transform: translateY(-10px);
-}
+    .experience-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
 
-.feature-card i {
-    font-size: 2.5rem;
-    color: var(--secondary);
-    margin-bottom: 20px;
-}
+    .experience-left {
+        position: relative;
 
-.feature-card h3 {
-    margin-bottom: 15px;
-    color: var(--primary);
+        img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .badge {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            background: white;
+            border-radius: 15px;
+            padding: 15px 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            .years {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: var(--primary);
+                display: block;
+            }
+
+            .text {
+                font-size: 0.9rem;
+                color: var(--gray);
+                font-weight: 500;
+            }
+        }
+    }
+
+    .experience-right {
+        max-width: 500px;
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                i {
+                    margin-right: 10px;
+                    color: var(--secondary);
+                }
+            }
+        }
+
+        .signature {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                height: 40px;
+            }
+
+            h4 {
+                margin: 0;
+                color: var(--primary);
+            }
+
+            p {
+                margin: 0;
+                font-style: italic;
+                color: var(--gray);
+            }
+        }
+    }
 }

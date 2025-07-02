@@ -147,83 +147,126 @@ nav ul li a:hover::after {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background: url("/assets/images/cookreyan.png") no-repeat center center;
   background-size: cover;
-  background-position: center;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: white;
   margin-top: 70px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.contact-info {
+.hero .company-bar {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
+  z-index: 10;
 }
-
-.contact-item {
+.hero .company-bar .company-icons {
+  max-width: 1000px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.hero .company-bar .icon-box {
   text-align: center;
+  flex: 1;
+  min-width: 100px;
 }
-
-.contact-item i {
-  font-size: 2rem;
-  color: var(--secondary);
-  margin-bottom: 10px;
+.hero .company-bar .icon-box i {
+  font-size: 1.8rem;
+  color: var(--gray);
+  margin-bottom: 5px;
+}
+.hero .company-bar .icon-box p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--gray);
 }
 
 .features {
-  background-color: var(--light);
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.feature-card {
   background: white;
-  padding: 30px;
+  padding: 100px 0;
+}
+.features .experience-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.features .experience-left {
+  position: relative;
+}
+.features .experience-left img {
+  max-width: 400px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.features .experience-left .badge {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background: white;
+  border-radius: 15px;
+  padding: 15px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s;
 }
-
-.feature-card:hover {
-  transform: translateY(-10px);
-}
-
-.feature-card i {
+.features .experience-left .badge .years {
   font-size: 2.5rem;
-  color: var(--secondary);
+  font-weight: bold;
+  color: var(--primary);
+  display: block;
+}
+.features .experience-left .badge .text {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+.features .experience-right {
+  max-width: 500px;
+}
+.features .experience-right p {
+  font-size: 1rem;
   margin-bottom: 20px;
 }
-
-.feature-card h3 {
-  margin-bottom: 15px;
+.features .experience-right .features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.features .experience-right .features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.features .experience-right .features-list li i {
+  margin-right: 10px;
+  color: var(--secondary);
+}
+.features .experience-right .signature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.features .experience-right .signature img {
+  height: 40px;
+}
+.features .experience-right .signature h4 {
+  margin: 0;
   color: var(--primary);
+}
+.features .experience-right .signature p {
+  margin: 0;
+  font-style: italic;
+  color: var(--gray);
 }
 
 .explore-grid {

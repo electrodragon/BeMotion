@@ -1,44 +1,49 @@
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background: url('/assets/images/cookreyan.png') no-repeat center center;
     background-size: cover;
-    background-position: center;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
     margin-top: 70px;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.contact-info {
+    position: relative;
     display: flex;
+    align-items: flex-end; // ensures bar sticks to bottom
     justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-}
 
-.contact-item {
-    text-align: center;
-}
+    .company-bar {
+        width: 100%;
+        position: absolute;
+        bottom: -40px;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
 
-.contact-item i {
-    font-size: 2rem;
-    color: var(--secondary);
-    margin-bottom: 10px;
+        .company-icons {
+            max-width: 1000px;
+            background: white;
+            padding: 25px 30px;
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .icon-box {
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+
+            i {
+                font-size: 1.8rem;
+                color: var(--gray);
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 0.9rem;
+                color: var(--gray);
+            }
+        }
+    }
 }
