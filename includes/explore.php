@@ -1,7 +1,7 @@
 <section class="explore-section">
     <div class="explore-layout">
 
-        <div class="explore-layout-left">
+        <div class="explore-layout-left" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
             <div class="overlay-content">
 
                 <div class="image-content">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="explore-layout-right">
+        <div class="explore-layout-right" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
             <div class="overlay-content">
                 <div class="image-content">
                     <div class="img">
