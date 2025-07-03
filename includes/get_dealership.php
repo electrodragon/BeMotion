@@ -1,4 +1,5 @@
 <section class="get-dealership-form">
+    <h1>Get Dealership</h1>
     <div class="get-dealership-container">
         <div class="form-left">
             <h2>Let’s discuss<br>on something <span class="highlight">cool</span><br>together</h2>
