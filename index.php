@@ -15,6 +15,7 @@
     <?php include('includes/features.php'); ?>
     <?php include('includes/explore.php'); ?>
     <?php include('includes/dealership.php'); ?>
+    <?php include('includes/company.php'); ?>
     <?php include('includes/get_dealership.php'); ?>
     <?php include('includes/team.php'); ?>
     <?php include('includes/benefits.php'); ?>
