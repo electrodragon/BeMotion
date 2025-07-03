@@ -5,7 +5,7 @@
 
             <div class="company-cards">
                 <!-- Card 1 -->
-                <div class="company-card">
+                <div class="company-card card-1">
                     <img src="/assets/images/eating-dog.png" alt="Company 1" class="company-img">
                     <div class="company-location">
                         <i class="fas fa-map-marker-alt"></i> 100 Sunrise Ct Hamel, Minnesota(MN)
@@ -17,7 +17,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="company-card">
+                <div class="company-card card-2">
                     <img src="/assets/images/feeding-hens.png" alt="Company 2" class="company-img">
                     <div class="company-location">
                         <i class="fas fa-map-marker-alt"></i> 124254 asdhasad das sda sjdbf.n.dnf
@@ -29,7 +29,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="company-card">
+                <div class="company-card card-3">
                     <img src="/assets/images/cows.png" alt="Company 3" class="company-img">
                     <div class="company-location">
                         <i class="fas fa-map-marker-alt"></i> aosdnb 232174bak dahdladl andla dl
