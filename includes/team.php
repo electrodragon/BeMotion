@@ -1,42 +1,35 @@
-<section>
+<section class="team-highlight">
     <div class="container">
-        <div class="section-title">
-            <h2>Our Team</h2>
-            <p>Meet our professionals</p>
+        <div class="highlight-layout">
+            <!-- Left Image -->
+            <div class="highlight-left">
+                <img src="../assets/images/sprayer.png" alt="Worker Spraying" class="highlight-img">
+            </div>
+
+            <!-- Center Content -->
+            <div class="highlight-right">
+                <p class="highlight-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                </p>
+
+                <div class="highlights">
+                    <div class="highlight-stats">
+                        <h2 class="stat-number">9625</h2>
+                        <p class="stat-label">Started Journey</p>
+                    </div>
+
+                    <ul class="highlight-benefits">
+                        <li><i class="fas fa-check-circle"></i> Early Engagement</li>
+                        <li><i class="fas fa-check-circle"></i> Affordable Price upto 2 years</li>
+                    </ul>
+                </div>
+
+                <a href="#" class="highlight-btn">More Explore</a>
+            </div>
         </div>
-
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="team-img">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="team-info">
-                    <h3>Marc Chiasson</h3>
-                    <p>Lead Designer</p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-img">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="team-info">
-                    <h3>Qalim Thams</h3>
-                    <p>Marketing Director</p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-img">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="team-info">
-                    <h3>Millar Chiasson</h3>
-                    <p>Technical Manager</p>
-                </div>
-            </div>
+        <!-- Right Worker Image -->
+        <div class="highlight-character">
+            <img src="../assets/images/person.png" alt="Smiling Worker" class="character-img">
         </div>
     </div>
 </section>
