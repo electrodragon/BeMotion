@@ -17,6 +17,8 @@
     <?php include('includes/dealership.php'); ?>
     <?php include('includes/company.php'); ?>
     <?php include('includes/get_dealership.php'); ?>
+    <?php include('includes/our_team.php'); ?>
+    <?php include('includes/our_team_next.php'); ?>
     <?php include('includes/team.php'); ?>
     <?php include('includes/benefits.php'); ?>
     <?php include('includes/contact.php'); ?>
