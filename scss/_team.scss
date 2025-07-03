@@ -1,47 +1,35 @@
 .team-highlight {
+  position: relative;
+  height: 800px;
   width: 100%;
 
-  .container {
-    width: 100%;
-    position: relative;
-    background: #2a9d8f;
+  .team-highlight-container {
+    max-width: 60%;
+    margin: auto;
     display: flex;
 
     .highlight-layout {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       flex-wrap: wrap; // responsive stacking
       gap: 30px;
 
-      @media (max-width: 992px) {
-        flex-direction: column;
-        text-align: center;
-      }
-
-
       .highlight-left {
         flex: 1;
-        max-width: 33.33%;
-        min-width: 280px;
 
         .highlight-img {
-          width: 500px;
-          height: auto;
           border-radius: 15px;
           box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
 
           img {
             width: 100%;
-            height: 100%;
           }
         }
       }
 
       .highlight-right {
         flex: 1;
-        max-width: 33.33%;
-        min-width: 280px;
 
         .highlight-desc {
           font-size: 0.95rem;
@@ -114,23 +102,20 @@
       }
 
     }
+  }
 
-    .highlight-character {
-      width: 280px;
-      position: absolute;
-      right: -50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .highlight-character {
+    position: absolute;
+    width: 480px;
+    right: -200px;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      .character-img {
-        width: 100%;
-        height: auto;
-      }
-
-      @media (max-width: 992px) {
-        justify-content: center;
-      }
+    .character-img {
+      width: 100%;
+      height: auto;
     }
   }
 }

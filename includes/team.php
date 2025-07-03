@@ -1,12 +1,12 @@
 <section class="team-highlight">
-    <div class="container">
+
+    <div class="team-highlight-container">
         <div class="highlight-layout">
-            <!-- Left Image -->
+
             <div class="highlight-left">
-                <img src="../assets/images/sprayer.png" alt="Worker Spraying" class="highlight-img">
+                <img src="/assets/images/sprayer.png" alt="Worker Spraying" class="highlight-img">
             </div>
 
-            <!-- Center Content -->
             <div class="highlight-right">
                 <p class="highlight-desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -27,9 +27,11 @@
                 <a href="#" class="highlight-btn">More Explore</a>
             </div>
         </div>
-        <!-- Right Worker Image -->
-        <div class="highlight-character">
-            <img src="../assets/images/person.png" alt="Smiling Worker" class="character-img">
-        </div>
     </div>
+
+    <!-- Right Worker Image -->
+    <div class="highlight-character">
+        <img src="../assets/images/person.png" alt="Smiling Worker" class="character-img">
+    </div>
+
 </section>
