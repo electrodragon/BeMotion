@@ -1,41 +1,50 @@
 <section class="dealership">
     <div class="container">
-        <div class="dealership-container">
-            <div class="dealership-content">
-                <h2>Get Dealership</h2>
-                <p>Let's discuss on something together. I'm interested in dealership opportunities.</p>
 
-                <form>
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="Enter your name">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter your email">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" placeholder="Enter your phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Address</label>
-                        <input type="text" placeholder="Enter your address">
-                    </div>
-
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+        <div class="elements-group element-group-one">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amecon<br />
+                sectetur adipisicing elit, sed do<br />
+                eiusmod tempor</p>
+            <div class="image-container">
+                <img src="/assets/images/sec_4_first_icon.png" alt="icon" />
             </div>
-
-            <div class="dealership-img" style="background: var(--primary); height: 100%; min-height: 500px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; text-align: center; padding: 20px;">
-                <div>
-                    <i class="fas fa-car" style="font-size: 5rem; margin-bottom: 20px;"></i>
-                    <p>Dealership Opportunity</p>
-                </div>
-            </div>
+            <h2>01</h2>
         </div>
+
+        <div class="elements-group element-group-two">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amecon<br />
+                sectetur adipisicing elit, sed do<br />
+                eiusmod tempor</p>
+            <div class="image-container">
+                <img src="/assets/images/sec_4_second_icon.png" alt="icon" />
+            </div>
+            <h2>02</h2>
+        </div>
+
+        <div class="elements-group element-group-three">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amecon<br />
+                sectetur adipisicing elit, sed do<br />
+                eiusmod tempor</p>
+            <div class="image-container">
+                <img src="/assets/images/sec_4_third_icon.png" alt="icon" />
+            </div>
+            <h2>03</h2>
+        </div>
+
+        <div class="elements-group element-group-four">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amecon<br />
+                sectetur adipisicing elit, sed do<br />
+                eiusmod tempor</p>
+            <div class="image-container">
+                <img src="/assets/images/sec_4_fifth_icon.png" alt="icon" />
+            </div>
+            <h2>04</h2>
+        </div>
+
+
     </div>
 </section>
