@@ -1,10 +1,18 @@
 .our-team {
-  height: 800px;
+  height: 900px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: #F1F4FB;
   align-items: center;
+
+  .our-team-top-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
 
   .our-team-cards {
     display: flex;

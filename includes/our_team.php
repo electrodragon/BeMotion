@@ -1,8 +1,10 @@
 <section class="our-team">
 
-    <h1>Our Team</h1>
+    <div class="our-team-top-area">
+        <h1>Our Team</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturi,</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturi,</p>
+    </div>
 
     <div class="our-team-cards">
         <div class="our-team-card team-card-1">
