@@ -38,19 +38,17 @@
                     </div>
                 </div>
 
-                <div class="lorun-text">
-                    Lorem ipsum dolor sit amecon
-                    sectetur adipisicing elit, sed do
+                <div class="lorem-text">
+                    Lorem ipsum dolor sit amecon<br />
+                    sectetur adipisicing elit, sed do<br />
                     eiusmod tempor
                 </div>
-
 
                 <div class="button-area">
                     <button>More Explore</button>
                 </div>
-
             </div>
         </div>
-        </div>
+
     </div>
 </section>
