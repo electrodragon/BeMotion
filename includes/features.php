@@ -3,12 +3,22 @@
         <div class="experience-left">
             <img src="/assets/images/experience.png" alt="CEO Image">
             <div class="badge">
-                <span class="years">25</span>
-                <span class="text">YEAR OF EXPERIENCE</span>
+                <div class="badge-content">
+                    <span class="years">25<span class="plus">+</span></span>
+                    <div class="text">
+                        <span class="label">YEAR OF</span>
+                        <span class="highlight">EXPERIENCE</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="experience-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor aenean massa.</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor, aenean massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                Nulla consequat massa quis enim.
+            </p>
             <ul class="features-list">
                 <div class="lists">
                     <li><i class="fas fa-check-circle"></i> 100% Satisfaction</li>

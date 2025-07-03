@@ -14,59 +14,85 @@
         position: relative;
 
         img {
-            max-width: 400px;
+            max-width: 500px; // Increased size
             border-radius: 10px;
         }
 
         .badge {
             position: absolute;
             bottom: -30px;
-            left: 0;
+            left: 100px;
             background: white;
-            border-radius: 15px;
-            padding: 15px 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            border-radius: 40px;
+            padding: 20px 40px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+
+            .badge-content {
+                display: flex;
+                align-items: flex-end;
+                gap: 10px;
+            }
 
             .years {
                 font-size: 2.5rem;
-                font-weight: bold;
-                color: var(--primary);
-                display: block;
+                font-weight: 800;
+                color: #ff6600; // Bright orange
+                line-height: 1;
+
+                .plus {
+                    font-size: 1rem;
+                    vertical-align: super;
+                    color: #ff6600;
+                    margin-left: 2px;
+                }
             }
 
             .text {
-                font-size: 0.9rem;
-                color: var(--gray);
-                font-weight: 500;
+                display: flex;
+                flex-direction: column;
+                line-height: 1;
+
+                .label {
+                    font-size: 0.7rem;
+                    color: #999;
+                    font-weight: 500;
+                }
+
+                .highlight {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: #007bff; // Bright blue
+                    text-transform: uppercase;
+                }
             }
         }
     }
 
     .experience-right {
-        max-width: 500px;
+        max-width: 540px;
 
         p {
             font-size: 1rem;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            line-height: 1.8;
         }
 
         .features-list {
             display: flex;
-            //flex-direction: column;
-            gap: 50px;
-            list-style: none;
+           list-style: none;
             padding: 0;
             margin-bottom: 30px;
 
-            .lists{
+            .lists {
                 display: flex;
                 flex-direction: column;
+                background: #2a9d8f;
+                gap: 10px;
 
                 li {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 10px;
 
                     i {
                         margin-right: 10px;

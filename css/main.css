@@ -221,40 +221,62 @@ header {
   position: relative;
 }
 .features .experience-left img {
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 10px;
 }
 .features .experience-left .badge {
   position: absolute;
   bottom: -30px;
-  left: 0;
+  left: 100px;
   background: white;
-  border-radius: 15px;
-  padding: 15px 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  border-radius: 40px;
+  padding: 20px 40px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+.features .experience-left .badge .badge-content {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
 }
 .features .experience-left .badge .years {
   font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--primary);
-  display: block;
+  font-weight: 800;
+  color: #ff6600;
+  line-height: 1;
+}
+.features .experience-left .badge .years .plus {
+  font-size: 1rem;
+  vertical-align: super;
+  color: #ff6600;
+  margin-left: 2px;
 }
 .features .experience-left .badge .text {
-  font-size: 0.9rem;
-  color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.features .experience-left .badge .text .label {
+  font-size: 0.7rem;
+  color: #999;
   font-weight: 500;
 }
+.features .experience-left .badge .text .highlight {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #007bff;
+  text-transform: uppercase;
+}
 .features .experience-right {
-  max-width: 500px;
+  max-width: 540px;
 }
 .features .experience-right p {
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  line-height: 1.8;
 }
 .features .experience-right .features-list {
   display: flex;
-  gap: 50px;
   list-style: none;
   padding: 0;
   margin-bottom: 30px;
@@ -262,11 +284,12 @@ header {
 .features .experience-right .features-list .lists {
   display: flex;
   flex-direction: column;
+  background: #2a9d8f;
+  gap: 10px;
 }
 .features .experience-right .features-list .lists li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 .features .experience-right .features-list .lists li i {
   margin-right: 10px;
