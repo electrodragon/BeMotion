@@ -1,40 +1,33 @@
 <section>
     <div class="container">
-        <div class="section-title">
-            <h2>Contact Us</h2>
-            <p>Get in touch with our team</p>
+        <div class="title">
+            <h2>CONTACT US</h2>
         </div>
 
         <form class="contact-form">
             <div class="form-group">
-                <label>First Name</label>
-                <input type="text" placeholder="Enter your first name">
+                <input type="text" placeholder="First name">
             </div>
 
             <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" placeholder="Enter your last name">
+                <input type="text" placeholder="Last name">
             </div>
 
             <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="Enter your phone number">
+                <input type="tel" placeholder="Phone number">
             </div>
 
             <div class="form-group">
-                <label>Location (City)</label>
-                <input type="text" placeholder="Enter your city">
-            </div>
-
-            <div class="form-group form-full">
-                <label>Email Address</label>
-                <input type="email" placeholder="Enter your email">
+                <input type="text" placeholder="Location (City)">
             </div>
 
             <div class="form-group">
-                <label>Position</label>
+                <input type="email" placeholder="Email address">
+            </div>
+
+            <div class="form-group">
                 <select>
-                    <option>Select position</option>
+                    <option disabled selected>Position</option>
                     <option>Dealership Inquiry</option>
                     <option>General Inquiry</option>
                     <option>Technical Support</option>
@@ -42,17 +35,19 @@
             </div>
 
             <div class="form-group">
-                <label>Portfolio / Website link</label>
-                <input type="text" placeholder="Enter your website">
+                <input type="text" placeholder="Portfolio / Website link..">
             </div>
 
             <div class="form-group">
-                <label>Your expected salary</label>
-                <input type="text" placeholder="Enter expected salary">
+                <input type="text" placeholder="Your expected salary">
             </div>
 
             <div class="form-group form-full">
-                <button type="submit" class="btn">Submit Now</button>
+                <textarea placeholder="Write your message..." rows="5"></textarea>
+            </div>
+
+            <div class="form-group form-full btn-area center">
+                <button type="submit" class="btn-submit">SUBMIT NOW</button>
             </div>
         </form>
     </div>

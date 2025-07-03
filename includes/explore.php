@@ -30,6 +30,27 @@
             </div>
         </div>
 
-        <div class="explore-layout-right">fsdfa</div>
+        <div class="explore-layout-right">
+            <div class="overlay-content">
+                <div class="image-content">
+                    <div class="img">
+                        <img src="../assets/images/hens.png" alt="eggs-basket">
+                    </div>
+                </div>
+
+                <div class="lorun-text">
+                    Lorem ipsum dolor sit amecon
+                    sectetur adipisicing elit, sed do
+                    eiusmod tempor
+                </div>
+
+
+                <div class="button-area">
+                    <button>More Explore</button>
+                </div>
+
+            </div>
+        </div>
+        </div>
     </div>
 </section>
