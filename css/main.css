@@ -278,13 +278,13 @@ header {
 .features .experience-right .features-list {
   display: flex;
   list-style: none;
+  gap: 24px;
   padding: 0;
   margin-bottom: 30px;
 }
 .features .experience-right .features-list .lists {
   display: flex;
   flex-direction: column;
-  background: #2a9d8f;
   gap: 10px;
 }
 .features .experience-right .features-list .lists li {
