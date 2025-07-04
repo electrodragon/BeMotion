@@ -1,6 +1,6 @@
 <section class="our-team-next">
 
-    <div class="outlaw">
+    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out" class="outlaw">
 
         <div class="some-other-frame">
 
