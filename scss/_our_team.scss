@@ -24,6 +24,11 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       font-family: Arial, sans-serif;
       background: white;
+      transition: transform 0.1s ease-in;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
 
       .card-image {
         width: 100%;
