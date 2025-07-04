@@ -48,7 +48,7 @@
           background: white;
           border-radius: 100%;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          transition: transform 0.2s ease;
+          transition: transform 0.4s ease, box-shadow 0.4s ease;
 
           img {
             position: absolute;
@@ -62,7 +62,8 @@
           }
 
           &:hover {
-            transform: scale(1.1); /* grows by 10% */
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
             cursor: pointer;
           }
         }
@@ -75,7 +76,7 @@
           .call-box {
             display: flex;
             align-items: center;
-            transition: transform 0.2s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             background: #38b6ff;
             color: #fff;
@@ -126,7 +127,8 @@
             }
 
             &:hover {
-              transform: scale(1.1); /* grows by 10% */
+              transform: scale(1.1);
+              box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
               cursor: pointer;
             }
           }
@@ -171,11 +173,12 @@
             text-transform: uppercase;
             margin-left: calc(32px + 24px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
 
             &:hover {
               cursor: pointer;
-              transform: translateY(4px); /* moves down 4px */
+              transform: translateY(4px);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             }
           }
         }
