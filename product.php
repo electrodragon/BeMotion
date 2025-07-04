@@ -14,16 +14,7 @@
 <body>
 <?php include('includes/header.php'); ?>
 <?php include('includes/product/product_head.php'); ?>
-<?php //include('includes/features.php'); ?>
-<?php //include('includes/explore.php'); ?>
-<?php //include('includes/dealership.php'); ?>
-<?php //include('includes/company.php'); ?>
-<?php //include('includes/get_dealership.php'); ?>
-<?php //include('includes/our_team.php'); ?>
-<?php //include('includes/our_team_next.php'); ?>
-<?php //include('includes/team.php'); ?>
-<?php //include('includes/benefits.php'); ?>
-<?php //include('includes/contact.php'); ?>
+<?php include('includes/product/display_product.php'); ?>
 <?php include('includes/footer.php'); ?>
 
 <script>

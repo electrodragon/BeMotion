@@ -4,12 +4,12 @@
 
             <!-- Left Nav -->
             <ul class="navbar-nav d-none d-lg-flex flex-row gap-3">
-                <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="../product.php">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Dealership</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="../index.php">Home</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="../product.php">Products</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">Dealership</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">Contact</a></li>
             </ul>
 
             <!-- Center Logo -->
@@ -19,10 +19,10 @@
 
             <!-- Right Social Icons -->
             <div class="social-icons d-none d-lg-flex gap-3">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-whatsapp"></i></a>
+                <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-instagram"></i></a>
             </div>
 
             <!-- Hamburger Button (Right corner) -->
