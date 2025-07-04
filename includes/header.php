@@ -3,9 +3,9 @@
         <!-- Navigation Left -->
         <div class="nav-left">
             <ul>
-                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Home</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="../index.php">Home</a></li>
                 <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">About</a></li>
-                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Products</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="../product.php">Products</a></li>
                 <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Dealership</a></li>
                 <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Blog</a></li>
                 <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Contact</a></li>
