@@ -1,23 +1,26 @@
 <header>
     <div class="container header-container">
+        <!-- Navigation Left -->
         <div class="nav-left">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Dealership</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Home</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">About</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Products</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Dealership</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Blog</a></li>
+                <li class="animate__animated animate__fadeInDown animate__slow"><a href="#">Contact</a></li>
             </ul>
         </div>
 
-        <a href="#" class="logo">Be<span>Motion</span></a>
+        <!-- Logo -->
+        <a href="#" class="logo animate__animated animate__pulse animate__infinite animate__slower">Be<span>Motion</span></a>
 
+        <!-- Social Icons -->
         <div class="nav-right social-icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-whatsapp"></i></a>
+            <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="animate__animated animate__fadeInRight animate__slow" href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 </header>
