@@ -2,16 +2,14 @@ header {
     z-index: 1000;
 
     .logo {
-        font-size: 1.8rem;
-        font-weight: 700;
         color: var(--primary);
         display: flex;
         justify-content: center;
         align-items: center;
+    }
 
-        span {
-            color: var(--secondary);
-        }
+    .logo-img {
+        display: block;
     }
 
     .social-icons a {

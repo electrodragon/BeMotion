@@ -1,6 +1,6 @@
 <?php // TODO: Fix the smoothness using Bootstrap ?>
 <header class="shadow-sm fixed-top bg-white">
-    <nav class="navbar navbar-expand-lg container px-3 position-relative">
+    <nav class="navbar navbar-expand-lg container-fluid px-3 position-relative">
         <div class="w-100 d-flex justify-content-between align-items-center gap-3">
 
             <!-- Left Nav -->
@@ -15,9 +15,13 @@
             </ul>
 
             <!-- Center Logo -->
-            <a class="navbar-brand logo animate__animated animate__pulse animate__infinite animate__slower mx-auto" href="#">
-                Be<span>Motion</span>
-            </a>
+            <div class="navbar-brand logo animate__animated animate__pulse animate__infinite animate__slower mx-auto py-3">
+                <img src="/assets/images/logo.png" alt="logo" class="logo-img">
+            </div>
+
+<!--            <a class="navbar-brand logo animate__animated animate__pulse animate__infinite animate__slower mx-auto" href="#">-->
+<!--                Be<span>Motion</span>-->
+<!--            </a>-->
 
             <!-- Right Social Icons -->
             <div class="social-icons d-none d-lg-flex gap-3">
