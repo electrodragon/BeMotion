@@ -1,0 +1,88 @@
+.page-identifier {
+  background: url('/assets/images/product_page/loving-hens.jpg') center/cover no-repeat;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .breadcrumb {
+    margin-top: 1rem;
+    font-size: 1rem;
+
+    .breadcrumb-item a {
+      opacity: 0.9;
+
+      &:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+      color: #fff;
+      content: "»";
+      margin: 0 0.5rem;
+    }
+  }
+
+  // 🔻 Large laptops/desktops
+  @media (max-width: 1200px) {
+    height: 800px;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  // 🔻 Tablets
+  @media (max-width: 992px) {
+    height: 600px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .breadcrumb {
+      font-size: 0.95rem;
+    }
+  }
+
+  // 🔻 Large Mobiles
+  @media (max-width: 768px) {
+    height: 400px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+    }
+  }
+
+  // 🔻 Small Mobiles
+  @media (max-width: 576px) {
+    height: 300px;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    .breadcrumb {
+      font-size: 0.75rem;
+    }
+  }
+}

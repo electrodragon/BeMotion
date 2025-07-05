@@ -3,6 +3,7 @@
 
 @import 'components/header';
 @import 'components/footer';
+@import 'components/page_identifier';
 
 @import 'pages/home/hero';
 @import 'pages/home/features';
@@ -19,3 +20,6 @@
 
 @import "pages/product/product_head";
 @import "pages/product/display_product";
+
+// Blogs Page
+@import 'pages/blogs/blog_categories_section';
