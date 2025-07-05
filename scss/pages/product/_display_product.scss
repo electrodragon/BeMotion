@@ -1,13 +1,102 @@
+.product-hero-section {
+  position: relative;
+  background-color: white;
+  padding: 100px 0 40px;
+  text-align: center;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+
+    .row {
+      display: flex;
+
+      .container-left {
+        display: flex;
+        flex-direction: column;
+
+        .orange-head {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .img img {
+            width: 20px;
+            height: 30px;
+          }
+
+          p {
+            text-align: center;
+            margin-top: 10px;
+          }
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      .container-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container-left h1 {
+      font-size: 2rem;
+    }
+
+    .container-right {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .container-right p {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container-left {
+      align-items: center;
+    }
+
+    .container-right {
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
 .product-section {
   padding: 4rem 0;
 
   .btn {
     border-radius: 25px;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 
     &:hover {
       transform: scale(1.05);
+      background-color: #2e90fa;
     }
   }
 
@@ -17,7 +106,7 @@
     color: white;
 
     &:hover {
-      background-color: darken(#2e90fa, 10%);
+      background-color: #207ce4;
     }
   }
 
@@ -25,6 +114,7 @@
     max-height: 220px;
     object-fit: contain;
     margin-bottom: -1rem;
+    width: 100%;
   }
 
   .card {
@@ -49,7 +139,6 @@
     }
   }
 
-  // Responsive tweaks
   @media (max-width: 992px) {
     .product-img {
       max-height: 180px;
@@ -61,6 +150,10 @@
       font-size: 0.8rem;
       padding: 0.4rem 1rem;
     }
+
+    .card-body {
+      padding: 1rem;
+    }
   }
 
   @media (max-width: 576px) {
@@ -70,6 +163,11 @@
 
     .card-body {
       padding: 1rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
     }
   }
 }
