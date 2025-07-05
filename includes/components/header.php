@@ -4,7 +4,7 @@
         <div class="w-100 d-flex justify-content-between align-items-center gap-3">
 
             <!-- Left Nav -->
-            <ul class="navbar-nav d-none d-lg-flex flex-row gap-3">
+            <ul class="navbar-nav nav-left d-none d-lg-flex flex-row gap-3">
                 <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/index.php">Home</a></li>
                 <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/about.php">About</a></li>
                 <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/product.php">Products</a></li>
