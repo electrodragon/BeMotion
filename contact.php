@@ -2,6 +2,7 @@
 
     <?php include('includes/components/header.php'); // Component ?>
 
+    <?php include('includes/components/page_identifier.php'); pageIdentifier('Contact', 'Contact US'); ?>
     <?php include('includes/pages/contact/hero.php'); ?>
     <?php include('includes/pages/contact/features.php'); ?>
     <?php include('includes/pages/contact/explore.php'); ?>

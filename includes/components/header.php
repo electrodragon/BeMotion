@@ -11,6 +11,7 @@
                 <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/index.php#dealership-section">Dealership</a></li>
                 <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/blogs.php">Blog</a></li>
                 <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/contact.php">Contact</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/faq.php">FAQ</a></li>
             </ul>
 
             <!-- Center Logo -->

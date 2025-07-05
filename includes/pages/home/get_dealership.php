@@ -1,4 +1,4 @@
-<section class="get-dealership-form">
+<section class="get-dealership-form"  id="dealership-section">
     <h1 data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">Get Dealership</h1>
     <div class="get-dealership-container">
         <div class="form-left">

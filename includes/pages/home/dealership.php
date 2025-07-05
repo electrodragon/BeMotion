@@ -1,4 +1,4 @@
-<section class="dealership" id="dealership-section">
+<section class="dealership">
     <div class="container">
 
         <div class="elements-group element-group-one">

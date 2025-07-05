@@ -1,4 +1,4 @@
-<?php function pageIdentifier($title = 'No Title') { ?>
+<?php function pageIdentifier($title = 'No Title', $subTitle = null) { ?>
 <section class="page-identifier position-relative text-white d-flex align-items-center justify-content-center">
     <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
@@ -7,7 +7,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center bg-transparent">
                 <li class="breadcrumb-item"><a href="#" class="text-light text-decoration-none">Home</a></li>
-                <li class="breadcrumb-item active text-light" aria-current="page"><?php echo $title ?></li>
+                <li class="breadcrumb-item active text-light" aria-current="page"><?php echo isset($subTitle) ? $subTitle : $title ?></li>
             </ol>
         </nav>
     </div>

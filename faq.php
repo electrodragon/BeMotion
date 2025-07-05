@@ -2,6 +2,7 @@
 
     <?php include('includes/components/header.php'); // Component ?>
 
+    <?php include('includes/components/page_identifier.php'); pageIdentifier('FAQ\'S', 'FAQ'); ?>
     <?php include('includes/pages/faq/hero.php'); ?>
     <?php include('includes/pages/faq/features.php'); ?>
     <?php include('includes/pages/faq/explore.php'); ?>
