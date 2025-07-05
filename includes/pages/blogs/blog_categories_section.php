@@ -1,6 +1,6 @@
 <section class="blog-categories-section pt-5">
     <div class="categories-content-area">
-        <div class="container">
+        <div class="container-fluid px-5">
 
             <div class="some-logo">
                 <img src="/assets/images/blogs_page/logoless_box.png" alt="some logo">
