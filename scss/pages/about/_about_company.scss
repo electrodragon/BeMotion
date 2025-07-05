@@ -1,0 +1,149 @@
+.about-company-section {
+
+  .title {
+    display: flex;
+    gap: 10px;
+    padding: 10px 4px;
+
+    p {
+      padding: 3px 0;
+    }
+  }
+
+  .section-tag {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .nav-tabs {
+    border-bottom: 1px solid #ddd;
+
+    .nav-link {
+      color: #000;
+      font-weight: 500;
+      border: none;
+      background: none;
+
+      &.active {
+        color: #000;
+        background: #C3D6E1;
+        border-bottom: 3px solid #C3D6E1;
+      }
+    }
+  }
+
+  .tab-pane {
+    border-left: 3px solid #7CC6F7;
+    border-bottom: 3px solid #E9E9E9;
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .btn {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #7CC6F7;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: darken(#7CC6F7, 10%);
+    }
+  }
+
+  .phone-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 50%;
+    transform: rotate(270deg);
+    color: #FF6600;
+    border: 2px solid #7CC6F7;
+    font-size: 1.2rem;
+  }
+
+  .experience-image {
+    position: relative;
+    display: inline-block;
+
+    img {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 2rem;
+      top: 35px;
+      left: 35px;
+      width: 100%;
+      height: 100%;
+      background-color: #FFF0E6; // soft peach shadow
+      z-index: 1;
+      //filter: blur(4px);
+    }
+  }
+
+  .exp-badge {
+    z-index: 10;
+    bottom: 0;
+    left: 62px;
+    background: #fff;
+    border-radius: 0 12px 0 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+
+    .exp-number {
+      font-size: 4rem;
+      color: #f60;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .exp-text {
+      line-height: 1.1;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+
+      .works-of {
+        font-size: 1rem;
+        color: #7ca6d9;
+        font-weight: 500;
+        text-align: left;
+      }
+
+      .experience-text {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #77c3f2; // Light blue like in your screenshot
+        display: inline-block;
+      }
+    }
+  }
+
+  // Responsive tweaks
+  @media (max-width: 767.98px) {
+    .section-title {
+      font-size: 1.6rem;
+    }
+
+    .exp-badge {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -30px;
+      text-align: center;
+    }
+  }
+}
