@@ -6,7 +6,7 @@
             <div class="col-12 col-md-6 container-left mb-4 mb-md-0">
                 <div class="orange-head" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-out">
                     <div class="img">
-                        <img src="/assets/images/product_page/sc_icon.png.png" alt="logo" />
+                        <img src="/assets/images/product_page/sc_icon.png" alt="logo" />
                     </div>
                     <p class="text-warning medium" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Our best Product</p>
                 </div>

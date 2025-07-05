@@ -1,7 +1,16 @@
-<section>
+<section class="contact-section">
     <div class="container">
         <div class="title" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200" data-aos-easing="ease">
-            <h2>CONTACT US</h2>
+            <div class="title-head">
+                <div class="img">
+                    <img src="../../../assets/images/product_page/sc_icon.png" alt="logo">
+                </div>
+                <h6>Contact Us Now</h6>
+            </div>
+
+            <h1>CONTACT US</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
         </div>
 
         <form class="contact-form">
