@@ -1,53 +1,214 @@
-<section class="explore-section">
-    <div class="explore-layout">
+<section class="blog-explore-section">
+    <div class="blog-explore-layout container">
 
-        <div class="explore-layout-left" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-            <div class="overlay-content">
+        <h1 class="mb-3">Recent Posts</h1>
 
-                <div class="image-content">
-                    <div class="img">
-                        <img src="../assets/images/eggs.png" alt="eggs-basket">
-                    </div>
+        <div class="row blog-recent-card">
+            <div class="col-sm-4">
+                <div class="blog-recent-card-image-container">
+                    <img class="rounded" src="/assets/images/blogs_page/granny_with_eggs.jpg" alt="granny">
                 </div>
-
-                <div class="media-button-box">
-                    <img src="/assets/images/watch_video_text.png" alt="png">
-                    <span class="video-btn">▶</span>
-                </div>
-
-
-                <div class="cell-box-container">
-                    <div class="call-box">
-                        <img src="../assets/images/worker.png" alt="Avatar" class="avatar"/>
-                        <div class="call-icon">📞</div>
-                        <div class="call-details">
-                            <span class="call-title">CALL TITLE</span>
-                            <span class="phone-number">PHONE NUMBER</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            <div class="col-sm-8">
+                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit.</p>
+                <div class="chips d-flex gap-3 mt-4">
+                    <span class="chip">Lorem</span>
+                    <span class="chip">zdfsfloreamsfsrfsf</span>
+                    <span class="chip">
+                        <img src="/assets/images/blogs_page/Boston%20Celtics.svg" alt="boston">
+                        India
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-5 mt-3">
+                    <span class="blog-author-name d-flex gap-3 align-items-center">
+                        <img src="/assets/images/blogs_page/gabie.png" alt="gabie">
+                        By Gabie Shebber
+                    </span>
+                    <span class="blog-publish-date">
+                        <span class="blog-publish-date-dot"></span>
+                        May 22, 2020
+                    </span>
+                </div>
+            </div>
+
+
         </div>
 
-        <div class="explore-layout-right" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-            <div class="overlay-content">
-                <div class="image-content">
-                    <div class="img">
-                        <img src="../assets/images/hens.png" alt="eggs-basket">
-                    </div>
-                </div>
-
-                <div class="lorem-text">
-                    Lorem ipsum dolor sit amecon<br />
-                    sectetur adipisicing elit, sed do<br />
-                    eiusmod tempor
-                </div>
-
-                <div class="button-area">
-                    <button>More Explore</button>
+        <div class="row mt-4 blog-recent-card">
+            <div class="col-sm-4">
+                <div class="blog-recent-card-image-container">
+                    <img class="rounded" src="/assets/images/blogs_page/pigs_vaccination.jpg" alt="granny">
                 </div>
             </div>
+            <div class="col-sm-8">
+                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit.</p>
+                <div class="chips d-flex gap-3 mt-4">
+                    <span class="chip">Lorem</span>
+                    <span class="chip">zdfsfloreamsfsrfsf</span>
+                    <span class="chip">
+                        <img src="/assets/images/blogs_page/Boston%20Celtics.svg" alt="boston">
+                        India
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-5 mt-3">
+                    <span class="blog-author-name d-flex gap-3 align-items-center">
+                        <img src="/assets/images/blogs_page/gabie.png" alt="gabie">
+                        By Gabie Shebber
+                    </span>
+                    <span class="blog-publish-date">
+                        <span class="blog-publish-date-dot"></span>
+                        May 22, 2020
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row mt-4 blog-recent-card">
+            <div class="col-sm-4">
+                <div class="blog-recent-card-image-container">
+                    <img class="rounded" src="/assets/images/blogs_page/sprayer.jpg" alt="granny">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit.</p>
+                <div class="chips d-flex gap-3 mt-4">
+                    <span class="chip">Lorem</span>
+                    <span class="chip">zdfsfloreamsfsrfsf</span>
+                    <span class="chip">
+                        <img src="/assets/images/blogs_page/Boston%20Celtics.svg" alt="boston">
+                        India
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-5 mt-3">
+                    <span class="blog-author-name d-flex gap-3 align-items-center">
+                        <img src="/assets/images/blogs_page/gabie.png" alt="gabie">
+                        By Gabie Shebber
+                    </span>
+                    <span class="blog-publish-date">
+                        <span class="blog-publish-date-dot"></span>
+                        May 22, 2020
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row mt-4 blog-recent-card">
+            <div class="col-sm-4">
+                <div class="blog-recent-card-image-container">
+                    <img class="rounded" src="/assets/images/blogs_page/loving-hens.jpg" alt="granny">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit.</p>
+                <div class="chips d-flex gap-3 mt-4">
+                    <span class="chip">Lorem</span>
+                    <span class="chip">zdfsfloreamsfsrfsf</span>
+                    <span class="chip">
+                        <img src="/assets/images/blogs_page/Boston%20Celtics.svg" alt="boston">
+                        India
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-5 mt-3">
+                    <span class="blog-author-name d-flex gap-3 align-items-center">
+                        <img src="/assets/images/blogs_page/gabie.png" alt="gabie">
+                        By Gabie Shebber
+                    </span>
+                    <span class="blog-publish-date">
+                        <span class="blog-publish-date-dot"></span>
+                        May 22, 2020
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row mt-4 blog-recent-card">
+            <div class="col-sm-4">
+                <div class="blog-recent-card-image-container">
+                    <img class="rounded" src="/assets/images/blogs_page/cow_bulls_cowshed_farm.jpg" alt="granny">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit.</p>
+                <div class="chips d-flex gap-3 mt-4">
+                    <span class="chip">Lorem</span>
+                    <span class="chip">zdfsfloreamsfsrfsf</span>
+                    <span class="chip">
+                        <img src="/assets/images/blogs_page/Boston%20Celtics.svg" alt="boston">
+                        India
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-5 mt-3">
+                    <span class="blog-author-name d-flex gap-3 align-items-center">
+                        <img src="/assets/images/blogs_page/gabie.png" alt="gabie">
+                        By Gabie Shebber
+                    </span>
+                    <span class="blog-publish-date">
+                        <span class="blog-publish-date-dot"></span>
+                        May 22, 2020
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row mt-4 blog-recent-card">
+            <div class="col-sm-4">
+                <div class="blog-recent-card-image-container">
+                    <img class="rounded" src="/assets/images/blogs_page/brown_chicken_farms.jpg" alt="granny">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit.</p>
+                <div class="chips d-flex gap-3 mt-4">
+                    <span class="chip">Lorem</span>
+                    <span class="chip">zdfsfloreamsfsrfsf</span>
+                    <span class="chip">
+                        <img src="/assets/images/blogs_page/Boston%20Celtics.svg" alt="boston">
+                        India
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-5 mt-3">
+                    <span class="blog-author-name d-flex gap-3 align-items-center">
+                        <img src="/assets/images/blogs_page/gabie.png" alt="gabie">
+                        By Gabie Shebber
+                    </span>
+                    <span class="blog-publish-date">
+                        <span class="blog-publish-date-dot"></span>
+                        May 22, 2020
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="load-more-button-container mt-5">
+            <button class="load-more-button ">Load More</button>
         </div>
 
     </div>
