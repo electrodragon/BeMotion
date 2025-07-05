@@ -1,4 +1,4 @@
-<section class="features">
+<section class="blogs-page-features">
     <div class="container experience-wrap">
         <div class="experience-left">
             <img data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-cubic" src="/assets/images/experience.png" alt="CEO Image">
