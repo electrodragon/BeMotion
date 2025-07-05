@@ -1,4 +1,4 @@
-<section>
+<section class="home-contact-section">
     <div class="container">
         <div class="title" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200" data-aos-easing="ease">
             <h2>CONTACT US</h2>

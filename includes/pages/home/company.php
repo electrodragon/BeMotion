@@ -12,7 +12,7 @@
                     </div>
                     <div class="company-info">
                         <h3>Lorem Ipsums</h3>
-                        <a href="#" class="company-link">Click here →</a>
+                        <a href="https://google.com" class="company-link">Click here →</a>
                     </div>
                 </div>
 
@@ -24,7 +24,7 @@
                     </div>
                     <div class="company-info">
                         <h3>Lorem Ipsums</h3>
-                        <a href="#" class="company-link">Click here →</a>
+                        <a href="https://google.com" class="company-link">Click here →</a>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     </div>
                     <div class="company-info">
                         <h3>Lorem Ipsums</h3>
-                        <a href="#" class="company-link">Click here →</a>
+                        <a href="https://google.com" class="company-link">Click here →</a>
                     </div>
                 </div>
             </div>
