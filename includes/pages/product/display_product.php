@@ -4,7 +4,7 @@
     <div class="container text-center text-md-start position-relative z-2">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 container-left mb-4 mb-md-0">
-                <div class="orange-head" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+                <div class="orange-head" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-out">
                     <div class="img">
                         <img src="/assets/images/product_page/sc_icon.png.png" alt="logo" />
                     </div>
@@ -40,7 +40,7 @@
             <?php for ($i = 0; $i < 3; $i++): ?>
                 <div class="col-12 col-sm-6 col-lg-4">
                     <img src="/assets/images/product_page/product.png" class="product-img mb-3" alt="Product Image" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-                    <div class="card border shadow-sm" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+                    <div class="card border shadow-sm" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100" data-aos-easing="ease-in-out">
                         <div class="card-body text-start">
                             <h5 class="fw-bold">Lpsam quia</h5>
                             <p class="text-muted small">
