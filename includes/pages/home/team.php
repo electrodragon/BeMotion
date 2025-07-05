@@ -31,7 +31,7 @@
 
     <!-- Right Worker Image -->
     <div data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out" class="highlight-character">
-        <img src="../assets/images/person.png" alt="Smiling Worker" class="character-img">
+        <img src="../../../assets/images/person.png" alt="Smiling Worker" class="character-img">
     </div>
 
 </section>
