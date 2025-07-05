@@ -4,6 +4,7 @@
 
     <?php include('includes/components/page_identifier.php'); pageIdentifier('About Us', 'About'); ?>
     <?php include('includes/pages/about/about_company.php'); ?>
+    <?php include('includes/pages/about/what_we_do.php'); ?>
 
     <?php include('includes/components/footer.php'); // Component ?>
 
