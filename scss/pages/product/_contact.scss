@@ -65,6 +65,20 @@
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 992px) {
+      padding: 30px;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; // stack full width on small screens
+      padding: 25px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 20px;
+    }
   }
 
   .form-group {
@@ -81,11 +95,13 @@
       font-size: 14px;
       outline: none;
       transition: 0.3s ease;
+      width: 100%;
     }
 
     select {
       appearance: none;
-      background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 15px center;
+      background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+      no-repeat right 15px center;
       background-size: 18px;
     }
 
@@ -97,6 +113,10 @@
 
   .form-full {
     grid-column: span 2;
+
+    @media (max-width: 768px) {
+      grid-column: span 1;
+    }
   }
 
   .center {
@@ -109,21 +129,22 @@
     justify-content: center;
     align-items: center;
     background: none;
+  }
 
-    .btn-submit {
-      padding: 12px 25px;
-      background-color: #007bff;
-      color: var(--light);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      width: 200px;
+  .btn-submit {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: var(--light);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    text-align: center;
 
-      &:hover {
-        background-color: #0056b3;
-      }
+    &:hover {
+      background-color: #0056b3;
     }
   }
 

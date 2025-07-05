@@ -1,102 +1,101 @@
 header {
-    z-index: 1000;
+  z-index: 1000;
+
+  .logo {
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-img {
+    display: block;
+  }
+
+  .social-icons a {
+    color: var(--dark);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+
+  .nav-left {
+    .nav-link {
+      color: var(--dark);
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--secondary);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        color: var(--secondary);
+        transition: width 0.3s;
+      }
+
+      &:hover::after {
+        width: 100%;
+        color: var(--secondary);
+      }
+    }
+  }
+
+  // 👇 Responsive Tweaks for Mobile View
+  @media (max-width: 991px) {
 
     .logo {
-        color: var(--primary);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      position: static;
+      transform: none;
+      font-size: 1.6rem;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    .logo-img {
-        display: block;
+    .navbar-collapse {
+      background: #fff;
+      padding: 1rem 0;
+      border-radius: 0 0 10px 10px;
+      z-index: 1000;
     }
 
-    .social-icons a {
-        color: var(--dark);
-        font-size: 1.2rem;
-        transition: color 0.3s;
+    .navbar-nav .nav-item {
+      margin-bottom: 0.8rem;
+    }
 
-        &:hover {
-            color: var(--secondary);
-        }
+
+    .nav-right {
+      order: -1;
+      justify-content: center;
     }
 
     .nav-left {
-        .nav-link {
-            color: var(--dark);
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s ease;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      gap: 0.7rem;
+    }
+  }
 
-            &:hover {
-                color: var(--secondary);
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-                width: 0;
-                height: 2px;
-                color: var(--secondary);
-                transition: width 0.3s;
-            }
-
-            &:hover::after {
-                width: 100%;
-                color: var(--secondary);
-            }
-        }
+  @media (max-width: 576px) {
+    .logo {
+      font-size: 1.4rem;
+      justify-content: center;
     }
 
-    // 👇 Responsive Tweaks for Mobile View
-    @media (max-width: 991px) {
-
-        .logo {
-            position: static;
-            transform: none;
-            font-size: 1.6rem;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        @media (max-width: 991px) {
-            .navbar-collapse {
-                background: #fff;
-                padding: 1rem 0;
-                border-radius: 0 0 10px 10px;
-                z-index: 1000;
-            }
-
-            .navbar-nav .nav-item {
-                margin-bottom: 0.8rem;
-            }
-        }
-
-        .nav-right {
-            order: -1;
-            justify-content: center;
-        }
-
-        .nav-left {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            justify-content: center;
-            gap: 0.7rem;
-        }
+    .nav-right a {
+      font-size: 1rem;
     }
-
-    @media (max-width: 576px) {
-        .logo {
-            font-size: 1.4rem;
-            justify-content: center;
-        }
-
-        .nav-right a {
-            font-size: 1rem;
-        }
-    }
+  }
 }
