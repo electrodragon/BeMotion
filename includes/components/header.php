@@ -1,15 +1,16 @@
+<?php // TODO: Fix the smoothness using Bootstrap ?>
 <header class="shadow-sm fixed-top bg-white">
     <nav class="navbar navbar-expand-lg container px-3 position-relative">
         <div class="w-100 d-flex justify-content-between align-items-center gap-3">
 
             <!-- Left Nav -->
             <ul class="navbar-nav d-none d-lg-flex flex-row gap-3">
-                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="../index.php">Home</a></li>
-                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="../product.php">Products</a></li>
-                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">Dealership</a></li>
-                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/index.php">Home</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/about.php">About</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/product.php">Products</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/index.php#dealership-section">Dealership</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/blogs.php">Blog</a></li>
+                <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/contact.php">Contact</a></li>
             </ul>
 
             <!-- Center Logo -->
@@ -34,12 +35,12 @@
         <!-- Mobile Menu Collapse -->
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav flex-column text-center w-100 mt-3 d-lg-none">
-                <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="../product.php">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Dealership</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about.php">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product.php">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index.php#dealership-section">Dealership</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blogs.php">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact.php">Contact</a></li>
                 <li class="nav-item mt-3 d-flex justify-content-center gap-3">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
