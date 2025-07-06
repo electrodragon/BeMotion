@@ -6,6 +6,7 @@
     <?php include('includes/pages/about/about_company.php'); ?>
     <?php include('includes/pages/about/what_we_do.php'); ?>
     <?php include('includes/pages/about/construction_solution.php'); ?>
+    <?php include('includes/pages/about/our_team_display.php'); ?>
 
     <?php include('includes/components/footer.php'); // Component ?>
 
