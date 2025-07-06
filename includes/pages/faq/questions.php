@@ -6,7 +6,7 @@
             <div class="faq-top">
                 <div class="titles">
 
-                    <div class="sub-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out" >
+                    <div class="sub-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
                         <div class="img">
                             <img src="/assets/images/product_page/sc_icon.png" alt="sc_icon">
                         </div>
