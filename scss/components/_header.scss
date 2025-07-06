@@ -1,5 +1,6 @@
 header {
   z-index: 1000;
+  @include font-fenix-regular;
 
   .logo {
     color: var(--primary);

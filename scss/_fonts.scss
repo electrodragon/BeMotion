@@ -1,0 +1,20 @@
+@mixin font-fenix-regular {
+  font-family: "Fenix", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@mixin font-exo-regular {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-exo-bold {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
