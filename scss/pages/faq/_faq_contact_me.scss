@@ -183,8 +183,8 @@
 
     .btn-submit {
       padding: 10px 30px;
-      background: #007bff;
-      color: white;
+      background: #7CC6F7;
+      color: var(--dark);
       font-weight: bold;
       border: none;
       border-radius: 6px;
@@ -193,7 +193,7 @@
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 
       &:hover {
-        background: #0056b3;
+        background: darken(#7CC6F7, 10%);
       }
     }
   }
