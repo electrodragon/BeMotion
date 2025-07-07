@@ -9,7 +9,7 @@
                         <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/index.php">Home</a></li>
                         <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/about.php">About</a></li>
                         <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/product.php">Products</a></li>
-                        <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/index.php#dealership-section">Dealership</a></li>
+                        <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/product_detail.php">Product Detail</a></li>
                         <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/blogs.php">Blog</a></li>
                         <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/contact.php">Contact</a></li>
                         <li class="nav-item animate__animated animate__fadeInDown animate__slow"><a class="nav-link" href="/faq.php">FAQ</a></li>
