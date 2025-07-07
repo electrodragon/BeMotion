@@ -7,6 +7,7 @@
     <?php include('includes/pages/product_detail/product_features.php'); ?>
     <?php include('includes/pages/product_detail/product_review.php'); ?>
     <?php include('includes/pages/product_detail/product_faq.php'); ?>
+    <?php include('includes/pages/product_detail/stay_connected.php'); ?>
     <?php include('includes/pages/product_detail/product_detail_contact.php'); ?>
 
 
