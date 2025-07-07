@@ -5,7 +5,7 @@ header {
   .logo {
     color: var(--primary);
     display: flex;
-    justify-content: center;
+    padding-left: 20%;
     align-items: center;
   }
 
@@ -61,6 +61,8 @@ header {
       font-size: 1.6rem;
       margin: 0 auto;
       text-align: center;
+      padding-left: 0;
+      justify-content: center;
     }
 
     .navbar-collapse {
@@ -93,6 +95,7 @@ header {
     .logo {
       font-size: 1.4rem;
       justify-content: center;
+      padding-left: 0;
     }
 
     .nav-right a {

@@ -12,6 +12,7 @@
                 </div>
             </div>
         </div>
+
         <div class="experience-right">
             <p data-aos="fade-in" data-aos-delay="150" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor, aenean massa.
