@@ -2,7 +2,7 @@
     <h1 data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">Get Dealership</h1>
     <div class="get-dealership-container">
         <div class="form-left">
-            <h2 data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">Let’s discuss<br>on something <span class="highlight">cool</span><br>together</h2>
+            <h2 data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">Let’s discuss on something <span class="highlight">cool</span> together</h2>
             <ul class="contact-info">
                 <li><i class="fas fa-envelope"></i> loremispum@gmail.com</li>
                 <li><i class="fas fa-phone"></i> +123 456 789</li>
