@@ -13,7 +13,7 @@
                 </p>
 
                 <div class="highlights">
-                    <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out" class="highlight-stats">
+                    <div class="highlight-stats" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
                         <h2 class="stat-number">9625</h2>
                         <p class="stat-label">Started Journey</p>
                     </div>
@@ -30,7 +30,8 @@
     </div>
 
     <!-- Right Worker Image -->
-    <div data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out" class="highlight-character">
+    <div  class="highlight-character">
+<!--          data-aos="fade-left" data-aos-duration="1000" data-aos-offset="50" data-aos-easing="ease-in-out">-->
         <img src="../../../assets/images/person.png" alt="Smiling Worker" class="character-img">
     </div>
 

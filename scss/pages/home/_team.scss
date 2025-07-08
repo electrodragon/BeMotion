@@ -121,3 +121,111 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .team-highlight {
+    height: auto;
+    padding: 60px 0;
+
+    .team-highlight-container {
+      max-width: 90%;
+    }
+
+    .highlight-character {
+      width: 300px;
+      right: -100px;
+      bottom: 30px;
+    }
+
+    .highlight-layout {
+      .highlight-left,
+      .highlight-right {
+        flex: 1 1 100%;
+      }
+
+      .highlight-img {
+        width: 100%;
+      }
+
+      .highlight-right {
+        .highlight-desc {
+          font-size: 0.9rem;
+        }
+
+        .highlights {
+          flex-direction: column;
+          gap: 16px;
+
+          .highlight-stats,
+          .highlight-benefits {
+            width: 100%;
+          }
+
+          .highlight-benefits {
+            gap: 8px;
+          }
+        }
+
+        .highlight-btn {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team-highlight {
+    padding: 40px 0;
+
+    .team-highlight-container {
+      width: 95%;
+    }
+
+    .highlight-layout {
+      flex-direction: column;
+      align-items: center;
+
+      .highlight-left,
+      .highlight-right {
+        width: 100%;
+        text-align: center;
+      }
+
+      .highlight-right {
+        .highlight-desc {
+          font-size: 0.85rem;
+          margin-bottom: 16px;
+        }
+
+        .highlights {
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+
+          .highlight-stats,
+          .highlight-benefits {
+            width: 100%;
+            text-align: center;
+          }
+
+          .highlight-benefits {
+            li {
+              justify-content: center;
+            }
+          }
+        }
+
+        .highlight-btn {
+          font-size: 0.85rem;
+          padding: 10px 18px;
+        }
+      }
+    }
+
+    .highlight-character {
+      display: none; // 🔥 hide on small screens
+    }
+  }
+}
