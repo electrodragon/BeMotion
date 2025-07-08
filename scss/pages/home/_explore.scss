@@ -8,7 +8,6 @@
   .explore-layout {
     display: flex;
     height: 100%;
-    flex-wrap: wrap;
     padding: 60px 0;
     justify-content: center;
     align-items: center;
@@ -16,14 +15,12 @@
     .explore-layout-left {
       flex: 1.4;
       height: 100%;
-      //background: rgba(42, 157, 143, 0.46);
       display: flex;
       justify-content: flex-end;
 
       .overlay-content {
         position: relative;
         width: 100%;
-        //background: rgba(179, 43, 43, 0.38);
 
         .image-content {
           position: absolute;
@@ -185,7 +182,150 @@
         }
       }
     }
-
   }
-
 }
+
+@media screen and (max-width: 1024px) {
+  .explore-section {
+
+    .explore-layout {
+      .explore-layout-left,
+      .explore-layout-right {
+        flex: 1;
+
+        .overlay-content {
+          position: relative !important;
+
+          .image-content {
+            .img img {
+              width: 300px;
+            }
+          }
+
+          .media-button-box {
+            right: 10%;
+            bottom: 300px;
+            width: 80px;
+          }
+
+          .cell-box-container {
+            width: 250px;
+            margin-top: 20px;
+            left: 5%;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+
+            .call-box {
+              width: 100%;
+              align-items: center;
+              text-align: center;
+
+              .avatar {
+                margin-right: 0;
+                margin-bottom: 10px;
+              }
+
+              .call-details {
+                align-items: center;
+
+                .call-title, .phone-number {
+                  color: white !important;
+                }
+              }
+
+              .call-icon {
+                display: none; // optional
+              }
+            }
+          }
+        }
+      }
+
+      .explore-layout-right .overlay-content {
+        align-items: center;
+
+        .lorem-text {
+          margin: 0;
+          font-size: 1.2rem;
+        }
+
+        .button-area {
+          margin-top: 20px;
+
+          button {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .explore-section {
+    .explore-layout {
+      display: flex;
+      flex-direction: column;
+
+      .explore-layout-left, .explore-layout-right {
+        //flex: 1;
+
+        .overlay-content {
+          position: relative !important;
+
+          .image-content {
+            right: -150px;
+            top: -50%;
+            .img img {
+              width: 250px;
+            }
+          }
+
+          .media-button-box {
+            right: 10%;
+            bottom: 300px;
+            width: 80px;
+          }
+
+          .cell-box-container {
+            width: 250px;
+            margin-top: 20px;
+            //left: 5%;
+            //bottom: 5%;
+            display: flex;
+            justify-content: center;
+
+            .call-box {
+              width: 100%;
+              align-items: center;
+              text-align: center;
+
+              .avatar {
+                //margin-right: 0;
+                //margin-bottom: 10px;
+              }
+
+              .call-details {
+                align-items: center;
+
+                .call-title, .phone-number {
+                  color: white !important;
+                }
+              }
+
+              .call-icon {
+                display: none; // optional
+              }
+            }
+          }
+        }
+      }
+
+      .overlay-content {
+        padding: 12px !important;
+      }
+    }
+  }
+}
+

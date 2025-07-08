@@ -18,7 +18,7 @@
 
                 <div class="cell-box-container">
                     <div class="call-box">
-                        <img src="../assets/images/worker.png" alt="Avatar" class="avatar"/>
+                        <img src="/assets/images/worker.png" alt="Avatar" class="avatar"/>
                         <div class="call-icon">📞</div>
                         <div class="call-details">
                             <span class="call-title">CALL TITLE</span>
