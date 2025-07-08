@@ -1,7 +1,7 @@
 .hero {
     background: url('/assets/images/cookreyan.png') no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     margin-top: 70px;
     position: relative;
     display: flex;
@@ -25,13 +25,12 @@
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            flex-wrap: wrap;
         }
 
         .icon-box {
             text-align: center;
             flex: 1;
-            min-width: 100px;
+            width: 100px;
 
             img {
                 width: 40px;
@@ -48,3 +47,110 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .hero {
+        .company-bar {
+            .company-icons {
+                padding: 20px;
+                gap: 16px;
+            }
+
+            .icon-box {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                p {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        .company-bar {
+            .company-icons {
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .icon-box {
+                flex: 0 1 30%; // 3 icons per row
+                text-align: center;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+
+        .company-bar {
+            top: 90%;
+            padding: 0 10px;
+
+            .company-icons {
+                align-items: center;
+                gap: 25px;
+                border-radius: 20px;
+            }
+
+            .icon-box {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                gap: 12px;
+                justify-content: flex-start;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    font-size: 0.85rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        .company-bar {
+            .company-icons {
+                padding: 12px;
+            }
+
+            .icon-box {
+                img {
+                    width: 28px;
+                    height: 28px;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
