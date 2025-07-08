@@ -6,7 +6,7 @@
             <h2 class="benefits-subtitle">lorem</h2>
             <a href="#" class="benefits-btn">MORE EXPLORE</a>
         </div>
-        <button data-aos="zoom-in-right" data-aos-duration="2000" data-aos-offset="200" data-aos-easing="ease" class="benefits-nav left"><i class="fas fa-arrow-left"></i></button>
-        <button data-aos="zoom-in-left" data-aos-duration="2000" data-aos-offset="200" data-aos-easing="ease" class="benefits-nav right"><i class="fas fa-arrow-right"></i></button>
+        <button class="benefits-nav left" data-aos="zoom-in-right" data-aos-duration="2000" data-aos-offset="200" data-aos-easing="ease"><i class="fas fa-arrow-left"></i></button>
+        <button  class="benefits-nav right" data-aos="zoom-in-left" data-aos-duration="2000" data-aos-offset="200" data-aos-easing="ease"><i class="fas fa-arrow-right"></i></button>
     </div>
 </section>
