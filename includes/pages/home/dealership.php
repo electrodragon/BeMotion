@@ -1,5 +1,5 @@
 <section class="dealership">
-    <div class="container no-js-slider">
+    <div class="container">
 
         <div class="elements-group element-group-one">
             <h3 data-aos="fade-down" data-aos-delay="450" data-aos-duration="1000" data-aos-easing="ease-in-out">Lorem Ipsum</h3>
