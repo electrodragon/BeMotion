@@ -6,17 +6,21 @@
   background: #F1F4FB;
   align-items: center;
   padding: 80px 0;
+  overflow: hidden;
 
   .our-team-top-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 20px;
     align-items: center;
     gap: 24px;
   }
 
   .our-team-cards {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
 
     .our-team-card {
@@ -56,9 +60,37 @@
           line-height: 1.5;
         }
       }
-
     }
-
   }
-
 }
+
+@media screen and (max-width: 768px) {
+  .our-team {
+    height: auto;
+    padding: 40px 0;
+
+    .our-team-cards {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 16px;
+      padding: 0 16px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .our-team-card {
+        flex: 0 0 80% !important; // ← Force this override
+        width: auto !important;   // ← Cancel out the fixed 300px
+        scroll-snap-align: start;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
