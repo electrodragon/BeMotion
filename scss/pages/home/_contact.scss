@@ -82,3 +82,56 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .home-contact-section {
+    padding: 40px 0;
+
+    .contact-form {
+      grid-template-columns: 1fr; // single column on mobile
+      padding: 20px;
+      gap: 16px;
+    }
+
+    .form-full {
+      grid-column: span 1; // override to fit mobile grid
+    }
+
+    .title h2 {
+      font-size: 22px;
+    }
+
+    .btn-area {
+      .btn-submit {
+        width: 100%; // make submit button full width
+        padding: 14px 0;
+        font-size: 16px;
+      }
+    }
+
+    .form-group {
+      input,
+      select,
+      textarea {
+        font-size: 15px;
+        padding: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home-contact-section {
+    .contact-form {
+      padding: 15px;
+      gap: 12px;
+    }
+
+    .btn-submit {
+      font-size: 14px;
+      padding: 12px 0;
+    }
+  }
+}
+
