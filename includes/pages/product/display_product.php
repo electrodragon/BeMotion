@@ -13,7 +13,7 @@
                 <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Our Product</h1>
             </div>
 
-            <div class="col-12 col-md-6 container-right" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+            <div class="col-12 col-md-6 px-4 container-right" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
                 <p class="lead text-start">
                     Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit  aspernatur aut odit aut fugit, sed quia sit
                 </p>
@@ -26,13 +26,14 @@
     <div class="container text-center">
 
         <!-- Filter Buttons -->
-        <div class="d-flex flex-wrap justify-content-start gap-2 mb-5">
+        <div class="button-slider d-flex justify-content-start gap-2 mb-5">
             <button type="button" class="btn btn-primary rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">SEE ALL</button>
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Lorem</button>
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ispum</button>
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loreamsaa</button>
-            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
+            <button type=
+    padding-right: 16px;"button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
         </div>
 
         <!-- Product Cards -->
