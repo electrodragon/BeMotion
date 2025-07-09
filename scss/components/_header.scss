@@ -13,13 +13,20 @@ header {
     display: block;
   }
 
-  .social-icons a {
-    color: var(--dark);
-    font-size: 1.2rem;
-    transition: color 0.3s;
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &:hover {
-      color: var(--secondary);
+    a {
+      color: var(--dark);
+      height: 24px;
+      width: 24px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--secondary);
+      }
     }
   }
 
