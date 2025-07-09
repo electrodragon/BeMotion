@@ -9,17 +9,37 @@
   }
 
   .our-team-cards {
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: center;
+    //gap: 24px;
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
+    flex-wrap: nowrap; // Essential for horizontal scrolling
+    overflow-x: auto; // Enable horizontal scrolling
+    scroll-snap-type: x mandatory; // Snap to cards
+    -webkit-overflow-scrolling: touch; // Smoother scrolling on iOS
+    padding-left: 20px; // Padding before the first item
+    padding-right: 20px; // Padding after the last item (helps with scroll-snap)
+    gap: 0; // Remove gap here as we'll use margin for spacing between cards
+    justify-content: flex-start; // Align items to the start for scrolling
+
 
     .our-team-card {
-      overflow: hidden;
-      width: 350px;
-      position: relative;
-      bottom: 250px;
+      //overflow: hidden;
+      //width: 350px;
+      //position: relative;
+      //bottom: 250px;
       transition: transform 0.5s ease;
+      flex: 0 0 85%; // Each card takes 85% of the viewport width (adjust as needed)
+      // width: auto !important; // Let flex-basis control the width
+      scroll-snap-align: start; // Snap cards to the start of the scroll container
+      position: static; // Remove the relative positioning and bottom offset for mobile
+      bottom: auto;
+      top: auto;
+      margin-right: 16px; // Space between cards in the slider
+      margin-bottom: 0; // Reset margin-bottom from desktop
+      box-sizing: border-box; // Include padding and border in the element's total width and height
 
       &:hover {
         transform: translateY(-10px);
@@ -59,7 +79,9 @@
     .our-team-top-area {
       display: none;
     }
+
     .our-team-cards {
+      display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
@@ -68,20 +90,18 @@
       //gap: 16px;
       //padding: 0 10px;
       padding-left: 16px;
-      padding-right: 16px;
     }
 
     .our-team-card {
       flex: 0 0 80%;
-      width: 200px !important;
+      width: 100% !important;
       scroll-snap-align: start;
       bottom: 0;
       top: 0;
-
-      .card-image {
-        height: 300px;
-      }
     }
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 
     // Hide scrollbar (optional)
     .our-team-cards::-webkit-scrollbar {
