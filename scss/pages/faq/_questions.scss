@@ -65,7 +65,6 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
       padding: 10px 15%;
 
       .faq-main-img {
@@ -107,20 +106,28 @@
             font-size: 1rem;
             font-weight: 600;
             color: #222;
+            display: flex; // ✨ Make button a flex container
+            justify-content: space-between;
+            align-items: center; // ✨ Vertically center everything
 
             &::after {
               content: "+";
               color: #FF6600;
-              font-size: 1.2rem;
               font-weight: 900;
               margin-left: auto;
-              background-image: none;
-              transform: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              //transform: none;
             }
 
             &:not(.collapsed)::after {
               content: "-";
+              font-weight: 900;
               color: #FF6600;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             }
 
             &:focus {
@@ -179,37 +186,42 @@
 
 
   @media (max-width: 768px) {
-    .faq-top {
-      flex-direction: column;
+    .faq-wrapper {
       padding: 0;
-      align-items: center;
-      .faq-desc {
-        padding: 0;
-      }
-    }
 
-    .faq-bottom {
-      .faq-images {
-        padding: 0;
+      .faq-top {
+        flex-direction: column;
         align-items: center;
 
-        .faq-main-img {
-          width: 400px;
-          height: 500px;
-          border-radius: 80px;
+        .faq-heading {
+          font-size: 2rem !important;
         }
 
-        .faq-sub-img {
-          position: relative;
-          bottom: 200px;
-          right: 50px;
-          width: 350px;
-          //object-fit: cover;
+        .faq-desc {
+          padding: 0 12px;
         }
       }
 
-      .accordion {
-        padding-right: 0;
+      .faq-bottom {
+        .faq-images {
+          padding: 0;
+          align-items: center;
+
+          .faq-main-img {
+            width: 100%;
+          }
+
+          .faq-sub-img {
+            position: relative;
+            bottom: 100px;
+            right: 30px;
+            width: 80%;
+          }
+        }
+
+        .accordion {
+          padding: 0 10px;
+        }
       }
     }
   }

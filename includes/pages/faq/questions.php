@@ -1,5 +1,5 @@
 <section class="faq-section">
-    <div class="container-fluid px-5">
+    <div class="container-fluid">
         <div class="faq-wrapper d-flex flex-wrap justify-content-between align-items-start gap-5">
 
             <!-- top Side -->

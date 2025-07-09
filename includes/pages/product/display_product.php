@@ -47,7 +47,7 @@
                             <p class="text-muted small">
                                 Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
                             </p>
-                            <a href="#" class="text-primary small">Shop now →</a>
+                            <a href="/product_detail.php" class="text-primary small">Shop now →</a>
                         </div>
                     </div>
                 </div>
