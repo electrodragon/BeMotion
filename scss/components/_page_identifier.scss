@@ -1,4 +1,5 @@
 .page-identifier {
+  margin-top: 70px;
   background: url('/assets/images/product_page/loving-hens.jpg') center/cover no-repeat;
   height: 600px;
   position: relative;
@@ -75,7 +76,7 @@
 
   // 🔻 Small Mobiles
   @media (max-width: 576px) {
-    height: 300px;
+    height: 250px;
 
     h1 {
       font-size: 1.6rem;
