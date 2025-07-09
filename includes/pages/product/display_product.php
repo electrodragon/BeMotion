@@ -32,8 +32,7 @@
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ispum</button>
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loreamsaa</button>
-            <button type=
-    padding-right: 16px;"button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
+            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
         </div>
 
         <!-- Product Cards -->

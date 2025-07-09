@@ -1,6 +1,6 @@
 <section class="blogs-page-features">
 
-    <div class="container px-5">
+    <div class="container">
 
         <div class="row">
             <div class="col-sm-6 d-flex justify-items-center align-items-center px-4 mt-5">
@@ -11,7 +11,7 @@
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                         consectetuer adipiscing elit.</p>
-                    <div class="chips d-flex gap-3 mt-4">
+                    <div class="chips d-flex flex-wrap gap-3 mt-4">
                         <span class="chip">Lorem</span>
                         <span class="chip">zdfsfloreamsfsrfsf</span>
                         <span class="chip">
@@ -38,7 +38,7 @@
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                         consectetuer adipiscing elit.</p>
-                    <div class="chips d-flex gap-3 mt-4">
+                    <div class="chips d-flex flex-wrap gap-3 mt-4">
                         <span class="chip">Lorem</span>
                         <span class="chip">zdfsfloreamsfsrfsf</span>
                         <span class="chip">
@@ -65,7 +65,7 @@
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                         consectetuer adipiscing elit.</p>
-                    <div class="chips d-flex gap-3 mt-4">
+                    <div class="chips d-flex flex-wrap gap-3 mt-4">
                         <span class="chip">Lorem</span>
                         <span class="chip">zdfsfloreamsfsrfsf</span>
                         <span class="chip">
@@ -90,7 +90,7 @@
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                         consectetuer adipiscing elit.</p>
-                    <div class="chips d-flex gap-3 mt-4">
+                    <div class="chips d-flex flex-wrap gap-3 mt-4">
                         <span class="chip">Lorem</span>
                         <span class="chip">zdfsfloreamsfsrfsf</span>
                         <span class="chip">

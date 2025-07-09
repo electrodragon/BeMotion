@@ -10,10 +10,10 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <h3 class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                     consectetuer adipiscing elit.</p>
-                <div class="chips d-flex gap-3 mt-4">
+                <div class="chips d-flex flex-wrap gap-3 mt-4">
                     <span class="chip">Lorem</span>
                     <span class="chip">zdfsfloreamsfsrfsf</span>
                     <span class="chip">
@@ -44,10 +44,10 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <h3 class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                     consectetuer adipiscing elit.</p>
-                <div class="chips d-flex gap-3 mt-4">
+                <div class="chips d-flex flex-wrap gap-3 mt-4">
                     <span class="chip">Lorem</span>
                     <span class="chip">zdfsfloreamsfsrfsf</span>
                     <span class="chip">
@@ -78,10 +78,10 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <h3 class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                     consectetuer adipiscing elit.</p>
-                <div class="chips d-flex gap-3 mt-4">
+                <div class="chips d-flex flex-wrap gap-3 mt-4">
                     <span class="chip">Lorem</span>
                     <span class="chip">zdfsfloreamsfsrfsf</span>
                     <span class="chip">
@@ -112,10 +112,10 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <h3 class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                     consectetuer adipiscing elit.</p>
-                <div class="chips d-flex gap-3 mt-4">
+                <div class="chips d-flex flex-wrap gap-3 mt-4">
                     <span class="chip">Lorem</span>
                     <span class="chip">zdfsfloreamsfsrfsf</span>
                     <span class="chip">
@@ -146,10 +146,10 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <h3 class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                     consectetuer adipiscing elit.</p>
-                <div class="chips d-flex gap-3 mt-4">
+                <div class="chips d-flex flex-wrap gap-3 mt-4">
                     <span class="chip">Lorem</span>
                     <span class="chip">zdfsfloreamsfsrfsf</span>
                     <span class="chip">
@@ -180,10 +180,10 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <h3 class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
                     consectetuer adipiscing elit.</p>
-                <div class="chips d-flex gap-3 mt-4">
+                <div class="chips d-flex flex-wrap gap-3 mt-4">
                     <span class="chip">Lorem</span>
                     <span class="chip">zdfsfloreamsfsrfsf</span>
                     <span class="chip">
