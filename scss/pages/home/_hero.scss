@@ -5,7 +5,7 @@
     margin-top: 70px;
     position: relative;
     display: flex;
-    align-items: flex-end; // ensures bar sticks to bottom
+    align-items: flex-end;
     justify-content: center;
 
     .company-bar {
@@ -30,7 +30,7 @@
         .icon-box {
             text-align: center;
             flex: 1;
-            width: 100px; // Base width for larger screens
+            width: 100px;
 
             img {
                 width: 40px;
@@ -74,32 +74,26 @@
     .hero {
         .company-bar {
             .company-icons {
-                // To make it a slider, override previous flex-wrap: wrap
-                flex-wrap: nowrap; // Ensure items stay in a single line
-                overflow-x: auto; // Enable horizontal scrolling
-                scroll-snap-type: x mandatory; // Snap to individual items
-                -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
-                justify-content: flex-start; // Align items to the start of the scroll container
-                gap: 20px; // Keep your desired gap between icons
-                padding: 20px; // Ensure consistent padding, consider padding 0 20px if you want edge space
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 20px;
 
-                // Hide scrollbar for a cleaner look
                 &::-webkit-scrollbar {
                     display: none;
                 }
-                -ms-overflow-style: none; /* For IE and Edge */
-                scrollbar-width: none; /* For Firefox */
+                -ms-overflow-style: none;
+                scrollbar-width: none;
             }
 
             .icon-box {
-                // Adjust flex-basis for mobile slider items
-                // This makes each item take up a specific percentage of the viewport
-                // For a 3-item view, roughly 30% each would work, with gaps and padding
-                flex: 0 0 30%; // Example: 3 items per screen, adjust as needed
-                // You might need 32% or less depending on exact gap/padding
-                max-width: unset; // Ensure it doesn't get limited by fixed width
+                flex: 0 0 30%;
+                max-width: unset;
                 text-align: center;
-                scroll-snap-align: start; // Snap to the start of each icon-box
+                scroll-snap-align: start;
 
                 img {
                     width: 32px;
@@ -119,27 +113,25 @@
         height: 300px;
 
         .company-bar {
-            top: 90%; // Adjust positioning of the bar itself
-            padding: 0 10px; // Padding for the company-bar container
+            top: 90%;
+            padding: 0 10px;
 
             .company-icons {
                 align-items: center;
-                gap: 20px; // Adjusted gap to be consistent or tweaked for smaller screens
+                gap: 20px;
                 border-radius: 20px;
-                padding: 15px 15px; // Adjust padding for inner scroll container
+                padding: 15px 15px;
             }
 
             .icon-box {
-                // Adjust flex-basis for even smaller screens, maybe 2.5 or 2 items
-                flex: 0 0 35%; // Example for maybe 2-3 items visible at a time
-                // width: 100%; // Remove or override this if flex-basis is used
+                flex: 0 0 35%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 0; // Remove padding as it might interfere with flex-basis
-                gap: 8px; // Adjusted gap for content inside the box
+                padding: 0;
+                gap: 8px;
                 justify-content: flex-start;
-                scroll-snap-align: start; // Explicitly set for smaller breakpoint too
+                scroll-snap-align: start;
 
                 img {
                     width: 30px;
@@ -164,7 +156,7 @@
             }
 
             .icon-box {
-                flex: 0 0 45%; // For very small screens, maybe 2 items per view
+                flex: 0 0 45%;
                 img {
                     width: 28px;
                     height: 28px;
