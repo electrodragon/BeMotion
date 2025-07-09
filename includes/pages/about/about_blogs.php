@@ -1,6 +1,6 @@
 <section class="about-blogs">
 
-    <div class="container-fluid px-5">
+    <div class="container-fluid">
 
         <div class="blogs-container">
             <div class="bog-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200"

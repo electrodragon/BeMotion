@@ -1,7 +1,5 @@
 .what-we-do-section {
   background-color: #F7F7F7;
-  margin-top: 40px;
-  height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,12 +31,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2a9d8f;
     width: 500px;
 
     .image {
       position: absolute;
       transition: all 1s ease;
+      border-radius: 20px;
 
       &:hover {
         transform: scale(1.1);
@@ -105,17 +103,49 @@
 
   // Responsive tweaks
   @media (max-width: 767.98px) {
-    .image-1,
-    .image-2,
-    .image-3 {
-      position: static;
-      width: 100%;
-      transform: none;
-      margin-bottom: 1rem;
+    .side-most-img {
+      display: none !important;
     }
 
-    .image-stack {
+    .three-img-container {
       flex-direction: column;
+      padding: 0;
+      gap: 20px; // ✅ Lower gap
+
+      .image-stack {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+
+        .image {
+          position: relative; // ✅ Not absolute on mobile
+          transform: none;
+          margin-bottom: 20px;
+          //width: 80%; // ✅ Responsive width
+        }
+
+        .image-2 {
+          bottom: 40px;
+          left: -40px;
+        }
+
+        .image-3 {
+          top: -80px;
+          right: -40px;
+        }
+      }
+
+      .contents {
+        padding: 0 16px;
+        //text-align: center;
+
+        ul {
+          padding-left: 1rem;
+        }
+      }
     }
   }
 }

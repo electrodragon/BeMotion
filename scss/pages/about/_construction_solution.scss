@@ -32,7 +32,7 @@
 
   // Tablet & Below
   @media (max-width: 768px) {
-    width: 500px;
+    width: 100%;
     flex-direction: column;
     border-radius: 1.5rem;
     padding-bottom: 10px;
@@ -51,16 +51,15 @@
 
   // Extra Small Screens
   @media (max-width: 480px) {
-    width: 400px;
+    width: 90%;
     padding: 1rem 1.2rem;
-
     .btn-cta {
       font-size: 0.9rem;
       padding: 0.6rem 1rem;
     }
 
     .cta-text {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 }
