@@ -1,5 +1,6 @@
 .companies {
   padding: 80px 0;
+  overflow: hidden;
 
   .companies-wrapper {
     background: #3ba0ff url('/assets/images/our_company_section.png') repeat;
@@ -22,16 +23,16 @@
 
       .company-cards {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         gap: 30px;
         flex-wrap: wrap;
         position: relative;
         bottom: -80px;
+        background: red;
 
         .company-card {
           background: #fff;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-          overflow: hidden;
           width: 400px;
           transition: transform 0.3s ease;
 
@@ -41,7 +42,6 @@
 
           .company-img {
             width: 100%;
-            height: 300px;
             object-fit: cover;
           }
 
@@ -101,11 +101,13 @@
           border-radius: 0 30px 10px 10px;
         }
       }
+
     }
   }
 }
+
 @media (max-width: 768px) {
-  .companies {
+  .companies-mobile {
     padding: 40px 0;
 
     .companies-wrapper {
@@ -120,64 +122,63 @@
           padding-left: 16px;
         }
 
-        .company-cards {
-          display: flex;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-          scroll-behavior: smooth;
-          gap: 16px;
-          padding: 0 0 0 16px; // ✅ Remove right padding
-          margin-top: 20px;
-          margin-bottom: 30px;
+        .glider-contain {
+          width: 100%;
+          padding: 0 5px;
+          background: red;
 
-          .company-card {
-            flex: 0 0 85%;
-            scroll-snap-align: start;
-            min-width: 280px;
-            max-width: 85%;
-            border-radius: 16px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          .company-cards {
+            flex-wrap: nowrap;
+            gap: 50px;
+            width: 100%;
+            background: violet;
+            //padding: 0 0 0 16px; // ✅ Remove right padding
+            //margin-top: 20px;
+            //margin-bottom: 30px;
+            margin: 0;
+            //padding: 10px;
 
-            .company-img {
-              height: 200px;
-              object-fit: cover;
-            }
+            .company-card {
+              background: yellowgreen;
+              flex: 0 0 100% !important;
+              //scroll-snap-align: start;
+              //min-width: 280px;
+              //max-width: 85%;
+              width: 100px !important;
+              border-radius: 16px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
-            .company-location {
-              font-size: 0.6rem;
-              //width: auto;
-              padding: 6px 10px;
-              margin: 10px;
-              position: static;
-            }
-
-            .company-info {
-              flex-direction: column;
-              align-items: flex-start;
-              padding: 10px 16px;
-              gap: 6px;
-
-              h3 {
-                font-size: 1rem;
+              .company-img {
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
               }
 
-              .company-link {
-                font-size: 0.9rem;
+              .company-location {
+                font-size: 0.6rem;
+                padding: 6px 10px;
+                //margin: 10px;
+                //position: static;
+              }
+
+              .company-info {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 16px;
+                gap: 6px;
+
+                h3 {
+                  font-size: 1rem;
+                }
+
+                .company-link {
+                  font-size: 0.9rem;
+                }
               }
             }
           }
         }
       }
     }
-  }
-
-  .companies .company-cards::-webkit-scrollbar {
-    display: none;
-  }
-
-  .companies .company-cards {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 }
