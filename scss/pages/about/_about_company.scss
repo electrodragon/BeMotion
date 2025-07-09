@@ -1,4 +1,5 @@
 .about-company-section {
+  overflow: hidden;
 
   .title {
     display: flex;
@@ -74,6 +75,7 @@
     img {
       position: relative;
       z-index: 2;
+      border-radius: 0 0 0 15px;
     }
 
     &::after {
@@ -166,6 +168,21 @@
     padding: 8px 20px;
     gap: 15px;
     width: 90%;
+
+    .experience-image {
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 2rem;
+        top: 20px;
+        left: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: #FFF0E6; // soft peach shadow
+        z-index: 1;
+        //filter: blur(4px);
+      }
+    }
 
     .exp-badge {
       left: 12px;

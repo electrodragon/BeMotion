@@ -60,7 +60,7 @@
                         </span>
 
                         <div class="d-flex flex-column align-items-center gap-1">
-                            <small class="text-muted">Want to Discuss:</small><br/>
+                            <small class="text-muted">Want to Discuss:</small>
                             <strong>+91(123)56789</strong>
                         </div>
                     </div>
