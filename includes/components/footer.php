@@ -15,14 +15,14 @@
 
             <div class="footer-newsletter col-12 col-md-6 text-md-end text-center">
                 <h4 class="mb-2 text-white text-start">Join <br /> Newsletter</h4>
-                <div class="newsletter-form d-inline-flex flex-wrap justify-content-center justify-content-md-end">
+                <div class="newsletter-form d-inline-flex justify-content-center justify-content-md-end">
                     <input type="email" placeholder="Your email" class="mb-2 mb-md-0" />
                     <button type="submit">Submit</button>
                 </div>
             </div>
         </div>
 
-        <div class="footer-grid row py-4 gx-4 gy-5">
+        <div class="footer-grid row py-4">
             <div class="footer-col col-12 col-md-6 col-lg-3">
                 <h3>BeMotion</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.</p>
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="footer-col col-6 col-md-6 col-lg-3">
+            <div class="footer-col col-4 col-lg-3">
                 <h3>Resources</h3>
                 <ul class="footer-links">
                     <li><a href="#">About Us</a></li>
@@ -45,7 +45,7 @@
                 </ul>
             </div>
 
-            <div class="footer-col col-6 col-md-6 col-lg-3">
+            <div class="footer-col col-4 col-lg-3">
                 <h3>Company</h3>
                 <ul class="footer-links">
                     <li><a href="#">Lorem Ipsum</a></li>
@@ -54,7 +54,7 @@
                 </ul>
             </div>
 
-            <div class="footer-col col-12 col-md-6 col-lg-3">
+            <div class="footer-col col-4 col-lg-3">
                 <h3>Help Page</h3>
                 <ul class="footer-links">
                     <li><a href="#">Private Policy</a></li>
