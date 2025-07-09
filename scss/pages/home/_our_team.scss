@@ -75,50 +75,49 @@
     padding: 40px 0;
 
     .our-team-top-area {
-      padding: 0 16px; // Adjust padding for smaller screens
+      padding: 0 16px;
     }
 
     .our-team-cards {
-      display: block; // Changed to block to allow horizontal scrolling
-      width: 100%; // Ensure it takes full width
-      overflow-x: scroll; // Enable horizontal scrolling
+      display: block;
+      width: 100%;
+      overflow-x: scroll;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      padding: 0 16px; // Padding for the scrollable area
+      padding: 0 16px;
 
       &::-webkit-scrollbar {
-        display: none; // Hide scrollbar for a cleaner look
+        display: none;
       }
 
       .team-card-slider-track {
         display: flex;
-        flex-wrap: nowrap; // Crucial for horizontal scrolling
+        flex-wrap: nowrap;
         gap: 16px;
-        padding-bottom: 20px; // Add some padding to prevent content from being cut off by scrollbar
-        min-width: max-content; // Ensures the track is wide enough for all cards
-        align-items: flex-start; // Align items to the start for better visual consistency
+        padding-bottom: 20px;
+        min-width: max-content;
+        align-items: flex-start;
       }
 
       .our-team-card {
-        flex: 0 0 85%; // Each card takes 85% of the viewport width
-        max-width: 300px; // Retain a max-width
-        scroll-snap-align: center; // Snap to the center of the card
+        flex: 0 0 85%;
+        max-width: 300px;
+        scroll-snap-align: center;
         border-radius: 12px;
         background: white;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out;
-        margin-right: 16px; // Add some margin between cards for better visual spacing
+        margin-right: 16px;
 
-        // Remove the translateY on hover for mobile, as it can conflict with scrolling gestures
         &:hover {
-          transform: none; // Reset transform on hover for mobile
+          transform: none;
         }
 
         .card-image {
           height: 220px;
           object-fit: cover;
           width: 100%;
-          border-top-left-radius: 12px; // Apply border-radius to the image as well
+          border-top-left-radius: 12px;
           border-top-right-radius: 12px;
         }
 
