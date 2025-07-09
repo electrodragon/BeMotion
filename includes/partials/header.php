@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Fenix&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css"> <!-- Make sure our Css file is placed under all other CDNs, so it will override the libs -->
 <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.9/glider.min.css">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.9/glider.min.css">-->
 
 </head>
 <body>

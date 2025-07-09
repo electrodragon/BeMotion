@@ -23,41 +23,46 @@
     justify-content: center;
     gap: 32px;
 
-    .our-team-card {
-      width: 300px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      font-family: Arial, sans-serif;
-      background: white;
-      transition: transform 0.1s ease-in;
+    .team-card-slider-track {
+      display: flex;
+      gap: 20px;
 
-      &:hover {
-        transform: translateY(-10px);
-      }
+      .our-team-card {
+        width: 300px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        font-family: Arial, sans-serif;
+        background: white;
+        transition: transform 0.3s ease-in;
 
-      .card-image {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .card-content {
-        padding: 16px;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-
-        .card-title {
-          margin: 0 0 8px 0;
-          font-size: 1.2rem;
-          color: #333;
+        &:hover {
+          transform: translateY(-10px);
         }
 
-        .card-text {
-          margin: 0;
-          font-size: 0.9rem;
-          color: #666;
-          line-height: 1.5;
+        .card-image {
+          width: 100%;
+          height: 350px;
+          object-fit: cover;
+          display: block;
+        }
+
+        .card-content {
+          padding: 16px;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+
+          .card-title {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            color: #333;
+          }
+
+          .card-text {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+          }
         }
       }
     }
@@ -69,28 +74,59 @@
     height: auto;
     padding: 40px 0;
 
+    .our-team-top-area {
+      padding: 0 16px; // Adjust padding for smaller screens
+    }
+
     .our-team-cards {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
+      display: block; // Changed to block to allow horizontal scrolling
+      width: 100%; // Ensure it takes full width
+      overflow-x: scroll; // Enable horizontal scrolling
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      gap: 16px;
-      padding: 0 16px;
+      padding: 0 16px; // Padding for the scrollable area
 
       &::-webkit-scrollbar {
-        display: none;
+        display: none; // Hide scrollbar for a cleaner look
+      }
+
+      .team-card-slider-track {
+        display: flex;
+        flex-wrap: nowrap; // Crucial for horizontal scrolling
+        gap: 16px;
+        padding-bottom: 20px; // Add some padding to prevent content from being cut off by scrollbar
+        min-width: max-content; // Ensures the track is wide enough for all cards
+        align-items: flex-start; // Align items to the start for better visual consistency
       }
 
       .our-team-card {
-        flex: 0 0 80% !important; // ← Force this override
-        width: auto !important;   // ← Cancel out the fixed 300px
-        scroll-snap-align: start;
+        flex: 0 0 85%; // Each card takes 85% of the viewport width
+        max-width: 300px; // Retain a max-width
+        scroll-snap-align: center; // Snap to the center of the card
         border-radius: 12px;
         background: white;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        margin-right: 16px; // Add some margin between cards for better visual spacing
+
+        // Remove the translateY on hover for mobile, as it can conflict with scrolling gestures
+        &:hover {
+          transform: none; // Reset transform on hover for mobile
+        }
+
+        .card-image {
+          height: 220px;
+          object-fit: cover;
+          width: 100%;
+          border-top-left-radius: 12px; // Apply border-radius to the image as well
+          border-top-right-radius: 12px;
+        }
+
+        .card-content {
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
       }
     }
   }
 }
-
