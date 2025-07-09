@@ -1,14 +1,14 @@
 <section class="product-features-container">
-    <ul class="nav nav-pills justify-content-center mb-4" id="productTab"
+    <ul class="nav nav-pills justify-content-center" id="productTab"
         role="tablist">
         <li class="nav-item" role="presentation" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <button class="nav-link active rounded-pill px-4" id="details-tab" data-bs-toggle="pill"
+            <button class="nav-link active rounded-pill" id="details-tab" data-bs-toggle="pill"
                     data-bs-target="#details" type="button" role="tab">
                 Details
             </button>
         </li>
         <li class="nav-item" role="presentation" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <button class="nav-link rounded-pill px-5" id="description-tab" data-bs-toggle="pill"
+            <button class="nav-link rounded-pill" id="description-tab" data-bs-toggle="pill"
                     data-bs-target="#description" type="button" role="tab">
                 Description
             </button>
@@ -16,7 +16,7 @@
     </ul>
 
     <!-- Tabs Content -->
-    <div class="tab-content" id="productTabContent">
+    <div class="tab-content mt-4" id="productTabContent">
 
         <!-- Details Tab -->
         <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">

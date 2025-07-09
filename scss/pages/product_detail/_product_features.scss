@@ -6,21 +6,22 @@
   padding: 16px 0;
 
   .nav-pills {
-    width: 50%;
+    width: 40%;
+    display: flex;
     background-color: var(--light);
     border-radius: 50px;
-    padding: 8px 4px;
+    padding: 8px 16px;
 
     .nav-item {
-      width: 50%;
+      flex: 1;
       display: flex;
       justify-content: center;
 
       .nav-link {
+        flex: 1;
         font-weight: 600;
         color: #555;
         transition: all 0.3s ease;
-        width: 60%;
 
         &.active {
           background-color: white;
@@ -81,19 +82,19 @@
   // 📱 Mobile Devices (up to 576px)
   @media (max-width: 576px) {
     .nav-pills {
-      border-radius: 20px;
-      padding: 8px 4px;
+      //border-radius: 20px;
+      //padding: 8px 4px;
       width: 100%;
 
       .nav-item {
-        width: 100%;
-        margin-bottom: 10px;
+        //width: 100%;
+        //margin-bottom: 10px;
         //background-color: red;
-        border-radius: 30px;
+        //border-radius: 30px;
 
 
         .nav-link {
-          width: 100%;
+          //width: 100%;
           //background-color: red;
         }
       }
@@ -113,7 +114,7 @@
 
       .nav-item {
         .nav-link {
-          width: 80%;
+          //width: 80%;
         }
       }
     }
@@ -128,18 +129,18 @@
   // 💻 Small Laptops (up to 992px)
   @media (max-width: 992px) {
     .nav-pills {
-      width: 70%;
+      width: 80%;
 
       .nav-item {
         .nav-link {
-          width: 70%;
+          //width: 70%;
         }
       }
     }
 
     .tab-content {
       .tab-pane {
-        width: 70%;
+        //width: 70%;
       }
     }
   }

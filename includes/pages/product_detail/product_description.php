@@ -26,9 +26,21 @@
                 <div class="social-media">
                     <p>Social Media</p>
                     <div class="social-icons" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#">
+                            <div>
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div>
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div>
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <button class="buy-btn">Buy Now</button>
