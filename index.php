@@ -34,6 +34,47 @@ function custom_page_scripts() {
         });
     </script>
 
+    <script>
+        const images = [
+            '/assets/images/loving-hens.jpg',
+            '/assets/images/chickens-different-colors-farmyard-daytime.jpeg',
+            '/assets/images/cookreyan.png'
+        ];
+
+        let currentIndex = 0;
+
+        const section = document.querySelector('.benefits');
+        const leftBtn = document.querySelector('.benefits-nav.left');
+        const rightBtn = document.querySelector('.benefits-nav.right');
+
+        // // Preload images
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Function to update background
+        function updateBackground(index) {
+            section.style.backgroundImage = `url('${images[index]}')`;
+        }
+
+        // Next image
+        rightBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateBackground(currentIndex);
+        });
+
+        // Previous image
+        leftBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateBackground(currentIndex);
+        });
+
+        // Set initial background explicitly (if not already set in CSS)
+        updateBackground(currentIndex);
+    </script>
+
+
     <?php
 }
 

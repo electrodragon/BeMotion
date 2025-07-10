@@ -1,5 +1,5 @@
 .benefits {
-  background: url('../../../assets/images/loving-hens.jpg') center/cover no-repeat;
+  background: url('/assets/images/loving-hens.jpg') center/cover no-repeat;
   height: 900px; // previously 100vh
   position: relative;
   display: flex;
@@ -8,6 +8,7 @@
   overflow: hidden;
   color: var(--white);
   padding: 80px 0;
+  transition: background-image 0.6s ease-in-out;
 
   .benefits-overlay {
     background: rgba(0, 0, 0, 0.5); // dark overlay
