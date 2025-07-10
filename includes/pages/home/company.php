@@ -8,7 +8,7 @@
                 <!-- Card 1 -->
                 <div class="company-card card-1" data-aos="fade-right" data-aos-duration="3000"
                      data-aos-easing="ease-in-out">
-                    <img src="/assets/images/eating-dog.png" alt="Company 1" class="company-img">
+                    <img src="/assets/images/feeding-hens.png" alt="Company 1" class="company-img">
                     <div class="company-location">
                         <i class="fas fa-map-marker-alt"></i> 100 Sunrise Ct Hamel, Minnesota(MN)
                     </div>
@@ -49,7 +49,7 @@
                 <div class="company-cards">
                     <div class="company-card card-1" data-aos="fade-right" data-aos-duration="3000"
                          data-aos-easing="ease-in-out">
-                        <img src="/assets/images/eating-dog.png" alt="Company 1" class="company-img">
+                        <img src="/assets/images/feeding-hens.png" alt="Company 1" class="company-img">
                         <div class="company-location">
                             <i class="fas fa-map-marker-alt"></i> 100 Sunrise Ct Hamel, Minnesota(MN)
                         </div>

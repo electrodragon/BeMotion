@@ -1,5 +1,5 @@
 .companies {
-  padding: 80px 0;
+  padding: 0 0 80px 0;
   overflow: hidden;
 
   .companies-wrapper {
@@ -11,7 +11,6 @@
     padding: 20px 0;
 
     .companies-container {
-      //width: 1400px;
       width: 90%;
       padding: 0;
       display: flex;
@@ -26,13 +25,12 @@
         margin: 40px 0 50px 0;
       }
 
-      // --- Common Company Card Styles ---
       .company-card {
         background: #fff;
         width: 500px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         transition: transform 0.3s ease;
-        border-radius: 10px; // Default border-radius for all cards
+        border-radius: 10px;
 
         &:hover {
           transform: translateY(-5px);
@@ -41,41 +39,41 @@
         .company-img {
           width: 100%;
           object-fit: cover;
-          height: 250px; // Set a default height, adjust as needed
+          height: 250px;
         }
 
         .company-location {
           background: #ff6b00;
           color: #fff;
           padding: 5px 10px;
-          font-size: 0.8rem; // Adjusted font size for better readability
+          font-size: 0.8rem;
           border-radius: 50px;
           display: flex;
           align-items: center;
           gap: 8px;
           position: relative;
-          bottom: 15px; // Lifts the location bubble
+          bottom: 15px;
           left: 20px;
-          width: fit-content; // Make width adjust to content
-          max-width: calc(100% - 40px); // Prevent it from going too wide
+          width: fit-content;
+          max-width: calc(100% - 40px);
         }
 
         .company-info {
-          padding: 0 30px 20px; // Added bottom padding
+          padding: 0 30px 20px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           position: relative;
 
           h3 {
-            font-size: 1.1rem; // Adjusted font size
+            font-size: 1.1rem;
             font-weight: 600;
             text-align: left;
-            margin: 0; // Remove default heading margin
+            margin: 0;
           }
 
           .company-link {
-            font-size: 1rem; // Adjusted font size
+            font-size: 1rem;
             color: #000;
             text-align: right;
             text-decoration: none;
@@ -89,106 +87,88 @@
         }
       }
 
-      // Specific border-radius for desktop cards (if desired)
-      .company-card.card-1 { border-radius: 30px 10px 10px 10px; } // Adjusted top-right for consistency
-      .company-card.card-2 { border-radius: 10px; } // Simple 10px radius
-      .company-card.card-3 { border-radius: 10px 30px 10px 10px; } // Adjusted top-left for consistency
+      .company-card.card-1 { border-radius: 30px 10px 10px 10px; }
+      .company-card.card-2 { border-radius: 10px; }
+      .company-card.card-3 { border-radius: 10px 30px 10px 10px; }
 
-      // --- Desktop Only Layout ---
       .desktop-only {
-        display: block; // Show on desktop
+        display: block;
       }
 
-      .desktop-only.company-cards { // Target the desktop specific card container
+      .desktop-only.company-cards {
         display: flex;
-        justify-content: space-between; // Distribute space
-        gap: 30px; // Space between cards
-        flex-wrap: wrap; // Allow wrapping on desktop
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
         position: relative;
-        bottom: -80px; // Lifts the entire row of cards
-        // background: red; // Debugging background, remove in production
+        bottom: -80px;
 
         .company-card {
-          width: calc(33.333% - 20px); // Responsive width for 3 cards with gap
-          min-width: 300px; // Ensure cards don't get too small
+          width: calc(33.333% - 20px);
+          min-width: 300px;
         }
       }
 
-      // --- Mobile Only Layout (using .glider-contain structure) ---
       .mobile-only {
-        display: none; // Hide on desktop by default
+        display: none;
       }
 
       .glider-contain {
-        // This is the container for your mobile slider
         width: 100%;
-        margin: 0 auto; // Center the glider container
-        // background: red; // Debugging background, remove in production
+        margin: 0 auto;
 
-        .company-cards { // This is the actual scrollable flex container for mobile
+        .company-cards {
           display: flex;
-          flex-wrap: nowrap; // Crucial for horizontal scrolling
-          overflow-x: auto; // Enable horizontal scrolling
-          scroll-snap-type: x mandatory; // Snap to cards
-          -webkit-overflow-scrolling: touch; // Smoother scrolling on iOS
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          scroll-padding-left: 20px;
+          padding: 20px;
+          margin: 0;
+          gap: 20px;
+          justify-content: flex-start;
 
-          // --- FIX for mobile slider left padding ---
-          // Use scroll-padding-left to ensure the snap point respects padding
-          scroll-padding-left: 20px; // This should match your desired left padding
-          // The padding-left on this container still provides visual space,
-          // but scroll-padding-left tells the browser where to snap items.
-          padding-left: 20px;
-          padding-right: 20px; // Keep padding-right for consistent end space
-          // --- END FIX ---
-
-          margin: 0; // Reset any default margin
-          gap: 20px; // Gap between mobile slider cards (adjust as needed)
-          justify-content: flex-start; // Align items to the start for scrolling
-
-          // Hide scrollbar for WebKit browsers (Chrome, Safari, etc.)
           &::-webkit-scrollbar {
             display: none;
           }
-          // Hide scrollbar for Internet Explorer, Edge, and Firefox
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
+          -ms-overflow-style: none;
+          scrollbar-width: none;
 
 
           .company-card {
-            flex: 0 0 85%; // Each card takes 85% of the viewport width (adjust as needed)
-            min-width: 280px; // Prevent cards from becoming too narrow
-            max-width: 400px; // Prevent cards from becoming too wide on slightly larger mobiles
-            scroll-snap-align: start; // Snap cards to the start
-            border-radius: 16px; // Adjust mobile card radius
+            flex: 0 0 85%;
+            min-width: 280px;
+            max-width: 400px;
+            scroll-snap-align: start;
+            border-radius: 16px;
 
-            // Reset desktop-specific positioning for mobile cards
             position: static;
             bottom: auto;
             left: auto;
-            margin-bottom: 0; // Remove desktop margin-bottom
-            // background: yellowgreen; // Debugging background, remove in production
+            margin-bottom: 0;
 
             &:hover {
-              transform: none; // Disable hover transform for touch devices
+              transform: none;
             }
 
             .company-img {
-              height: 250px; // Adjust image height for mobile
+              height: 250px;
             }
 
             .company-location {
-              font-size: 0.7rem; // Adjust font size for mobile
-              padding: 6px 12px; // Adjust padding
-              bottom: 20px; // Adjust lift
-              left: 15px; // Adjust position
-              max-width: calc(100% - 30px); // Adjust max-width based on new left/right
+              font-size: 0.7rem;
+              padding: 6px 12px;
+              bottom: 20px;
+              left: 15px;
+              max-width: calc(100% - 30px);
             }
 
             .company-info {
-              flex-direction: column; // Stack elements vertically
-              align-items: flex-start; // Align to start
-              padding: 10px 20px 15px; // Adjust padding
-              gap: 8px; // Space between h3 and link
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 10px 20px 15px;
+              gap: 8px;
 
               h3 {
                 font-size: 1rem;
@@ -205,27 +185,25 @@
   }
 }
 
-// Global responsive adjustments for .companies-wrapper
 @media (max-width: 1400px) {
   .companies .companies-wrapper .companies-container {
-    max-width: 95%; // Allow container to expand more on smaller large screens
+    max-width: 95%;
   }
 }
 
-// Breakpoint for switching from desktop to mobile layout
 @media (max-width: 768px) {
   .companies {
-    padding: 40px 0; // Adjust section padding for mobile
+    padding: 40px 0;
   }
 
   .companies .companies-wrapper {
-    align-items: flex-start; // Adjust alignment for mobile
-    padding: 10px 0; // Adjust padding
+    align-items: flex-start;
+    padding: 10px 0;
   }
 
   .companies .companies-wrapper .companies-container {
-    width: 100%; // Full width on mobile
-    max-width: 100%; // Ensure it uses full width
+    width: 100%;
+    max-width: 100%;
   }
 
   .companies .companies-wrapper .companies-container .title {
