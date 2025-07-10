@@ -2,10 +2,10 @@
   height: 900px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background: #F1F4FB;
   align-items: center;
-  padding: 80px 0;
+  //padding: 0px 0;
   overflow: hidden;
 
   .our-team-top-area {
@@ -14,7 +14,7 @@
     justify-content: center;
     padding: 0 20px;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
   }
 
   .our-team-cards {
@@ -22,6 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
+    margin-bottom: 150px;
 
     .team-card-slider-track {
       display: flex;
@@ -84,11 +85,15 @@
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      padding: 0 16px;
+      padding: 16px 16px 0;
+      margin-bottom: 0;
 
       &::-webkit-scrollbar {
         display: none;
       }
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
 
       .team-card-slider-track {
         display: flex;
