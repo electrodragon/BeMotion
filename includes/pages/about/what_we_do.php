@@ -8,13 +8,13 @@
             <!-- Left Image Layout -->
             <div class="col-lg-6 position-relative text-center image-stack">
                 <div class="image image-1 shadow" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-                    <img src="/assets/images/about_page/brown_chicken_farms.jpg" class="img-fluid rounded-4" alt="Chickens">
+                    <img src="/assets/images/about_page/brown_chicken_farms.webp" class="img-fluid rounded-4" alt="Chickens">
                 </div>
                 <div class="image image-2 shadow" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-                    <img src="/assets/images/about_page/bottle.jpg" class="img-fluid rounded-4" alt="Medicine Bottle">
+                    <img src="/assets/images/about_page/bottle.webp" class="img-fluid rounded-4" alt="Medicine Bottle">
                 </div>
                 <div class="image image-3 shadow" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-                    <img src="/assets/images/about_page/test_tube_check.jpg" class="img-fluid rounded-4" alt="Lab Research">
+                    <img src="/assets/images/about_page/test_tube_check.webp" class="img-fluid rounded-4" alt="Lab Research">
                 </div>
             </div>
 

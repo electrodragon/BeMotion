@@ -26,7 +26,7 @@
             <div class="faq-bottom">
 <!--                Images-->
                 <div class="faq-images mt-4">
-                    <img src="/assets/images/faqs_page/cow_bulls_cowshed_farm.jpg" class="faq-main-img rounded-5 mb-3" alt="hens" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+                    <img src="/assets/images/faqs_page/cow_bulls_cowshed_farm.webp" class="faq-main-img rounded-5 mb-3" alt="hens" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
                     <img src="/assets/images/faqs_page/worker.png" class="faq-sub-img" alt="workers" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
                 </div>
 

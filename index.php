@@ -24,9 +24,9 @@ function custom_page_scripts() {
 
     <script>
         const images = [
-            '/assets/images/loving-hens.jpg',
+            '/assets/images/loving-hens.webp',
             '/assets/images/chickens-different-colors-farmyard-daytime.jpeg',
-            '/assets/images/cookreyan.png'
+            '/assets/images/cookreyan.webp'
         ];
 
         let currentIndex = 0;

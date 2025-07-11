@@ -6,7 +6,7 @@
             <div class="col-sm-6 d-flex justify-items-center align-items-center px-4 mt-5">
                 <div class="blog-card">
                     <div class="card-image-container">
-                        <img src="/assets/images/blogs_page/granny_with_eggs.jpg" alt="granny" class="rounded">
+                        <img src="/assets/images/blogs_page/granny_with_eggs.webp" alt="granny" class="rounded">
                     </div>
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
@@ -33,7 +33,7 @@
             <div class="col-sm-6 px-4 mt-5">
                 <div class="blog-card">
                     <div class="card-image-container">
-                        <img src="/assets/images/blogs_page/loving-hens.jpg" alt="granny" class="rounded">
+                        <img src="/assets/images/blogs_page/loving-hens.webp" alt="granny" class="rounded">
                     </div>
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
@@ -60,7 +60,7 @@
             <div class="col-sm-6 px-4 mt-5">
                 <div class="blog-card">
                     <div class="card-image-container">
-                        <img src="/assets/images/blogs_page/cow_bulls_cowshed_farm.jpg" alt="granny" class="rounded">
+                        <img src="/assets/images/blogs_page/cow_bulls_cowshed_farm.webp" alt="granny" class="rounded">
                     </div>
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
@@ -85,7 +85,7 @@
             <div class="col-sm-6 px-4 mt-5">
                 <div class="blog-card">
                     <div class="card-image-container">
-                        <img src="/assets/images/blogs_page/brown_chicken_farms.jpg" alt="granny" class="rounded">
+                        <img src="/assets/images/blogs_page/brown_chicken_farms.webp" alt="granny" class="rounded">
                     </div>
                     <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
                     <p class="mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,

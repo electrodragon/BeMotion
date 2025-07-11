@@ -6,7 +6,7 @@
         <div class="row blog-recent-card">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
-                    <img class="rounded" src="/assets/images/blogs_page/granny_with_eggs.jpg" alt="granny">
+                    <img class="rounded" src="/assets/images/blogs_page/granny_with_eggs.webp" alt="granny">
                 </div>
             </div>
             <div class="col-sm-8">
@@ -40,7 +40,7 @@
         <div class="row mt-4 blog-recent-card">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
-                    <img class="rounded" src="/assets/images/blogs_page/pigs_vaccination.jpg" alt="granny">
+                    <img class="rounded" src="/assets/images/blogs_page/pigs_vaccination.webp" alt="granny">
                 </div>
             </div>
             <div class="col-sm-8">
@@ -74,7 +74,7 @@
         <div class="row mt-4 blog-recent-card">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
-                    <img class="rounded" src="/assets/images/blogs_page/sprayer.jpg" alt="granny">
+                    <img class="rounded" src="/assets/images/blogs_page/sprayer.webp" alt="granny">
                 </div>
             </div>
             <div class="col-sm-8">
@@ -108,7 +108,7 @@
         <div class="row mt-4 blog-recent-card">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
-                    <img class="rounded" src="/assets/images/blogs_page/loving-hens.jpg" alt="granny">
+                    <img class="rounded" src="/assets/images/blogs_page/loving-hens.webp" alt="granny">
                 </div>
             </div>
             <div class="col-sm-8">
@@ -142,7 +142,7 @@
         <div class="row mt-4 blog-recent-card">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
-                    <img class="rounded" src="/assets/images/blogs_page/cow_bulls_cowshed_farm.jpg" alt="granny">
+                    <img class="rounded" src="/assets/images/blogs_page/cow_bulls_cowshed_farm.webp" alt="granny">
                 </div>
             </div>
             <div class="col-sm-8">
@@ -176,7 +176,7 @@
         <div class="row mt-4 blog-recent-card">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
-                    <img class="rounded" src="/assets/images/blogs_page/brown_chicken_farms.jpg" alt="granny">
+                    <img class="rounded" src="/assets/images/blogs_page/brown_chicken_farms.webp" alt="granny">
                 </div>
             </div>
             <div class="col-sm-8">

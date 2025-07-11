@@ -8,7 +8,7 @@
 
     <div class="our-team-cards">
         <div class="our-team-card team-card-1" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-            <img src="/assets/images/team_p_1.jpg" alt="Card image" class="card-image">
+            <img src="/assets/images/team_p_1.webp" alt="Card image" class="card-image">
 
             <div class="card-content">
                 <h3 class="card-title">Marc Chiasson</h3>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="our-team-card team-card-2" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-            <img src="/assets/images/team_p_2.jpg" alt="Card image" class="card-image">
+            <img src="/assets/images/team_p_2.webp" alt="Card image" class="card-image">
 
             <div class="card-content">
                 <h3 class="card-title">Qalim Thams</h3>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="our-team-card team-card-3" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-            <img src="/assets/images/team_p_3.jpg" alt="Card image" class="card-image">
+            <img src="/assets/images/team_p_3.webp" alt="Card image" class="card-image">
 
             <div class="card-content">
                 <h3 class="card-title">Millar Chiasson</h3>

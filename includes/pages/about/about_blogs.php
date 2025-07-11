@@ -13,7 +13,7 @@
                 <div class="blog-card">
                     <div class="card-image-container" data-aos="fade-right" data-aos-duration="1000"
                          data-aos-offset="200" data-aos-easing="ease-in-out">
-                        <img src="/assets/images/blogs_page/loving-hens.jpg" alt="granny" class="rounded">
+                        <img src="/assets/images/blogs_page/loving-hens.webp" alt="granny" class="rounded">
                     </div>
 
                     <h3 class="mt-4" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="200"
@@ -47,7 +47,7 @@
                 <div class="blog-card">
                     <div class="card-image-container" data-aos="fade-left" data-aos-duration="1000"
                          data-aos-offset="200" data-aos-easing="ease-in-out">
-                        <img src="/assets/images/blogs_page/brown_chicken_farms.jpg" alt="granny" class="rounded">
+                        <img src="/assets/images/blogs_page/brown_chicken_farms.webp" alt="granny" class="rounded">
                     </div>
 
                     <h3 class="mt-4" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="200"
