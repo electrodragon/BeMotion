@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="product-detail-form-container">
     <div class="titles" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
         <h2>Ipsam voluptatem voluptas </h2>
         <p>Donec purus mi, commodo id commodo vel, imperdiet ut mauris. Ut ultricies arcu risus, malesuada efficitur orci euismod in. Proin eleifend est risus, ac
