@@ -1,6 +1,6 @@
 <section class="blogs-page-features">
 
-    <div class="container">
+    <div class="container-fluid px-5">
 
         <div class="row">
             <div class="col-sm-6 d-flex justify-items-center align-items-center px-4 mt-5" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
