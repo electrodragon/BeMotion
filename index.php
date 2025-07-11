@@ -23,18 +23,6 @@ function custom_page_scripts() {
     glider_script(); ?>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Glider(document.querySelector('.company-cards'), {
-                slidesToShow: 'auto',
-                slidesToScroll: 1,
-                draggable: true,
-                arrows: false, // 🔥 Disable arrows
-                scrollLock: true,
-            });
-        });
-    </script>
-
-    <script>
         const images = [
             '/assets/images/loving-hens.jpg',
             '/assets/images/chickens-different-colors-farmyard-daytime.jpeg',
