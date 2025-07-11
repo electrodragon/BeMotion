@@ -4,8 +4,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
-  padding: 0 15px;
-  overflow: hidden;
+  padding: 10px 15px;
 
   .form-wrapper {
     background: #f9f9f9;
@@ -99,7 +98,8 @@
   // 📱 Media Queries
   @media (max-width: 991px) {
     .form-wrapper {
-      margin-top: 50px !important;
+      margin-top: 50px;
+      padding: 30px;
     }
   }
 
@@ -138,4 +138,3 @@
     }
   }
 }
-
