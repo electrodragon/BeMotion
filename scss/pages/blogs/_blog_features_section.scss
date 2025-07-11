@@ -1,5 +1,5 @@
 .blogs-page-features {
-  padding: 80px 0;
+  padding: 40px 0;
 
   .blog-card {
     width: 100%;
@@ -32,6 +32,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      padding-left: 8px;
 
       .blog-publish-date-dot {
         display: block;

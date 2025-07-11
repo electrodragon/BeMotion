@@ -35,7 +35,6 @@
       .categories-left {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         gap: 24px;
 
         .category {
@@ -53,35 +52,12 @@
         }
       }
 
-      .categories-right {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-
-        .author-image {
-          width: 80px;
-
-          img {
-            width: 100%;
-          }
+      @media (max-width: 768px) {
+        .categories-left {
+          font-size: 0.7rem;
+          gap: 12px;
         }
-
-        .author-detail {
-          display: flex;
-          flex-direction: column;
-
-          small {
-            color: gray;
-            font-weight: bold;
-          }
-
-          .author-name {
-            font-weight: bold;
-          }
-        }
-
       }
-
     }
 
  }

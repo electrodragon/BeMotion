@@ -3,7 +3,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-sm-6 d-flex justify-items-center align-items-center px-4 mt-5">
+            <div class="col-sm-6 d-flex justify-items-center align-items-center px-4 mt-5" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="blog-card">
                     <div class="card-image-container">
                         <img src="/assets/images/blogs_page/granny_with_eggs.webp" alt="granny" class="rounded">
@@ -21,7 +21,6 @@
                     </div>
 
                     <div class="d-flex align-items-center gap-5 mt-3">
-                        <span class="blog-author-name">By Gabie Shebber</span>
                         <span class="blog-publish-date">
                         <span class="blog-publish-date-dot"></span>
                         May 22, 2020
@@ -30,7 +29,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-6 px-4 mt-5">
+
+            <div class="col-sm-6 px-4 mt-5" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="blog-card">
                     <div class="card-image-container">
                         <img src="/assets/images/blogs_page/loving-hens.webp" alt="granny" class="rounded">
@@ -48,7 +48,6 @@
                     </div>
 
                     <div class="d-flex align-items-center gap-5 mt-3">
-                        <span class="blog-author-name">By Gabie Shebber</span>
                         <span class="blog-publish-date">
                         <span class="blog-publish-date-dot"></span>
                         May 22, 2020
@@ -57,7 +56,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-6 px-4 mt-5">
+
+            <div class="col-sm-6 px-4 mt-5" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="blog-card">
                     <div class="card-image-container">
                         <img src="/assets/images/blogs_page/cow_bulls_cowshed_farm.webp" alt="granny" class="rounded">
@@ -73,7 +73,6 @@
                         India</span>
                     </div>
                     <div class="d-flex align-items-center gap-5 mt-3">
-                        <span class="blog-author-name">By Gabie Shebber</span>
                         <span class="blog-publish-date">
                         <span class="blog-publish-date-dot"></span>
                         May 22, 2020
@@ -82,7 +81,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-6 px-4 mt-5">
+
+            <div class="col-sm-6 px-4 mt-5" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="blog-card">
                     <div class="card-image-container">
                         <img src="/assets/images/blogs_page/brown_chicken_farms.webp" alt="granny" class="rounded">
@@ -100,7 +100,6 @@
                     </div>
 
                     <div class="d-flex align-items-center gap-5 mt-3">
-                        <span class="blog-author-name">By Gabie Shebber</span>
                         <span class="blog-publish-date">
                         <span class="blog-publish-date-dot"></span>
                         May 22, 2020
