@@ -1,5 +1,5 @@
 <section class="blog-explore-section">
-    <div class="blog-explore-layout container">
+    <div class="blog-explore-layout container-fluid px-5">
 
         <h1 class="mb-3">Recent Posts</h1>
 
