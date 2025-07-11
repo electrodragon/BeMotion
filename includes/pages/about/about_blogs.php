@@ -33,8 +33,6 @@
                     </div>
 
                     <div class="d-flex align-items-center gap-5 mt-3">
-                        <span class="blog-author-name" data-aos="fade-right" data-aos-offset="5"
-                              data-aos-duration="1000" data-aos-easing="ease-in-out">By Gabie Shebber</span>
                         <span class="blog-publish-date" data-aos="fade-right" data-aos-offset="5" data-aos-delay="100"
                               data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="blog-publish-date-dot" data-aos="fade-right" data-aos-offset="5"
@@ -67,8 +65,6 @@
                     </div>
 
                     <div class="d-flex align-items-center gap-5 mt-3">
-                        <span class="blog-author-name" data-aos="fade-left" data-aos-offset="5" data-aos-duration="1000"
-                              data-aos-easing="ease-in-out">By Gabie Shebber</span>
                         <span class="blog-publish-date" data-aos="fade-left" data-aos-offset="5" data-aos-delay="100"
                               data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="blog-publish-date-dot" data-aos="fade-left" data-aos-offset="5"
