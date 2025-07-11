@@ -3,7 +3,7 @@
 
         <h1 class="mb-3">Recent Posts</h1>
 
-        <div class="row blog-recent-card" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="row blog-recent-card" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
                     <img class="rounded" src="/assets/images/blogs_page/pigs_vaccination.webp" alt="granny">
@@ -33,7 +33,7 @@
 
         </div>
 
-        <div class="row mt-4 blog-recent-card" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="row mt-4 blog-recent-card" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
                     <img class="rounded" src="/assets/images/blogs_page/granny_with_eggs.webp" alt="granny">
@@ -63,7 +63,7 @@
 
         </div>
 
-        <div class="row mt-4 blog-recent-card" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="row mt-4 blog-recent-card" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
                     <img class="rounded" src="/assets/images/blogs_page/sprayer.webp" alt="granny">
@@ -93,7 +93,7 @@
 
         </div>
 
-        <div class="row mt-4 blog-recent-card" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="row mt-4 blog-recent-card" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
                     <img class="rounded" src="/assets/images/blogs_page/loving-hens.webp" alt="granny">
@@ -123,7 +123,7 @@
 
         </div>
 
-        <div class="row mt-4 blog-recent-card" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="row mt-4 blog-recent-card" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
                     <img class="rounded" src="/assets/images/blogs_page/cow_bulls_cowshed_farm.webp" alt="granny">
@@ -153,7 +153,7 @@
 
         </div>
 
-        <div class="row mt-4 blog-recent-card" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="row mt-4 blog-recent-card" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="col-sm-4">
                 <div class="blog-recent-card-image-container">
                     <img class="rounded" src="/assets/images/blogs_page/brown_chicken_farms.webp" alt="granny">
