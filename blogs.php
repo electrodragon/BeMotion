@@ -1,3 +1,4 @@
+<?php header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");?>
 <?php include('includes/partials/header.php'); page_header('BeMotion - Home');// Partials ?>
 
     <?php include('includes/components/header.php'); // Component ?>
