@@ -57,7 +57,7 @@
 
       .load-more-button {
         text-transform: uppercase;
-        background: #7CC6F7;
+        background: var(--light-blue);
         border-radius: 24px;
         font-weight: bold;
         border: none;
@@ -67,7 +67,7 @@
 
         &:hover {
           cursor: pointer;
-          background: darken(#7CC6F7, 10%);
+          background: darken(#7BC6F7, 10%);
           transform: scale(1.05);
         }
       }
