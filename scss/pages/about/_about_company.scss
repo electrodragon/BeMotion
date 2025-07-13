@@ -14,6 +14,7 @@
   .section-tag {
     font-size: 0.9rem;
     font-weight: 500;
+    color: var(--light-blue);
   }
 
   .section-title {
@@ -39,8 +40,8 @@
   }
 
   .tab-pane {
-    border-left: 3px solid #7CC6F7;
-    border-bottom: 3px solid #E9E9E9;
+    border-left: 3px solid var(--light-blue);
+    border-bottom: 3px solid var(--light-blue);
     padding: 15px;
     font-size: 0.95rem;
     color: #555;
@@ -48,7 +49,7 @@
 
   .btn {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    background-color: #7CC6F7;
+    background-color: var(--light-blue);
     transition: background-color 0.3s ease-in;
 
     &:hover {
@@ -63,8 +64,8 @@
     padding: 15px;
     border-radius: 50%;
     transform: rotate(270deg);
-    color: #FF6600;
-    border: 2px solid #7CC6F7;
+    color: var(--orange);
+    border: 2px solid var(--light-blue);
     font-size: 1.2rem;
   }
 
@@ -109,20 +110,20 @@
 
     .exp-number {
       font-size: 4rem;
-      color: #f60;
+      color: var(--orange);
       font-weight: 800;
       line-height: 1;
     }
 
     .exp-text {
-      line-height: 1.1;
+      line-height: 0.8;
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
 
       .works-of {
         font-size: 1rem;
-        color: #7ca6d9;
+        color: var(--light-blue);
         font-weight: 500;
         text-align: left;
       }
@@ -130,7 +131,7 @@
       .experience-text {
         font-size: 2rem;
         font-weight: 800;
-        color: #77c3f2;
+        color: var(--light-blue);
         display: inline-block;
       }
     }
