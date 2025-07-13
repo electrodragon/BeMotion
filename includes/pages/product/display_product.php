@@ -27,12 +27,12 @@
 
         <!-- Filter Buttons -->
         <div class="button-slider d-flex justify-content-start gap-2 mb-5">
-            <button type="button" class="btn btn-primary rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">SEE ALL</button>
-            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Lorem</button>
-            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ispum</button>
-            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
-            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loreamsaa</button>
-            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
+            <button type="button" class="btn btn-pills-1 rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">SEE ALL</button>
+            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Lorem</button>
+            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ispum</button>
+            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
+            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loreamsaa</button>
+            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
         </div>
 
         <!-- Product Cards -->
@@ -46,7 +46,7 @@
                             <p class="text-muted small">
                                 Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
                             </p>
-                            <a href="/product_detail.php" class="text-primary small">Shop now →</a>
+                            <a href="/product_detail.php" class="shop-now small">Shop now →</a>
                         </div>
                     </div>
                 </div>
@@ -54,6 +54,6 @@
         </div>
 
         <!-- Load More Button -->
-        <button class="btn btn-primary mt-5 px-5 py-2 rounded">LOAD MORE</button>
+        <button class="btn load-btn mt-5 px-5 py-2 rounded">LOAD MORE</button>
     </div>
 </section>

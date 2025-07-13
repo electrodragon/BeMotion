@@ -38,7 +38,7 @@
 
           &::after {
             content: '+';
-            background-color: #cce5ff;
+            background-color: var(--light-blue);
             color: #000;
             border-radius: 50%;
             width: 24px;
@@ -54,7 +54,7 @@
 
           &:not(.collapsed)::after {
             content: '−';
-            background-color: #50b4ff;
+            background-color: var(--blue);
             color: #fff;
           }
 

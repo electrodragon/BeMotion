@@ -86,6 +86,10 @@
   }
 }
 
+.btn-pills-1 {
+  background: var(--light-blue);
+}
+
 .product-section {
   padding: 4rem 10px;
   overflow: hidden;
@@ -143,6 +147,10 @@
     .card-body {
       padding: 1.5rem;
 
+      .shop-now {
+        color: var(--blue);
+      }
+
       h5 {
         font-size: 1.2rem;
       }
@@ -151,6 +159,10 @@
         font-size: 0.9rem;
       }
     }
+  }
+
+  .load-btn {
+    background: var(--light-blue);
   }
 
   @media (max-width: 992px) {

@@ -36,7 +36,7 @@
       }
 
       .highlight-text {
-        color: #f39c12;
+        color: var(--orange);
         font-weight: bold;
         margin-bottom: 10px;
       }
@@ -92,9 +92,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: #FF6600;
+                color: var(--orange);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
-                border: 1px solid #FF6600;
+                border: 1px solid var(--orange);
                 border-radius: 50px;
 
                 &:hover {
@@ -108,7 +108,7 @@
         }
 
         .buy-btn {
-          background: #7CC6F7;
+          background: var(--light-blue);
           color: var(--dark);
           border: none;
           padding: 10px 35px;
@@ -119,7 +119,7 @@
           transition: background 0.3s ease;
 
           &:hover {
-            background: darken(#7CC6F7, 10%);
+            background: darken(#7BC6F7, 10%);
           }
         }
       }

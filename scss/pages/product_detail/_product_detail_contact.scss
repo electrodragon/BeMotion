@@ -61,7 +61,7 @@
           transition: border 0.3s ease;
 
           &:focus {
-            border-color: #7cc6f7;
+            border-color: var(--light-blue);
             outline: none;
           }
         }

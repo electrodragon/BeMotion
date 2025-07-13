@@ -80,7 +80,7 @@
 
     .btn-submit {
       padding: 10px 30px;
-      background: #7CC6F7;
+      background: var(--light-blue);
       color: var(--dark);
       font-weight: bold;
       border: none;
@@ -90,7 +90,7 @@
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 
       &:hover {
-        background: darken(#7CC6F7, 10%);
+        background: darken(#7BC6F7, 10%);
       }
     }
   }

@@ -27,7 +27,7 @@
 
       .company-card {
         background: #EEF3FF;
-        width: 500px;
+        width: 400px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         transition: transform 0.3s ease;
         border-radius: 10px;
@@ -103,10 +103,10 @@
         position: relative;
         bottom: -80px;
 
-        .company-card {
-          width: calc(33.333% - 20px);
-          min-width: 300px;
-        }
+        //.company-card {
+        //  width: calc(33.333% - 20px);
+        //  //min-width: 300px;
+        //}
       }
 
       .mobile-only {
