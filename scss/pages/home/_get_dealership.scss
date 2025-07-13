@@ -10,7 +10,7 @@
 
   .get-dealership-container {
     width: 70%;
-    background: var(--light-gray);
+    background: #F5F1F0;
     border-radius: 12px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
     padding: 40px;
@@ -37,7 +37,7 @@
         line-height: 1.5;
 
         .highlight {
-          color: #3ba0ff;
+          color: var(--orange);
         }
       }
 
@@ -58,18 +58,16 @@
           transition: background 0.3s ease;
 
           &:hover {
-            background-color: #3ba0ff;
+            background-color: var(--light-blue);
             color: #fff;
 
             i {
-              background-color: #fff;
-              color: #3ba0ff;
+              color: var(--dark);
             }
           }
 
           i {
-            background-color: #3ba0ff;
-            color: #fff;
+            color: var(--blue);
             padding: 10px;
             border-radius: 8px;
             margin-right: 12px;
@@ -91,7 +89,7 @@
 
         a {
           color: white;
-          background: #3ba0ff;
+          background: var(--blue);
           width: 35px;
           height: 35px;
           border-radius: 50%;
@@ -102,7 +100,7 @@
           transition: all 0.3s;
 
           &:hover {
-            background: #0e7cd5;
+            background: lighten(#1976D3, 10%);
           }
         }
       }
@@ -142,7 +140,7 @@
 
             &.active,
             &:hover {
-              background: #3ba0ff;
+              background: var(--light-blue);
               color: white;
             }
           }
@@ -161,13 +159,13 @@
           transition: 0.3s ease;
 
           &:focus {
-            border-color: #3ba0ff;
+            border-color: var(--light-blue);
           }
         }
 
         .submit-btn {
           width: 250px;
-          background-color: #3ba0ff;
+          background-color: var(--light-blue);
           color: #fff;
           border: none;
           padding: 20px 20px;

@@ -19,7 +19,7 @@
       justify-content: center;
       gap: 16px;
 
-      .image-container {
+      .image-container{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -27,7 +27,7 @@
         height: 130px;
         border-radius: 0 0 100% 100%;
         background: white;
-        border-top: 2px solid #3C8BDA;
+        border-top: 2px solid var(--orange);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
@@ -42,7 +42,7 @@
         .image-container {
           border-radius: 100% 100% 0 0;
           border-top: none;
-          border-bottom: 2px solid #3C8BDA;
+          border-bottom: 2px solid var(--blue);
         }
       }
     }

@@ -3,7 +3,7 @@
   overflow: hidden;
 
   .companies-wrapper {
-    background: #3ba0ff url('/assets/images/our_company_section.png') repeat;
+    background: #3B8AD9 url('/assets/images/our_company_section.png') repeat;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@
       }
 
       .company-card {
-        background: #fff;
+        background: #EEF3FF;
         width: 500px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         transition: transform 0.3s ease;
@@ -43,7 +43,7 @@
         }
 
         .company-location {
-          background: #ff6b00;
+          background: var(--orange);
           color: #fff;
           padding: 5px 10px;
           font-size: 0.8rem;
@@ -81,7 +81,7 @@
             transition: color 0.2s;
 
             &:hover {
-              color: #3ba0ff;
+              color: var(--light-blue);
             }
           }
         }

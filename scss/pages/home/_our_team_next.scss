@@ -20,7 +20,7 @@
         border-radius: 16px;
 
         &.background-overlay-color {
-          background-color: rgba(25, 118, 211, 0.78);
+          background-color: #4B94DD;
         }
 
         &.background-overlay-image img {
@@ -57,7 +57,7 @@
           text-transform: uppercase;
 
           .chip-button {
-            background: #ff6600;
+            background: var(--orange);
             color: white;
             padding: 16px 20px;
             border-radius: 15px;

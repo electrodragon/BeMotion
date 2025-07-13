@@ -51,7 +51,7 @@
 
             .stat-number {
               font-size: 2rem;
-              color: #3ba0ff;
+              color: var(--light-blue);
               margin: 0;
             }
 
@@ -79,7 +79,7 @@
               font-size: 0.95rem;
 
               i {
-                color: #ff5722;
+                color: var(--orange);
                 margin-right: 10px;
               }
             }
@@ -88,7 +88,7 @@
 
         .highlight-btn {
           display: inline-block;
-          background-color: #3ba0ff;
+          background-color: var(--orange);
           color: white;
           padding: 12px 25px;
           border-radius: 25px;
@@ -98,7 +98,7 @@
           transition: background-color 0.3s ease;
 
           &:hover {
-            background-color: #0e7cd5;
+            background-color: darken(#FF6600, 7%);
           }
         }
       }

@@ -38,13 +38,13 @@
       .years {
         font-size: 2.5rem;
         font-weight: 800;
-        color: #ff6600; // Bright orange
+        color: var(--orange);
         line-height: 1;
 
         .plus {
           font-size: 1rem;
           vertical-align: super;
-          color: #ff6600;
+          color: var(--orange);
           margin-left: 2px;
         }
       }
@@ -56,14 +56,14 @@
 
         .label {
           font-size: 0.7rem;
-          color: #999;
+          color: var(--blue);
           font-weight: 500;
         }
 
         .highlight {
           font-size: 1.2rem;
           font-weight: 700;
-          color: #007bff;
+          color: var(--blue);
           text-transform: uppercase;
         }
       }

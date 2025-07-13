@@ -32,7 +32,7 @@
     .benefits-award {
       position: relative;
       top: 80px;
-      color: orange;
+      color: var(--orange);
       font-weight: bold;
       font-size: 0.9rem;
       opacity: 0.5;
@@ -63,7 +63,7 @@
       position: relative;
       top: 60px;
       padding: 25px 25px;
-      background-color: #007bff;
+      background-color: var(--light-blue);
       color: var(--light);
       border: none;
       border-radius: 3px;

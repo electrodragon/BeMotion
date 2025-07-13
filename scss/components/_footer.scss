@@ -26,7 +26,7 @@ footer {
 
   .call-icon {
     background: var(--light);
-    color: orange;
+    color: var(--orange);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -42,7 +42,7 @@ footer {
     flex-direction: column;
 
     .call-label {
-      color: orange;
+      color: var(--orange);
       font-size: 0.85rem;
     }
 
