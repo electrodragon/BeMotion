@@ -15,7 +15,7 @@
 
     .chips {
       .chip {
-        background: #F5F7F9;
+        background: var(--light-gray);
         border: 1px solid #D9DBDF;
         padding: 8px 16px;
         border-radius: 24px;
@@ -38,7 +38,7 @@
         display: block;
         width: 6px;
         height: 6px;
-        background: #7E7F81;
+        background: var(--dark);
         //background: red;
         border-radius: 100%;
       }

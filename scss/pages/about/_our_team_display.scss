@@ -1,5 +1,5 @@
 .our-team-display-section {
-  background: white;
+  background: var(--light);
   margin: 0;
 
   .our-team-top-area {
@@ -34,7 +34,7 @@
       }
 
       .card-content {
-        background: #EDEDED;
+        background: var(--light-gray);
         padding: 20px;
         width: 90%;
         border-bottom-left-radius: 30px;

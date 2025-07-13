@@ -167,7 +167,7 @@ footer {
 
 
 .footer-links a:hover {
-  color: orange;
+  color: var(--orange);
 }
 
 .social-links {
@@ -187,7 +187,7 @@ footer {
     transition: 0.3s;
 
     &:hover {
-      background: orange;
+      background: var(--orange);
       transform: translateY(-3px);
     }
   }
@@ -196,7 +196,7 @@ footer {
 .copyright {
   text-align: center;
   padding: 15px 0;
-  color: #aaa;
+  color: var(--light-gray);
   font-size: 0.85rem;
 }
 

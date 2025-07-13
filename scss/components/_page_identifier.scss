@@ -33,7 +33,7 @@
     }
 
     .breadcrumb-item + .breadcrumb-item::before {
-      color: #fff;
+      color: var(--light);
       content: "»";
       margin: 0 0.5rem;
     }

@@ -7,7 +7,7 @@
   padding: 10px 15px;
 
   .form-wrapper {
-    background: #f9f9f9;
+    background: var(--light-gray);
     width: 100%;
     max-width: 800px;
     padding: 40px;
@@ -23,7 +23,7 @@
 
     .form-subtitle {
       font-size: 0.9rem;
-      color: #666;
+      color: var(--dark);
       margin-bottom: 2rem;
     }
   }
@@ -51,7 +51,7 @@
 
       select {
         appearance: none;
-        background-color: #fff;
+        background-color: var(--light);
         padding: 12px 15px;
         font-size: 0.95rem;
         color: #333;

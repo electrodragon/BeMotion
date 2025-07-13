@@ -26,7 +26,7 @@
         width: 130px;
         height: 130px;
         border-radius: 0 0 100% 100%;
-        background: white;
+        background: var(--light);
         border-top: 2px solid var(--orange);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
@@ -64,7 +64,7 @@
           flex: 0 0 85%;
           scroll-snap-align: start;
           border-radius: 20px;
-          background: white;
+          background: var(--light);
           padding: 24px 16px;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           min-width: 260px;
