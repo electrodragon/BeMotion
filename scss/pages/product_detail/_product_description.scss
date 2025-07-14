@@ -30,18 +30,21 @@
       padding: 40px 0;
 
       .product-title {
+        @include font-exo-bold();
         font-size: 1.8rem;
         font-weight: 700;
         margin-bottom: 10px;
       }
 
       .highlight-text {
+        @include font-exo-regular();
         color: var(--orange);
         font-weight: bold;
         margin-bottom: 10px;
       }
 
       .product-description {
+        @include font-exo-regular();
         font-size: 0.95rem;
         color: #333;
         margin-bottom: 20px;
@@ -55,8 +58,10 @@
 
         li {
           margin-bottom: 6px;
+          @include font-exo-regular();
 
           strong {
+            @include font-exo-bold();
             width: 100px;
             display: inline-block;
           }
@@ -64,6 +69,7 @@
       }
 
       .social-buy {
+        @include font-exo-bold();
         display: flex;
         //justify-content: space-between;
         gap: 50px;
@@ -108,6 +114,7 @@
         }
 
         .buy-btn {
+          @include font-exo-bold();
           background: var(--light-blue);
           color: var(--dark);
           border: none;

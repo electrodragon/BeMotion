@@ -22,6 +22,7 @@
         font-weight: 600;
         color: #555;
         transition: all 0.3s ease;
+        @include font-roboto-bold();
 
         &.active {
           background-color: var(--light);
@@ -45,6 +46,7 @@
         font-size: 0.95rem;
         padding: 14px 18px;
         color: #222;
+        @include font-roboto-bold();
 
         &::after {
           content: '+' !important;
@@ -71,10 +73,12 @@
       }
 
       .accordion-body {
+        @include font-roboto-regular();
         font-size: 0.9rem;
         padding: 15px 20px;
         background-color: var(--light);
         color: #444;
+
       }
     }
   }
