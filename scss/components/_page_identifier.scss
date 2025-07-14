@@ -17,11 +17,13 @@
   h1 {
     font-size: 3.5rem;
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    @include font-exo-bold();
   }
 
   .breadcrumb {
     margin-top: 1rem;
     font-size: 1rem;
+    @include font-exo-regular();
 
     .breadcrumb-item a {
       opacity: 0.9;

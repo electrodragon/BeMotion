@@ -38,6 +38,7 @@
           color: #555;
           margin-bottom: 20px;
           line-height: 1.6;
+          @include font-exo-regular();
         }
 
         .highlights {
@@ -52,6 +53,7 @@
             .stat-number {
               font-size: 2rem;
               color: var(--light-blue);
+              @include font-exo-bold();
               margin: 0;
             }
 
@@ -89,6 +91,7 @@
         .highlight-btn {
           display: inline-block;
           background-color: var(--orange);
+          @include font-exo-bold();
           color: var(--light);
           padding: 12px 25px;
           border-radius: 25px;

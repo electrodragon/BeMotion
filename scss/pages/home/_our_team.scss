@@ -7,6 +7,7 @@
   align-items: center;
   //padding: 0px 0;
   overflow: hidden;
+  @include font-poppins-regular();
 
   .our-team-top-area {
     display: flex;
@@ -15,6 +16,9 @@
     padding: 0 20px;
     align-items: center;
     gap: 16px;
+    h1 {
+      @include font-poppins-bold();
+    }
   }
 
   .our-team-cards {
@@ -56,6 +60,7 @@
             margin: 0 0 8px 0;
             font-size: 1.2rem;
             color: #333;
+            @include font-exo-bold();
           }
 
           .card-text {
@@ -63,6 +68,7 @@
             font-size: 0.9rem;
             color: #666;
             line-height: 1.5;
+            @include font-exo-regular();
           }
         }
       }

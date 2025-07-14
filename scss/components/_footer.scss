@@ -42,11 +42,13 @@ footer {
     flex-direction: column;
 
     .call-label {
+      @include font-exo-bold();
       color: var(--orange);
       font-size: 0.85rem;
     }
 
     .call-number {
+      @include font-exo-bold();
       font-weight: 700;
       color: var(--light);;
     }
@@ -76,6 +78,7 @@ footer {
     font-weight: 600;
     line-height: 1.3;
     text-align: left;
+    @include font-exo-bold();
 
     @media (max-width: 576px) {
       font-size: 1rem;
@@ -90,6 +93,7 @@ footer {
 
     input {
       background: rgba(32, 11, 58, 1);
+      @include font-exo-regular();
       user-focus: none;
       border: none;
       padding: 10px 15px;
@@ -108,6 +112,7 @@ footer {
     }
 
     button {
+      @include font-exo-bold();
       background: rgba(48, 18, 86, 1);
       border: none;
       padding: 10px 20px;
@@ -137,10 +142,18 @@ footer {
   margin-bottom: 15px;
   font-weight: 700;
   text-transform: capitalize;
+  @include font-exo-bold();
   color: var(--light);;
 }
 
+.footer-col .be-motion {
+  @include font-fenix-regular();
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .footer-col p {
+  @include font-exo-regular();
   font-size: 0.95rem;
   color: var(--light-gray);
   line-height: 1.6;
@@ -149,6 +162,7 @@ footer {
 }
 
 .footer-links {
+  @include font-exo-regular();
   list-style: none;
   padding: 0;
 }
@@ -194,6 +208,7 @@ footer {
 }
 
 .copyright {
+  @include font-exo-regular();
   text-align: center;
   padding: 15px 0;
   color: var(--light-gray);

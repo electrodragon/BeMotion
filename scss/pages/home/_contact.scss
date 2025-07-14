@@ -1,6 +1,7 @@
 .home-contact-section {
   padding: 80px 0;
   overflow: hidden;
+  @include font-exo-regular();
 
   .contact-form {
     display: grid;
@@ -56,6 +57,7 @@
     background: none;
 
     .btn-submit {
+      @include font-exo-bold();
       padding: 12px 25px;
       background-color: var(--light-blue);
       color: var(--light);
@@ -75,11 +77,13 @@
   .title {
     text-align: center;
     margin-bottom: 30px;
+    @include font-exo-bold();
 
     h2 {
       font-size: 28px;
       font-weight: 800;
       text-transform: uppercase;
+      @include font-exo-bold();
     }
   }
 }

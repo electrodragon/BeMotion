@@ -31,8 +31,8 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="navbar-brand logo animate__animated animate__pulse animate__infinite animate__slower mx-auto">
-                        <img src="/assets/images/main-logo.png" alt="logo" class="logo-img"/>
+                    <div class="navbar-brand logo  mx-auto">
+                        <img src="/assets/images/main-logo.png" alt="logo" class="logo-img animate__animated animate__pulse animate__infinite"/>
                     </div>
                 </div>
 

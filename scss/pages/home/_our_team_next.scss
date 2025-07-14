@@ -38,6 +38,11 @@
 
         h1 {
           font-size: 2rem;
+          @include font-exo-bold();
+        }
+
+        p {
+          @include font-exo-regular();
         }
       }
 
@@ -55,6 +60,7 @@
           justify-content: space-between;
           align-items: center;
           text-transform: uppercase;
+          @include font-farro-regular();
 
           .chip-button {
             background: var(--orange);
@@ -63,6 +69,7 @@
             border-radius: 15px;
             text-transform: uppercase;
             transition: transform 0.3s ease-in;
+            @include font-exo-regular();
 
             &:hover {
               transform: scale(1.1);

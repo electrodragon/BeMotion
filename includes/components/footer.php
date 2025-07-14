@@ -24,7 +24,7 @@
 
         <div class="footer-grid row py-4">
             <div class="footer-col col-12 col-md-6 col-lg-3">
-                <h3>BeMotion</h3>
+                <h3 class="be-motion">BeMotion</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>

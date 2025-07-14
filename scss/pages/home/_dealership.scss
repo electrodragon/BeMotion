@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    @include font-exo-regular;
 
     .elements-group {
       display: flex;
@@ -18,6 +19,10 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
+
+      h3, h2 {
+        @include font-exo-bold
+      }
 
       .image-container{
         display: flex;

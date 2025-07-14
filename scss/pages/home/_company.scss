@@ -4,8 +4,8 @@
 
   .companies-wrapper {
     background:var(--light-blue) url('/assets/images/our_company_section.png') repeat;
-    font-family: 'Poppins', sans-serif;
     display: flex;
+    @include font-exo-regular();
     justify-content: center;
     align-items: center;
     padding: 20px 0;
@@ -21,8 +21,9 @@
       .title {
         font-size: 3rem;
         font-weight: 700;
-        color: va(--light);
+        color: var(--light);
         margin: 40px 0 50px 0;
+        @include font-exo-bold();
       }
 
       .company-card {
