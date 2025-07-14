@@ -165,6 +165,13 @@
   font-style: normal;
 }
 
+@mixin font-montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @mixin font-open-sans-regular {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;

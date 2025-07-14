@@ -3,6 +3,10 @@
 
   .blog-explore-layout {
 
+    h1 {
+      @include font-montserrat-bold();
+    }
+
     .blog-recent-card {
       width: 100%;
 
@@ -17,6 +21,14 @@
         }
       }
 
+      h3 {
+        @include font-montserrat-bold();
+      }
+
+      p {
+        @include font-open-sans-regular();
+      }
+
       .chips {
         .chip {
           background: var(--light-gray);
@@ -24,6 +36,7 @@
           padding: 8px 16px;
           border-radius: 24px;
           transition: background 0.3s ease;
+          @include font-open-sans-regular();
 
           &:hover {
             cursor: pointer;
@@ -33,6 +46,7 @@
       }
 
       .blog-publish-date {
+        @include font-open-sans-regular();
         display: flex;
         align-items: center;
         gap: 10px;
@@ -56,6 +70,7 @@
       align-items: center;
 
       .load-more-button {
+        @include font-exo-bold();
         text-transform: uppercase;
         background: var(--light-blue);
         border-radius: 24px;
