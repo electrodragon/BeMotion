@@ -5,9 +5,11 @@
     display: flex;
     gap: 10px;
     padding: 10px 4px;
+    @include font-exo-regular();
 
     p {
       padding: 3px 0;
+      @include font-exo-regular();
     }
   }
 
@@ -20,6 +22,7 @@
   .section-title {
     font-size: 2rem;
     line-height: 1.2;
+    @include font-exo-bold();
   }
 
   .nav-tabs {
@@ -30,6 +33,7 @@
       font-weight: 500;
       border: none;
       background: none;
+      @include font-exo-regular();
 
       &.active {
         color: #000;
@@ -44,6 +48,7 @@
     border-bottom: 3px solid var(--light-blue);
     padding: 15px;
     font-size: 0.95rem;
+    @include font-exo-regular();
     color: #555;
   }
 
@@ -51,6 +56,7 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     background-color: var(--light-blue);
     transition: background-color 0.3s ease-in;
+    @include font-exo-bold();
 
     &:hover {
       background-color: darken(#7CC6F7, 10%);
@@ -67,6 +73,14 @@
     color: var(--orange);
     border: 2px solid var(--light-blue);
     font-size: 1.2rem;
+  }
+
+  .want {
+    @include font-exo-regular();
+  }
+
+  .number {
+    @include font-exo-bold();
   }
 
   .experience-image {
@@ -94,6 +108,7 @@
   }
 
   .exp-badge {
+    @include font-exo-bold();
     z-index: 10;
     bottom: 0;
     left: 62px;
@@ -107,6 +122,7 @@
     font-family: 'Poppins', sans-serif;
     width: 70%;
     max-width: 500px;
+    @include font-exo-bold();
 
     .exp-number {
       font-size: 4rem;

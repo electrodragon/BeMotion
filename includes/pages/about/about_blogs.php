@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
         <div class="blogs-container">
-            <div class="bog-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200"
+            <div class="blog-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200"
                  data-aos-easing="ease-in-out">
                 <h1>Blogs</h1>
             </div>

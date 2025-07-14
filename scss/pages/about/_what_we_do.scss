@@ -70,11 +70,20 @@
     }
   }
 
+  .main-title{
+    @include font-exo-bold();
+  }
+
+  p {
+    @include font-exo-regular();
+  }
+
   .custom-list {
     list-style: none;
     padding-left: 10px;
 
     li {
+      @include font-exo-regular();
       position: relative;
       padding-left: 1.5rem;
       margin-bottom: 0.6rem;
@@ -91,6 +100,8 @@
   }
 
   .btn-primary {
+    @include font-exo-bold();
+    color: var(--dark);
     background-color: var(--light-blue);
     border: none;
     font-weight: 600;

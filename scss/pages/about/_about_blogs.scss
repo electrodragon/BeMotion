@@ -9,14 +9,24 @@
     padding: 0 20px 20px;
     margin-bottom: 3%;
 
+    .blog-title {
+      h1 {
+        @include font-exo-bold();
+      }
+    }
+
     .blog-content {
       margin-top: 3%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      @include font-open-sans-regular();
 
       .blog-card {
         width: 40%;
+        h3 {
+          @include font-montserrat-bold();
+        }
 
         .card-image-container {
           width: 100%;
@@ -31,6 +41,7 @@
 
         .chips {
           .chip {
+            @include font-open-sans-regular();
             background: var(--light);
             border: 1px solid var(--light-gray);
             padding: 8px 16px;

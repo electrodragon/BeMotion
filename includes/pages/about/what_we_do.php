@@ -20,7 +20,7 @@
 
             <!-- Right Text Content -->
             <div class="col-lg-6 contents">
-                <h4 class="fw-bold" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">What We Do!</h4>
+                <h4 class="main-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">What We Do!</h4>
                 <p data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Lorem voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit</p>
                 <ul class="custom-list">
                     <li data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ipsam voluptatem</li>
@@ -29,7 +29,7 @@
                     <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200" data-aos-easing="ease-in-out">Ipsam voluptatem quia voluptas sit</li>
                 </ul>
 
-                <h5 class="fw-bold mt-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ipsam voluptatem voluptas</h5>
+                <h5 class="mt-4 main-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ipsam voluptatem voluptas</h5>
                 <ul class="custom-list">
                     <li data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ipsam voluptatem lorem</li>
                     <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-offset="200" data-aos-easing="ease-in-out">Ipsam voluptatem lorem</li>

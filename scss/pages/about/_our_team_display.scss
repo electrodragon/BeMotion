@@ -44,11 +44,13 @@
           font-size: 1.2rem;
           font-weight: 600;
           color: #222;
+          @include font-exo-bold();
         }
 
         .card-text {
           font-size: 0.9rem;
           color: #777;
+          @include font-exo-regular();
         }
       }
     }

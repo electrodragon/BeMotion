@@ -11,9 +11,11 @@
     font-size: 0.95rem;
     padding: 0 1rem;
     color: #000;
+    @include font-exo-regular();
   }
 
   .btn-cta {
+    @include font-exo-bold();
     background-color: var(--light-blue);
     color: var(--dark);
     font-weight: 600;
