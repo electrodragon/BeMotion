@@ -28,11 +28,14 @@
         font-weight: 600;
 
         .faq-subtitle {
+          color: var(--orange);
+          @include font-exo-regular();
           margin-top: 10px;
         }
       }
 
       .faq-heading {
+        @include font-exo-bold();
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.3;
@@ -44,6 +47,7 @@
     }
 
     p {
+      @include font-exo-regular();
       flex: 1;
       padding: 20px;
     }
@@ -97,6 +101,7 @@
 
         .accordion-header {
           padding: 0;
+          @include font-exo-bold();;
 
           .accordion-button {
             background: transparent;
@@ -138,6 +143,7 @@
         }
 
         .accordion-body {
+          @include font-exo-regular();
           padding: 0.6rem 0 1rem;
           color: #666;
           font-size: 0.95rem;

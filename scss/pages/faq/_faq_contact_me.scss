@@ -16,12 +16,14 @@
     text-align: left;
 
     .form-title {
+      @include font-exo-bold();
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
     .form-subtitle {
+      @include font-exo-regular();
       font-size: 0.9rem;
       color: var(--dark);
       margin-bottom: 2rem;
@@ -40,6 +42,7 @@
       input,
       select,
       textarea {
+        @include font-exo-regular();
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         flex: 1;
         padding: 12px 15px;
@@ -79,6 +82,7 @@
     }
 
     .btn-submit {
+      @include font-exo-bold();
       padding: 10px 30px;
       background: var(--light-blue);
       color: var(--dark);

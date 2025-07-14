@@ -10,7 +10,7 @@
                         <div class="img">
                             <img src="/assets/images/product_page/sc_icon.png" alt="sc_icon">
                         </div>
-                        <p class="faq-subtitle text-warning">   Great Experience in building</p>
+                        <p class="faq-subtitle">   Great Experience in building</p>
                     </div>
 
                     <h2 class="faq-heading" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">Frequently Asked<br><span>Any Questions</span></h2>
