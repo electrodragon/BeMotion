@@ -70,7 +70,7 @@
             </div>
 
             <!-- Hamburger Button (Right corner) -->
-            <button class="navbar-toggler ham position-absolute top-2 end-0 mt-2 me-2" type="button"
+            <button class="navbar-toggler ham position-absolute top-1.5 end-0 mt-2 me-2" type="button"
                     data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -78,7 +78,7 @@
 
         <!-- Mobile Menu Collapse -->
         <div class="collapse navbar-collapse mobile-nav-bar" id="mainNavbar">
-            <ul class="navbar-nav flex-column text-center w-100 mt-5 d-lg-none">
+            <ul class="navbar-nav flex-column text-center w-100 mt-3 d-lg-none">
                 <li class="nav-item"><a class="nav-link" href="/index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about.php">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="/product.php">Products</a></li>
