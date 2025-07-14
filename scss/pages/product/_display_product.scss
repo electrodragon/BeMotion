@@ -38,11 +38,14 @@
           p {
             text-align: center;
             margin-top: 10px;
+            color: var(--orange);
+            @include font-exo-regular();
           }
         }
 
         h1 {
           font-size: 2.5rem;
+          @include font-exo-bold();
         }
       }
 
@@ -53,6 +56,7 @@
 
         p {
           font-size: 1rem;
+          @include font-exo-regular();
         }
       }
     }
@@ -106,6 +110,7 @@
     margin-bottom: 2rem;
 
     button {
+      @include font-exo-semi-bold();
       width: 150px;
       flex: 0 0 auto;
       scroll-snap-align: start;
@@ -153,16 +158,19 @@
 
       h5 {
         font-size: 1.2rem;
+        @include font-exo-bold();
       }
 
       p {
         font-size: 0.9rem;
+        @include font-exo-regular();
       }
     }
   }
 
   .load-btn {
     background: var(--light-blue);
+    @include font-exo-bold();
   }
 
   @media (max-width: 992px) {

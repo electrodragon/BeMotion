@@ -8,7 +8,7 @@
                     <div class="img">
                         <img src="/assets/images/product_page/sc_icon.png" alt="logo" />
                     </div>
-                    <p class="text-warning medium" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Our best Product</p>
+                    <p class="medium" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Our best Product</p>
                 </div>
                 <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Our Product</h1>
             </div>
@@ -42,7 +42,7 @@
                     <img src="/assets/images/product_page/product.png" class="product-img mb-3" alt="Product Image" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
                     <div class="card border shadow-sm" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100" data-aos-easing="ease-in-out">
                         <div class="card-body text-start">
-                            <h5 class="fw-bold">Lpsam quia</h5>
+                            <h5 class="">Lpsam quia</h5>
                             <p class="text-muted small">
                                 Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
                             </p>
