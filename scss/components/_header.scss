@@ -33,7 +33,7 @@ header {
       transition: color 0.3s;
 
       &:hover {
-        color: var(--secondary);
+        //color: var(--secondary);
       }
     }
   }
@@ -60,7 +60,7 @@ header {
         }
 
         &:hover {
-          color: var(--secondary);
+          //color: var(--secondary);
         }
       }
     }
@@ -74,7 +74,7 @@ header {
       transition: color 0.3s ease;
 
       &:hover {
-        color: var(--secondary);
+        color: var(--orange);
       }
 
       &::after {
@@ -84,13 +84,13 @@ header {
         left: 0;
         width: 0;
         height: 2px;
-        color: var(--secondary);
+        color: var(--orange);
         transition: width 0.3s;
       }
 
       &:hover::after {
         width: 100%;
-        color: var(--secondary);
+        color: var(--orange);
       }
     }
   }
