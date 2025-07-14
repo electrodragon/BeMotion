@@ -14,6 +14,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
     .subscribe-title {
+      @include font-farro-bold();
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 10px;
@@ -21,6 +22,7 @@
     }
 
     .subscribe-text {
+      @include font-roboto-regular();
       font-size: 1rem;
       color: #111;
       max-width: 600px;
@@ -32,6 +34,7 @@
       justify-content: center;
 
       input[type="email"] {
+        @include font-roboto-regular();
         width: 100%;
         max-width: 400px;
         padding: 14px 20px;
