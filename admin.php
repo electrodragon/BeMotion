@@ -49,6 +49,14 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
         <!-- Content Area -->
         <main class="p-4">
+            <?php if (isset($_GET['status'])): ?>
+                <?php if ($_GET['status'] === 'success'): ?>
+                    <div class="alert alert-success">✅ Blog added successfully!</div>
+                <?php elseif ($_GET['status'] === 'error'): ?>
+                    <div class="alert alert-danger">❌ Failed to upload image!</div>
+                <?php endif; ?>
+            <?php endif; ?>
+
             <?php
             $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
@@ -60,7 +68,7 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
                     echo "<h2>Products Entry Page (coming soon)</h2>";
                     break;
                 case 'blogs':
-                    echo "<h2>Blogs Entry Page (coming soon)</h2>";
+                    include('includes/pages/admin/blogs_entry.php');
                     break;
                 default:
                     echo "<h2>Welcome to Admin Panel</h2><p>This is your dashboard content.</p>";
