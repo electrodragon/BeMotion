@@ -10,15 +10,33 @@ header("Pragma: no-cache");
 
 <?php //include('includes/components/header.php'); // Component ?>
 
+<?php
+$current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
+?>
 
 <div class="d-flex" id="admin-layout">
     <!-- Sidebar -->
     <aside class="sidebar bg-dark text-white p-3">
         <h4 class="mb-4">Admin</h4>
         <ul class="nav flex-column gap-2">
-            <li><a href="#" class="nav-link text-white">Dealership data</a></li>
-            <li><a href="#" class="nav-link text-white">Products Entry</a></li>
-            <li><a href="#" class="nav-link text-white">Blogs Entry</a></li>
+            <li>
+                <a href="admin.php?page=dealership"
+                   class="nav-link text-white <?php echo ($current_page == 'dealership') ? 'active-link' : ''; ?>">
+                    Dealership data
+                </a>
+            </li>
+            <li>
+                <a href="admin.php?page=products"
+                   class="nav-link text-white <?php echo ($current_page == 'products') ? 'active-link' : ''; ?>">
+                    Products Entry
+                </a>
+            </li>
+            <li>
+                <a href="admin.php?page=blogs"
+                   class="nav-link text-white <?php echo ($current_page == 'blogs') ? 'active-link' : ''; ?>">
+                    Blogs Entry
+                </a>
+            </li>
         </ul>
     </aside>
 
@@ -31,9 +49,25 @@ header("Pragma: no-cache");
 
         <!-- Content Area -->
         <main class="p-4">
-            <h2>Welcome to Admin Panel</h2>
-            <p>This is your dashboard content.</p>
+            <?php
+            $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+            switch ($page) {
+                case 'dealership':
+                    include('includes/pages/admin/get_dealership_data.php');
+                    break;
+                case 'products':
+                    echo "<h2>Products Entry Page (coming soon)</h2>";
+                    break;
+                case 'blogs':
+                    echo "<h2>Blogs Entry Page (coming soon)</h2>";
+                    break;
+                default:
+                    echo "<h2>Welcome to Admin Panel</h2><p>This is your dashboard content.</p>";
+            }
+            ?>
         </main>
+
     </div>
 </div>
 

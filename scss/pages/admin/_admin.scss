@@ -31,4 +31,21 @@
     background-color: #f8f9fa;
     min-height: calc(100vh - 60px);
   }
+
+  .sidebar .nav-link {
+    border-radius: 6px;
+    padding: 10px 12px;
+    transition: background 0.3s ease;
+  }
+
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+  }
+
+  .sidebar .nav-link.active-link {
+    background-color: #6c757d; /* Gray */
+    border-left: 4px solid #ffc107; /* Golden border */
+    font-weight: 600;
+  }
+
 }
