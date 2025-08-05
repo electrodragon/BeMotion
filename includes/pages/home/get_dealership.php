@@ -16,9 +16,10 @@
         </div>
 
         <div class="form-right" data-aos="fade" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-            <form>
+            <form action="submit.php" method="POST" id="contactForm">
                 <p class="form-label">I’m interested in..</p>
                 <div class="interest-tags">
+                    <input type="hidden" name="interest" id="interestInput" value="Dealership" />
                     <button type="button" class="active">Dealership</button>
                     <button type="button">asdadw1</button>
                     <button type="button">gadgdfg</button>
@@ -26,9 +27,9 @@
                     <button type="button">Other</button>
                 </div>
 
-                <input type="text" placeholder="Your name" required />
-                <input type="email" placeholder="Your email" required />
-                <textarea placeholder="Your message" rows="4" required></textarea>
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="email" placeholder="Your email" required />
+                <textarea name="message" placeholder="Your message" rows="4" required></textarea>
 
                 <button type="submit" class="submit-btn">
                     <i class="fas fa-paper-plane"></i> Send Message

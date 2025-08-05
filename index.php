@@ -70,6 +70,25 @@ function custom_page_scripts() {
         updateBackground(currentIndex);
     </script>
 
+    <script>
+        const buttons = document.querySelectorAll(".interest-tags button");
+        const interestInput = document.getElementById("interestInput");
+
+        buttons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                interestInput.value = btn.innerText.trim();
+            });
+        });
+    </script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            alert("✅ Form submitted successfully!");
+        }
+    </script>
 
     <?php
 }
