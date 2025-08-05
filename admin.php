@@ -56,10 +56,12 @@ require 'RedBeanPHP5_7_5-mysql/rb-mysql.php';
                     <div class="alert alert-success">✅ Blog added successfully!</div>
                 <?php elseif ($_GET['status'] === 'error'): ?>
                     <div class="alert alert-danger">❌ Failed to upload image!</div>
-                <?php elseif ($_GET['status' === 'deleted']): ?>
-                <div class="alert alert-danger">✅ Blog Deleted!</div>
-                <?php elseif ($_GET['status' === 'updated']): ?>
-                    <div class="alert alert-danger">✏️ Blog Updated Successfully!</div>
+                <?php elseif ($_GET['status'] === 'deleted'): ?>
+                    <div class="alert alert-danger">🗑️ Blog deleted!</div>
+                <?php elseif ($_GET['status'] === 'updated'): ?>
+                    <div class="alert alert-info">✏️ Blog updated successfully!</div>
+                <?php elseif ($_GET['status'] === 'failed'): ?>
+                    <div class="alert alert-danger">⚠️ Operation failed! Please try again.</div>
                 <?php endif; ?>
             <?php endif; ?>
 
