@@ -12,6 +12,8 @@ header("Pragma: no-cache");
 
 <?php
 $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+require 'RedBeanPHP5_7_5-mysql/rb-mysql.php';
 ?>
 
 <div class="d-flex" id="admin-layout">
@@ -54,6 +56,10 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
                     <div class="alert alert-success">✅ Blog added successfully!</div>
                 <?php elseif ($_GET['status'] === 'error'): ?>
                     <div class="alert alert-danger">❌ Failed to upload image!</div>
+                <?php elseif ($_GET['status' === 'deleted']): ?>
+                <div class="alert alert-danger">✅ Blog Deleted!</div>
+                <?php elseif ($_GET['status' === 'updated']): ?>
+                    <div class="alert alert-danger">✏️ Blog Updated Successfully!</div>
                 <?php endif; ?>
             <?php endif; ?>
 
@@ -78,6 +84,13 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
     </div>
 </div>
+
+<script>
+    setTimeout(() => {
+        const alert = document.querySelector('.alert');
+        if (alert) alert.remove();
+    }, 3000); // 3 seconds
+</script>
 
 
 <?php include('includes/partials/footer.php'); // Partials ?>

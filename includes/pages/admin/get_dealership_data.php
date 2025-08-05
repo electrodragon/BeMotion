@@ -1,6 +1,4 @@
 <?php
-require 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; // Make sure this file is in your project
-
 // RedBean connection setup
 R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
 
