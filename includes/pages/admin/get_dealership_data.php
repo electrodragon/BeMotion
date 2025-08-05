@@ -1,19 +1,14 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbName = "bemotion";
-$tableName = "get_dealership";
+require 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; // Make sure this file is in your project
 
-// Connect to DB
-$conn = new mysqli($host, $user, $pass, $dbName);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// RedBean connection setup
+R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
 
-// Fetch data
-$sql = "SELECT * FROM $tableName ORDER BY created_at DESC";
-$result = $conn->query($sql);
+// Table name
+$tableName = 'dealership';
+
+// Fetch data using RedBean
+$rows = R::findAll($tableName, ' ORDER BY created_at DESC ');
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +42,7 @@ $result = $conn->query($sql);
 <div class="container">
     <h2 class="text-center">Submitted Contact Form Data</h2>
 
-    <?php if ($result->num_rows > 0): ?>
+    <?php if (!empty($rows)): ?>
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">
@@ -61,16 +56,16 @@ $result = $conn->query($sql);
                 </tr>
                 </thead>
                 <tbody>
-                <?php while($row = $result->fetch_assoc()): ?>
+                <?php foreach ($rows as $row): ?>
                     <tr>
-                        <td><?= $row['id'] ?></td>
-                        <td><?= htmlspecialchars($row['interest']) ?></td>
-                        <td><?= htmlspecialchars($row['name']) ?></td>
-                        <td><?= htmlspecialchars($row['email']) ?></td>
-                        <td><?= nl2br(htmlspecialchars($row['message'])) ?></td>
-                        <td><?= $row['created_at'] ?></td>
+                        <td><?= $row->id ?></td>
+                        <td><?= htmlspecialchars($row->interest) ?></td>
+                        <td><?= htmlspecialchars($row->name) ?></td>
+                        <td><?= htmlspecialchars($row->email) ?></td>
+                        <td><?= nl2br(htmlspecialchars($row->message)) ?></td>
+                        <td><?= $row->created_at ?></td>
                     </tr>
-                <?php endwhile; ?>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -82,7 +77,3 @@ $result = $conn->query($sql);
 
 </body>
 </html>
-
-<?php
-$conn->close();
-?>

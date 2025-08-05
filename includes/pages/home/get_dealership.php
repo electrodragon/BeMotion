@@ -17,6 +17,9 @@
 
         <div class="form-right" data-aos="fade" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
             <form action="submit.php" method="POST" id="contactForm">
+                <!-- 👇 This is the key part you're missing -->
+                <input type="hidden" name="form" value="dealership" />
+
                 <p class="form-label">I’m interested in..</p>
                 <div class="interest-tags">
                     <input type="hidden" name="interest" id="interestInput" value="Dealership" />
@@ -35,6 +38,7 @@
                     <i class="fas fa-paper-plane"></i> Send Message
                 </button>
             </form>
+
         </div>
     </div>
 </section>
