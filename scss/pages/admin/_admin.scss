@@ -1,10 +1,13 @@
 #admin-layout {
-  height: 100vh;
+  min-height: 100vh; /* Full vertical height */
+  display: flex;
 
   .sidebar {
     width: 240px;
     min-height: 100vh;
     background-color: #212529;
+    position: sticky;
+    top: 0;
 
     h4 {
       font-weight: bold;

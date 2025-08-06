@@ -86,6 +86,8 @@ if (isset($_POST['add_product'])) {
     R::store($product); // Final save with image names
 
     header("Location: admin.php?page=products&status=success&source=product");
+//    header("Location: admin.php?page=products&status=success&source=product&view=list");
+
     exit;
 }
 

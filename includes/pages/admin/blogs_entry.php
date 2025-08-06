@@ -31,7 +31,7 @@ if (isset($_POST['update_blog'])) {
             $blog->$field = $_POST[$field];
         }
 
-        $uploadTextDir = __DIR__ . '/upload_texts/';
+        $uploadTextDir = __DIR__ . '/upload_blogs/';
         if (!is_dir($uploadTextDir)) mkdir($uploadTextDir, 0777, true);
 
         $textFileName = strtolower(trim(preg_replace('/[^A-Za-z0-9]+/', '_', $_POST['title']))) . '_' . time() . '.txt';
@@ -105,11 +105,17 @@ if (isset($_GET['edit'])) {
     $editBlog = R::load('blogs', $editId);
     if ($editBlog->id) {
         $editMode = true;
+
+        // Load blog content from text file
+        $textFilePath = __DIR__ . '/upload_blogs/' . $editBlog->content;
+        if (file_exists($textFilePath)) {
+            $editBlog->content = file_get_contents($textFilePath);
+        } else {
+            $editBlog->content = '';
+        }
     }
 }
 ?>
-
-
 
 <div class="container">
     <!-- Add Blog Toggle -->

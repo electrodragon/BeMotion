@@ -16,7 +16,7 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
 require 'RedBeanPHP5_7_5-mysql/rb-mysql.php';
 ?>
 
-<div class="d-flex" id="admin-layout">
+<div class="d-flex min-vh-100" id="admin-layout">
     <!-- Sidebar -->
     <aside class="sidebar bg-dark text-white p-3">
         <h4 class="mb-4">Admin</h4>

@@ -90,3 +90,39 @@ if ($product->image_4) $images[] = $product->image_4;
         </button>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const thumbnails = Array.from(document.querySelectorAll('.thumbnail-img'));
+        const mainImage = document.getElementById('mainProductImage');
+        const leftBtn = document.querySelectorAll('.arrow-btn')[0];
+        const rightBtn = document.querySelectorAll('.arrow-btn')[1];
+
+        let currentIndex = 0;
+
+        const updateMainImage = (index) => {
+            currentIndex = index;
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.toggle('selected', i === index);
+            });
+            mainImage.src = thumbnails[index].src;
+        };
+
+        // Arrow button click events
+        leftBtn.addEventListener('click', () => {
+            const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+            updateMainImage(newIndex);
+        });
+
+        rightBtn.addEventListener('click', () => {
+            const newIndex = (currentIndex + 1) % thumbnails.length;
+            updateMainImage(newIndex);
+        });
+
+        // Thumbnail click (optional)
+        thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener('click', () => updateMainImage(index));
+        });
+    });
+</script>
