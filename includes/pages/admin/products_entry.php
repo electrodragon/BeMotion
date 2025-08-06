@@ -91,10 +91,6 @@ if (isset($_POST['add_product'])) {
     exit;
 }
 
-
-
-
-
 $products = R::find('products', ' ORDER BY `id` ASC ');
 
 $editMode = false;

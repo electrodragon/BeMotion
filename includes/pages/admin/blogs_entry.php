@@ -95,7 +95,7 @@ if (isset($_POST['add_blog'])) {
     exit;
 }
 
-$blogs = R::findAll('blogs', 'ORDER BY id DESC');
+$blogs = R::find('blogs', 'ORDER BY id ASC');
 
 $editMode = false;
 $editBlog = null;
@@ -233,10 +233,10 @@ if (isset($_GET['edit'])) {
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($blogs as $blog): ?>
+            <?php $i = 1; foreach ($blogs as $blog): ?>
                 <tr>
 <!--                    --><?php //echo '/includes/pages/admin/upload_images/blogs_images/'; echo $blog->image; die?>
-                    <td><?= $blog->id ?></td>
+                    <td><?= $i++ ?></td>
                     <td><img src="/includes/pages/admin/upload_images/blogs_images/<?= $blog->image ?>" width="80"></td>
                     <td><?= $blog->title ?></td>
                     <td>
