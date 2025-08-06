@@ -9,10 +9,10 @@ if (isset($_GET['page']) && $_GET['page'] === 'blogs' && isset($_GET['delete']))
 
     if ($blog->id > 0) {
         R::trash($blog);
-        header("Location: admin.php?page=blogs&status=deleted");
+        header("Location: admin.php?page=blogs&status=deleted&source=blog");
         exit;
     } else {
-        header("Location: admin.php?page=blogs&status=failed");
+        header("Location: admin.php?page=blogs&status=failed&source=blog");
         exit;
     }
 }
@@ -45,7 +45,7 @@ if (isset($_POST['update_blog'])) {
         }
 
         R::store($blog);
-        header("Location: admin.php?page=blogs&status=updated");
+        header("Location: admin.php?page=blogs&status=updated&source=blog");
         exit;
     }
 }
@@ -69,7 +69,7 @@ if (isset($_POST['add_blog'])) {
 
     $blog->image = $image;
     R::store($blog);
-    header("Location: admin.php?page=blogs&status=success");
+    header("Location: admin.php?page=blogs&status=success&source=blog");
     exit;
 }
 

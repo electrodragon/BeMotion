@@ -51,19 +51,27 @@ require 'RedBeanPHP5_7_5-mysql/rb-mysql.php';
 
         <!-- Content Area -->
         <main class="p-4">
-            <?php if (isset($_GET['status'])): ?>
-                <?php if ($_GET['status'] === 'success'): ?>
-                    <div class="alert alert-success">✅ Blog added successfully!</div>
-                <?php elseif ($_GET['status'] === 'error'): ?>
-                    <div class="alert alert-danger">❌ Failed to upload image!</div>
-                <?php elseif ($_GET['status'] === 'deleted'): ?>
-                    <div class="alert alert-danger">🗑️ Blog deleted!</div>
-                <?php elseif ($_GET['status'] === 'updated'): ?>
-                    <div class="alert alert-info">✏️ Blog updated successfully!</div>
-                <?php elseif ($_GET['status'] === 'failed'): ?>
-                    <div class="alert alert-danger">⚠️ Operation failed! Please try again.</div>
+            <?php if (isset($_GET['status']) && isset($_GET['source'])): ?>
+                <?php
+                $status = $_GET['status'];
+                $source = $_GET['source'];
+                $isBlog = $source === 'blog';
+                $isProduct = $source === 'product';
+                ?>
+
+                <?php if ($status === 'success'): ?>
+                    <div class="alert alert-success">✅ <?= $isBlog ? 'Blog' : 'Product' ?> added successfully!</div>
+                <?php elseif ($status === 'error'): ?>
+                    <div class="alert alert-danger">❌ <?= $isBlog ? 'Blog' : 'Product' ?> image upload failed!</div>
+                <?php elseif ($status === 'deleted'): ?>
+                    <div class="alert alert-danger">🗑️ <?= $isBlog ? 'Blog' : 'Product' ?> deleted!</div>
+                <?php elseif ($status === 'updated'): ?>
+                    <div class="alert alert-info">✏️ <?= $isBlog ? 'Blog' : 'Product' ?> updated successfully!</div>
+                <?php elseif ($status === 'failed'): ?>
+                    <div class="alert alert-danger">⚠️ <?= $isBlog ? 'Blog' : 'Product' ?> operation failed! Try again.</div>
                 <?php endif; ?>
             <?php endif; ?>
+
 
             <?php
             $page = isset($_GET['page']) ? $_GET['page'] : 'home';
@@ -73,7 +81,7 @@ require 'RedBeanPHP5_7_5-mysql/rb-mysql.php';
                     include('includes/pages/admin/get_dealership_data.php');
                     break;
                 case 'products':
-                    echo "<h2>Products Entry Page (coming soon)</h2>";
+                    include('includes/pages/admin/products_entry.php');
                     break;
                 case 'blogs':
                     include('includes/pages/admin/blogs_entry.php');
