@@ -114,32 +114,71 @@ if (isset($_GET['edit'])) {
 
                 <div class="mb-2">
                     <label for="title" class="form-label">Blog Title</label>
-                    <input type="text" class="form-control" name="title" required value="<?= $editMode ? htmlspecialchars($editBlog->title) : '' ?>">
+                    <input
+                            type="text"
+                            class="form-control"
+                            name="title"
+                            placeholder="Enter blog title here"
+                            required
+                            value="<?= $editMode ? htmlspecialchars($editBlog->title) : '' ?>">
                 </div>
+
                 <div class="mb-2">
                     <label for="content" class="form-label">Content</label>
-                    <textarea class="form-control" name="content" rows="1" required><?= $editMode ? htmlspecialchars($editBlog->content) : '' ?></textarea>
+                    <div id="editor" style="height: 200px;">
+                        <?= $editMode ? $editBlog->content : '' ?>
+                    </div>
+                    <input type="hidden" name="content" id="hiddenContent">
                 </div>
+
                 <div class="mb-3">
                     <label class="form-label">Upload Image</label>
-                    <input class="form-control" type="file" name="image" <?= $editMode ? '' : 'required' ?>>
+                    <input
+                            class="form-control"
+                            type="file"
+                            name="image"
+                            placeholder="Upload blog image"
+                        <?= $editMode ? '' : 'required' ?>>
                 </div>
+
                 <div class="mb-2">
                     <label class="form-label">Tags (comma-separated)</label>
-                    <input type="text" class="form-control" name="tags" required value="<?= $editMode ? htmlspecialchars($editBlog->tags) : '' ?>">
+                    <input
+                            type="text"
+                            class="form-control"
+                            name="tags"
+                            placeholder="e.g. finance, accounting, AI"
+                            required
+                            value="<?= $editMode ? htmlspecialchars($editBlog->tags) : '' ?>">
                 </div>
+
                 <div class="mb-2">
                     <label class="form-label">Location</label>
-                    <input type="text" class="form-control" name="location" required value="<?= $editMode ? htmlspecialchars($editBlog->location) : '' ?>">
+                    <input
+                            type="text"
+                            class="form-control"
+                            name="location"
+                            placeholder="Enter blog location (e.g. New York, USA)"
+                            required
+                            value="<?= $editMode ? htmlspecialchars($editBlog->location) : '' ?>">
                 </div>
+
                 <div class="mb-1">
                     <label class="form-label">Date</label>
-                    <input type="date" class="form-control" name="created_at" required value="<?= $editMode ? date('Y-m-d', strtotime($editBlog->created_at)) : '' ?>">
+                    <input
+                            type="date"
+                            class="form-control"
+                            name="created_at"
+                            placeholder="Select blog publish date"
+                            required
+                            value="<?= $editMode ? date('Y-m-d', strtotime($editBlog->created_at)) : '' ?>">
                 </div>
+
                 <button type="submit" name="<?= $editMode ? 'update_blog' : 'add_blog' ?>" class="btn btn-primary w-100">
                     <?= $editMode ? 'Update Blog' : 'Submit Blog' ?>
                 </button>
             </form>
+
         </div>
     </div>
 
@@ -184,11 +223,42 @@ if (isset($_GET['edit'])) {
 
 </div>
 
-<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+<!--<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>-->
+
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 
 <script>
-    CKEDITOR.replace('content');
+    const quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: [
+                ['bold', 'italic', 'underline', 'strike'],
+                ['blockquote', 'code-block'],
+                [{ 'header': 1 }, { 'header': 2 }],
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                [{ 'script': 'sub'}, { 'script': 'super' }],
+                [{ 'indent': '-1'}, { 'indent': '+1' }],
+                [{ 'direction': 'rtl' }],
+                [{ 'size': ['small', false, 'large', 'huge'] }],
+                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                [{ 'color': [] }, { 'background': [] }],
+                [{ 'font': [] }],
+                [{ 'align': [] }],
+                ['clean'],
+                ['link', 'image']
+            ]
+        }
+    });
+
+    document.querySelector('form').addEventListener('submit', function () {
+        const html = quill.root.innerHTML;
+        document.querySelector('#hiddenContent').value = html;
+    });
 </script>
+
 
 <script>
     function toggleForm() {
