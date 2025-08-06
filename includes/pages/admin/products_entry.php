@@ -170,7 +170,7 @@ if (isset($_GET['edit'])) {
                             <label class="form-label"><?= ucwords(str_replace('_', ' ', $image)) ?></label>
                             <input class="form-control" type="file" name="<?= $image ?>" <?= $editMode ? '' : 'required' ?>>
                             <?php if ($editMode && !empty($editProduct->$image)): ?>
-                                <img src="/upload_images/products_images<?= $editProduct->$image ?>" width="80" class="mt-1">
+                                <img src="/includes/pages/admin/upload_images/products_images/<?= $editProduct->$image ?>" width="80" class="mt-1">
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
