@@ -141,6 +141,7 @@
     gap: 15px;
 
     .carousel-track {
+      padding: 4px;
       display: flex;
       gap: 10px;
       overflow-x: auto;
@@ -170,6 +171,27 @@
       cursor: pointer;
       border-radius: 50px;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .thumbnail-img {
+      cursor: pointer;
+      opacity: 0.7;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      width: 100px;
+      height: auto;
+    }
+
+    .thumbnail-img:hover {
+      opacity: 1;
+    }
+
+    .thumbnail-img.selected {
+      border: 2px solid #ff7a00;
+      opacity: 1;
+      transform: scale(1.05);
     }
   }
 }

@@ -6,6 +6,11 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 ?>
+
+<?php
+require_once 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; // if not already included
+?>
+
 <?php include('includes/partials/header.php'); page_header('BeMotion - Home');// Partials ?>
 
     <?php include('includes/components/header.php'); // Component ?>
@@ -38,6 +43,28 @@ function custom_page_scripts() {
         //     });
         // });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mainImage = document.getElementById('mainProductImage');
+            const thumbnails = document.querySelectorAll('.thumbnail-img');
+
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    // Update main image
+                    mainImage.src = thumb.src;
+
+                    // Remove "selected" class from all
+                    thumbnails.forEach(img => img.classList.remove('selected'));
+
+                    // Add "selected" to clicked one
+                    thumb.classList.add('selected');
+                });
+            });
+        });
+    </script>
+
+
 
     <?php
 }

@@ -22,35 +22,59 @@
     </div>
 </section>
 
+<?php
+R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
+$products = R::findAll('products', 'ORDER BY id DESC LIMIT 6');
+
+// Unique titles for filters
+$titles = R::getCol('SELECT DISTINCT title FROM products');
+?>
+
+
 <section class="product-section py-5">
     <div class="container text-center">
 
         <!-- Filter Buttons -->
         <div class="button-slider d-flex justify-content-start gap-2 mb-5">
-            <button type="button" class="btn btn-pills-1 rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">SEE ALL</button>
-            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Lorem</button>
-            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">Ispum</button>
-            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
-            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loreamsaa</button>
-            <button type="button" class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">loream</button>
+            <button type="button" class="btn btn-pills-1 rounded-pill px-4 py-2 filter-btn active" data-title="all"
+                    data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+                SEE ALL
+            </button>
+
+            <?php foreach ($titles as $title): ?>
+                <button type="button"
+                        class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2 filter-btn"
+                        data-title="<?= htmlspecialchars($title) ?>"
+                        data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+                    <?= htmlspecialchars($title) ?>
+                </button>
+            <?php endforeach; ?>
         </div>
 
         <!-- Product Cards -->
-        <div class="row g-5 justify-content-center">
-            <?php for ($i = 0; $i < 3; $i++): ?>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <img src="/assets/images/product_page/product.png" class="product-img mb-3" alt="Product Image" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-                    <div class="card border shadow-sm" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100" data-aos-easing="ease-in-out">
+        <!-- Product Cards -->
+        <div class="row g-5 justify-content-center" id="productGrid">
+            <?php foreach ($products as $product): ?>
+                <div class="col-12 col-sm-6 col-lg-4 product-card"
+                     data-title="<?= htmlspecialchars($product->title) ?>">
+
+                    <img src="/assets/images/product_page/<?= htmlspecialchars($product->image_1) ?>"
+                         class="product-img mb-3"
+                         alt="<?= htmlspecialchars($product->title) ?>"
+                         data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+
+                    <div class="card border shadow-sm"
+                         data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100" data-aos-easing="ease-in-out">
                         <div class="card-body text-start">
-                            <h5 class="">Lpsam quia</h5>
+                            <h5><?= htmlspecialchars($product->title) ?></h5>
                             <p class="text-muted small">
-                                Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
+                                <?= htmlspecialchars(mb_strimwidth($product->description, 0, 100, '...')) ?>
                             </p>
-                            <a href="/product_detail.php" class="shop-now small">Shop now →</a>
+                            <a href="/product_detail.php?id=<?= $product->id ?>" class="shop-now small">Shop now →</a>
                         </div>
                     </div>
                 </div>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </div>
 
         <!-- Load More Button -->

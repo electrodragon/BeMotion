@@ -6,6 +6,10 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 ?>
+<?php
+require_once 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; // if not already included
+?>
+
 <?php include('includes/partials/header.php'); page_header('BeMotion - Product');// Partials ?>
 
     <?php include('includes/components/header.php'); // Component ?>
@@ -30,6 +34,32 @@ function custom_page_scripts() {
         //     });
         // });
     </script>
+
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product-card');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                buttons.forEach(b => b.classList.remove('btn-pills-1'));
+                btn.classList.add('btn-pills-1');
+
+                const filterTitle = btn.getAttribute('data-title');
+
+                products.forEach(card => {
+                    const cardTitle = card.getAttribute('data-title');
+
+                    if (filterTitle === 'all' || cardTitle === filterTitle) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
 
     <?php
 }
