@@ -58,7 +58,7 @@ $titles = R::getCol('SELECT DISTINCT title FROM products');
                 <div class="col-12 col-sm-6 col-lg-4 product-card"
                      data-title="<?= htmlspecialchars($product->title) ?>">
 
-                    <img src="/assets/images/product_detail_page/<?= htmlspecialchars($product->image_1) ?>"
+                    <img src="/includes/pages/admin/upload_images/products_images/<?= htmlspecialchars($product->image_1) ?>"
                          class="product-img mb-3"
                          alt="<?= htmlspecialchars($product->title) ?>"
                          data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">

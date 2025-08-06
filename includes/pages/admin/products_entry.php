@@ -23,22 +23,23 @@ if (isset($_POST['update_product'])) {
     $product = R::load('products', $id);
 
     if ($product->id > 0) {
-        foreach ([
-                     'title', 'subtitle', 'description', 'position', 'experience', 'location', 'email', 'phone'
-                 ] as $field) {
+        foreach (['title', 'subtitle', 'description', 'position', 'experience', 'location', 'email', 'phone'] as $field) {
             $product->$field = $_POST[$field];
         }
 
-        // Image upload
+        $uploadDir = __DIR__ . '/upload_images/products_images';
+        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
+
         foreach (['image_1', 'image_2', 'image_3', 'image_4'] as $field) {
             if (!empty($_FILES[$field]['name'])) {
-                $image = $_FILES[$field]['name'];
+                $ext = pathinfo($_FILES[$field]['name'], PATHINFO_EXTENSION);
+                $newFileName = $id . '_' . $field . '.' . $ext;
                 $tmp = $_FILES[$field]['tmp_name'];
-                $uploadDir = '../../../db/handlers/uploads/';
-                if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-                $path = $uploadDir . basename($image);
-                move_uploaded_file($tmp, $path);
-                $product->$field = $image;
+                $path = $uploadDir . $newFileName;
+
+                if (move_uploaded_file($tmp, $path)) {
+                    $product->$field = $newFileName;
+                }
             }
         }
 
@@ -49,34 +50,50 @@ if (isset($_POST['update_product'])) {
 }
 
 // ADD NEW product
+
 if (isset($_POST['add_product'])) {
+    $uploadDir = __DIR__ . '/upload_images/products_images/';
+
+    if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
+
     $product = R::dispense('products');
 
-    foreach ([
-                 'title', 'subtitle', 'description', 'position', 'experience', 'location', 'email', 'phone'
-             ] as $field) {
+    foreach (['title', 'subtitle', 'description', 'position', 'experience', 'location', 'email', 'phone'] as $field) {
         $product->$field = $_POST[$field];
     }
 
     $product->created_at = date('Y-m-d');
+    $id = R::store($product); // Store first to get ID
 
-    $uploadDir = '../../../db/handlers/uploads/';
-    if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
+    // Clean title for filename use
+    $cleanTitle = strtolower(trim(preg_replace('/[^A-Za-z0-9]+/', '_', $_POST['title'])));
 
     foreach (['image_1', 'image_2', 'image_3', 'image_4'] as $field) {
-        $image = $_FILES[$field]['name'];
-        $tmp = $_FILES[$field]['tmp_name'];
-        $path = $uploadDir . basename($image);
-        move_uploaded_file($tmp, $path);
-        $product->$field = $image;
+        if (isset($_FILES[$field]) && $_FILES[$field]['error'] === 0) {
+            $ext = pathinfo($_FILES[$field]['name'], PATHINFO_EXTENSION);
+            $newFileName = $cleanTitle . '_' . $field . '.' . $ext;
+            $tmp = $_FILES[$field]['tmp_name'];
+            $path = $uploadDir . $newFileName;
+
+            if (move_uploaded_file($tmp, $path)) {
+                $product->$field = $newFileName;
+            } else {
+                echo "❌ Upload failed for $field<br>";
+            }
+        }
     }
 
-    R::store($product);
+    R::store($product); // Final save with image names
+
     header("Location: admin.php?page=products&status=success&source=product");
     exit;
 }
 
-$products = R::findAll('products', ' ORDER BY `id` ASC ');
+
+
+
+
+$products = R::find('products', ' ORDER BY `id` ASC ');
 
 $editMode = false;
 $editProduct = null;
@@ -153,7 +170,7 @@ if (isset($_GET['edit'])) {
                             <label class="form-label"><?= ucwords(str_replace('_', ' ', $image)) ?></label>
                             <input class="form-control" type="file" name="<?= $image ?>" <?= $editMode ? '' : 'required' ?>>
                             <?php if ($editMode && !empty($editProduct->$image)): ?>
-                                <img src="/assets/images/product_detail_page/<?= $editProduct->$image ?>" width="80" class="mt-1">
+                                <img src="/upload_images/products_images<?= $editProduct->$image ?>" width="80" class="mt-1">
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
@@ -190,7 +207,7 @@ if (isset($_GET['edit'])) {
             <?php $i = 1; foreach ($products as $product): ?>
                 <tr>
                     <td><?= $i++ ?></td>
-                    <td><img src="/assets/images/product_detail_page/<?= $product->image_1 ?>" width="80"></td>
+                    <td><img src="/includes/pages/admin/upload_images/products_images/<?= $product->image_1 ?>" width="80"></td>
                     <td><?= $product->title ?></td>
                     <td><?= $product->subtitle ?></td>
                     <td><?= $product->description ?></td>
