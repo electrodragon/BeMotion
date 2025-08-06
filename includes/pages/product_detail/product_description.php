@@ -26,7 +26,7 @@ if ($product->image_4) $images[] = $product->image_4;
 
         <!-- Left: Product Image -->
         <div class="product-image"  data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-            <img id="mainProductImage" src="/includes/pages/admin/upload_images/products_images<?= htmlspecialchars($product->image_1) ?>" alt="<?= htmlspecialchars($product->title) ?>">
+            <img id="mainProductImage" src="/includes/pages/admin/upload_images/products_images/<?= htmlspecialchars($product->image_1) ?>" alt="<?= htmlspecialchars($product->title) ?>">
         </div>
 
         <!-- Right: Info Panel -->

@@ -2,12 +2,16 @@
 R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
 R::freeze(false);
 
-// DELETE functionality
+// DELETE blog
 if (isset($_GET['page']) && $_GET['page'] === 'blogs' && isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
     $blog = R::load('blogs', $id);
 
     if ($blog->id > 0) {
+        // Also delete associated content file
+        $contentPath = __DIR__ . '/upload_blogs/' . $blog->content;
+        if (file_exists($contentPath)) unlink($contentPath);
+
         R::trash($blog);
         header("Location: admin.php?page=blogs&status=deleted&source=blog");
         exit;
@@ -23,25 +27,30 @@ if (isset($_POST['update_blog'])) {
     $blog = R::load('blogs', $id);
 
     if ($blog->id > 0) {
-        $blog->title = $_POST['title'];
-        $blog->content = $_POST['content'];
-        $blog->tags = $_POST['tags'];
-        $blog->location = $_POST['location'];
-        $blog->created_at = $_POST['created_at'];
+        foreach (['title', 'tags', 'location', 'created_at'] as $field) {
+            $blog->$field = $_POST[$field];
+        }
 
-        // Image check
+        $uploadTextDir = __DIR__ . '/upload_texts/';
+        if (!is_dir($uploadTextDir)) mkdir($uploadTextDir, 0777, true);
+
+        $textFileName = strtolower(trim(preg_replace('/[^A-Za-z0-9]+/', '_', $_POST['title']))) . '_' . time() . '.txt';
+        $filePath = $uploadTextDir . $textFileName;
+        file_put_contents($filePath, $_POST['content']);
+        $blog->content = $textFileName;
+
+        $uploadDir = __DIR__ . '/upload_images/blogs_images/';
+        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
+
         if (!empty($_FILES['image']['name'])) {
-            $image = $_FILES['image']['name'];
+            $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+            $newFileName = $id . '_image.' . $ext;
             $tmp = $_FILES['image']['tmp_name'];
-            $uploadDir = '../../../db/handlers/uploads/';
-            if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-            $path = $uploadDir . basename($image);
-            move_uploaded_file($tmp, $path);
-            $blog->image = $image;
-        } else {
-            // Keep the old image if none is uploaded
-            $existingBlog = R::load('blogs', $id);
-            $blog->image = $existingBlog->image;
+            $path = $uploadDir . $newFileName;
+
+            if (move_uploaded_file($tmp, $path)) {
+                $blog->image = $newFileName;
+            }
         }
 
         R::store($blog);
@@ -50,24 +59,37 @@ if (isset($_POST['update_blog'])) {
     }
 }
 
-// ADD NEW blog
+// ADD blog
 if (isset($_POST['add_blog'])) {
+    $uploadTextDir = __DIR__ . '/upload_blogs/';
+    if (!is_dir($uploadTextDir)) mkdir($uploadTextDir, 0777, true);
+
     $blog = R::dispense('blogs');
-    $blog->title = $_POST['title'];
-    $blog->content = $_POST['content'];
-    $blog->tags = $_POST['tags'];
-    $blog->location = $_POST['location'];
-    $blog->created_at = $_POST['created_at'];
 
-    // Upload image
-    $image = $_FILES['image']['name'];
-    $tmp = $_FILES['image']['tmp_name'];
-    $uploadDir = '../../../db/handlers/uploads/';
+    foreach (['title', 'tags', 'location', 'created_at'] as $field) {
+        $blog->$field = $_POST[$field];
+    }
+
+    $textFileName = strtolower(trim(preg_replace('/[^A-Za-z0-9]+/', '_', $_POST['title']))) . '_' . time() . '.txt';
+    $filePath = $uploadTextDir . $textFileName;
+    file_put_contents($filePath, $_POST['content']);
+    $blog->content = $textFileName;
+
+    $uploadDir = __DIR__ . '/upload_images/blogs_images/';
     if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
-    $path = $uploadDir . basename($image);
-    move_uploaded_file($tmp, $path);
 
-    $blog->image = $image;
+    if (!empty($_FILES['image']['name'])) {
+        $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+        $cleanTitle = strtolower(trim(preg_replace('/[^A-Za-z0-9]+/', '_', $_POST['title'])));
+        $newFileName = $cleanTitle . '_image.' . $ext;
+        $tmp = $_FILES['image']['tmp_name'];
+        $path = $uploadDir . $newFileName;
+
+        if (move_uploaded_file($tmp, $path)) {
+            $blog->image = $newFileName;
+        }
+    }
+
     R::store($blog);
     header("Location: admin.php?page=blogs&status=success&source=blog");
     exit;
@@ -87,15 +109,9 @@ if (isset($_GET['edit'])) {
 }
 ?>
 
+
+
 <div class="container">
-
-<!--    --><?php //if (isset($_GET['status'])): ?>
-<!--        <div class="alert alert---><?php //= $_GET['status'] == 'success' ? 'success' : 'danger' ?><!--">-->
-<!--            --><?php //= $_GET['status'] == 'success' ? '✅ Blog Added Successfully' :
-//                ($_GET['status'] == 'deleted' ? '🗑️ Blog Deleted' : '❌ Operation Failed') ?>
-<!--        </div>-->
-<!--    --><?php //endif; ?>
-
     <!-- Add Blog Toggle -->
     <div class="d-flex justify-content-between mb-2 flex-row">
         <h2>All Blogs</h2>
@@ -123,12 +139,26 @@ if (isset($_GET['edit'])) {
                             value="<?= $editMode ? htmlspecialchars($editBlog->title) : '' ?>">
                 </div>
 
+<!--                WIth editing tools-->
+
+<!--                <div class="mb-2">-->
+<!--                    <label for="content" class="form-label">Content</label>-->
+<!--                    <div id="editor" style="height: 200px;">-->
+<!--                        --><?php //= $editMode ? $editBlog->content : '' ?>
+<!--                    </div>-->
+<!--                    <input type="hidden" name="content" id="hiddenContent">-->
+<!--                </div>-->
+
                 <div class="mb-2">
                     <label for="content" class="form-label">Content</label>
-                    <div id="editor" style="height: 200px;">
-                        <?= $editMode ? $editBlog->content : '' ?>
-                    </div>
-                    <input type="hidden" name="content" id="hiddenContent">
+                    <textarea
+                            name="content"
+                            id="content"
+                            class="form-control"
+                            rows="6"
+                            placeholder="Write the full blog content here..."
+                            required
+                    ><?= $editMode ? htmlspecialchars($editBlog->content) : '' ?></textarea>
                 </div>
 
                 <div class="mb-3">
@@ -174,7 +204,7 @@ if (isset($_GET['edit'])) {
                             value="<?= $editMode ? date('Y-m-d', strtotime($editBlog->created_at)) : '' ?>">
                 </div>
 
-                <button type="submit" name="<?= $editMode ? 'update_blog' : 'add_blog' ?>" class="btn btn-primary w-100">
+                <button type="submit" name="<?= $editMode ? 'update_blog' : 'add_blog' ?>" class="btn btn-primary mt-2 w-100">
                     <?= $editMode ? 'Update Blog' : 'Submit Blog' ?>
                 </button>
             </form>
@@ -199,8 +229,9 @@ if (isset($_GET['edit'])) {
             <tbody>
             <?php foreach ($blogs as $blog): ?>
                 <tr>
+<!--                    --><?php //echo '/includes/pages/admin/upload_images/blogs_images/'; echo $blog->image; die?>
                     <td><?= $blog->id ?></td>
-                    <td><img src="/db/handlers/uploads/<?= $blog->image ?>" width="80"></td>
+                    <td><img src="/includes/pages/admin/upload_images/blogs_images/<?= $blog->image ?>" width="80"></td>
                     <td><?= $blog->title ?></td>
                     <td>
                         <?php foreach (explode(',', $blog->tags) as $tag): ?>
@@ -223,11 +254,6 @@ if (isset($_GET['edit'])) {
 
 </div>
 
-<!--<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>-->
-
-<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
-
-<!-- Initialize Quill editor -->
 <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 
 <script>
