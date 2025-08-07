@@ -30,9 +30,9 @@
                             <span class="category">dladhlad</span>
                             <span class="category">alsdhlaad</span>
                             <span class="category">adnamdp adjad</span>
-                            <i class="fa-solid fa-magnifying-glass ms-2"></i>
+                            <input type="text" id="blogSearch" class="form-control form-control-sm ms-2" placeholder="Search blogs..." style="width: 200px;">
+                            <div id="searchHeading" class="h5 mb-4 text-muted" style="display: none;"></div>
                         </div>
-
                     </div>
                 </div>
             </div>

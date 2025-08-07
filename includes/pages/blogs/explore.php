@@ -38,7 +38,7 @@ if (empty($blogs)) {
 
         <a href="blog_description.php?id=<?= $blog->id ?>" class="text-decoration-none text-dark w-100">
 
-            <div class="row mt-4 blog-recent-card" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="row mt-4 blog-recent-card" data-title="<?= htmlspecialchars($blog->title) ?>" data-content="<?= htmlspecialchars(strtolower($shortContent)) ?>" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="col-sm-4">
                     <div class="blog-recent-card-image-container">
                         <img class="rounded" src="/includes/pages/admin/upload_images/blogs_images/<?= htmlspecialchars($blog->image) ?>" alt="<?= htmlspecialchars($blog->title) ?>">

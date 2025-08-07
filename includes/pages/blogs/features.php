@@ -26,7 +26,7 @@ if (empty($blogs)) {
         <div class="row">
 
             <?php foreach ($blogs as $blog): ?>
-                <div class="col-sm-6 d-flex justify-items-center align-items-center px-4 mt-5" data-aos="fade"
+                <div class="blog-area col-sm-6 d-flex justify-items-center align-items-center px-4 mt-5" data-aos="fade"
                      data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <a href="blog_description.php?id=<?= $blog->id ?>" class="text-decoration-none text-dark w-100">
                         <div class="blog-card">

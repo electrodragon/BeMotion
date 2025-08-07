@@ -42,6 +42,50 @@ function custom_page_scripts() {
         // });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('blogSearch');
+            const blogCards = document.querySelectorAll('.blog-recent-card');
+            const searchHeading = document.getElementById('searchHeading');
+
+            searchInput.addEventListener('input', function () {
+
+                const query = this.value.trim().toLowerCase();
+
+                if (query.length > 0) {
+                    searchHeading.style.display = 'block';
+                    searchHeading.textContent = `Search: "${query}"`;
+
+                    let hasMatch = false;
+
+                    blogCards.forEach(card => {
+                        const title = card.getAttribute('data-title') || '';
+                        const content = card.getAttribute('data-content') || '';
+                        const combined = title.toLowerCase() + ' ' + content;
+
+                        if (combined.includes(query)) {
+                            card.style.display = 'flex'; // or '' if default is block/flex
+                            hasMatch = true;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    if (!hasMatch) {
+                        searchHeading.textContent = `No results found for "${query}"`;
+                    }
+
+                } else {
+                    searchHeading.style.display = 'none';
+                    blogCards.forEach(card => {
+                        card.style.display = 'flex'; // or reset to your default display
+                    });
+                }
+            });
+        });
+    </script>
+
+
     <?php
 }
 
