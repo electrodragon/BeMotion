@@ -1,8 +1,24 @@
 <?php
-//require '../../../RedBeanPHP5_7_5-mysql/rb-mysql.php';
-R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
+if (!file_exists($dbFile)) {
+    die("Database file not found: " . $dbFile);
+}
+
+R::setup('sqlite:' . $dbFile);
+
 R::freeze(true); // ✅ freeze true in production
-$blogs = R::findAll('blogs');
+
+$tables = R::inspect();
+if (!in_array('blogs', $tables)) {
+    die("Table 'blogs' does not exist in the SQLite database.");
+}
+
+$blogs = array_slice(R::findAll('blogs'), 0, 2);
+
+if (empty($blogs)) {
+    die("No blogs found in the database.");
+}
+
+
 ?>
 
 <section class="blogs-page-features">
@@ -23,8 +39,16 @@ $blogs = R::findAll('blogs');
                             <?php
                             $contentPath = __DIR__ . '/../admin/upload_blogs/' . $blog->content;
                             $blogContent = file_exists($contentPath) ? file_get_contents($contentPath) : 'No content available.';
+
+                            $charLimit = 200;
+                            $cleanContent = strip_tags($blogContent);
+                            $shortContent = mb_substr($cleanContent, 0, $charLimit); // mb_substr supports UTF-8 characters
+                            if (mb_strlen($cleanContent) > $charLimit) {
+                                $shortContent .= '...';
+                            }
                             ?>
-                            <p class="mt-4"><?= nl2br(htmlspecialchars($blogContent)) ?></p>
+                            <p class="mt-4"><?= htmlspecialchars($shortContent) ?></p>
+
 
 
                             <div class="chips d-flex flex-wrap gap-3 mt-4">

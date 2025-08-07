@@ -4,7 +4,11 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
     exit;
 }
 
-R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
+use RedBeanPHP\R;
+
+$dbFile = __DIR__ . "/xyz__.sqlite";
+R::setup('sqlite:' . $dbFile);
+
 $id = intval($_GET['id']);
 $product = R::load('products', $id);
 

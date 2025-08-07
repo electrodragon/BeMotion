@@ -23,7 +23,11 @@
 </section>
 
 <?php
-R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
+use RedBeanPHP\R;
+
+$dbFile = __DIR__ . "/xyz__.sqlite";
+R::setup('sqlite:' . $dbFile);
+R::freeze(false);
 $products = R::findAll('products', 'ORDER BY id DESC LIMIT 6');
 
 // Unique titles for filters

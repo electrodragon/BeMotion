@@ -1,4 +1,11 @@
 <?php
+require 'vendor/autoload.php';
+use RedBeanPHP\R;
+
+$dbFile = __DIR__ . "/xyz__.sqlite";
+R::setup('sqlite:' . $dbFile);
+R::freeze(true);
+
 // Force cache to clear every time
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -11,10 +18,6 @@ header("Pragma: no-cache");
 
 
 <?php
-require 'RedBeanPHP5_7_5-mysql/rb-mysql.php';
-R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
-R::freeze(true);
-
 $id = intval($_GET['id']);
 $blog = R::load('blogs', $id);
 
@@ -38,29 +41,34 @@ $blogContent = file_exists($contentPath) ? file_get_contents($contentPath) : 'No
             <!-- Blog Image -->
             <div class="text-center mb-4">
                 <img src="/includes/pages/admin/upload_images/blogs_images/<?= htmlspecialchars($blog->image) ?>"
-                     class="img-fluid rounded shadow-sm"
+                     class="img-fluid rounded shadow"
                      alt="<?= htmlspecialchars($blog->title) ?>">
             </div>
 
-            <!-- Tags, Location & Date -->
-            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-4 text-muted small">
-                <?php foreach (explode(',', $blog->tags) as $tag): ?>
-                    <span class="badge bg-secondary px-3 py-1"><?= htmlspecialchars(trim($tag)) ?></span>
-                <?php endforeach; ?>
-                <span class="mx-2">|</span>
-                <span><i class="bi bi-geo-alt-fill"></i> <?= htmlspecialchars($blog->location) ?></span>
-                <span class="mx-2">|</span>
-                <span><i class="bi bi-calendar-event"></i> <?= date('F j, Y', strtotime($blog->created_at)) ?></span>
+            <!-- Blog Content -->
+            <div class="blog-full-content">
+                <?= nl2br(htmlspecialchars($blogContent)) ?>
             </div>
 
-            <!-- Blog Content -->
-            <div class="blog-full-content border-top pt-4">
-                <?= nl2br(htmlspecialchars($blogContent)) ?>
+            <!-- Tags & Location -->
+            <!-- Date -->
+            <div class="small mb-3">
+                <i class="bi bi-calendar-event me-1"></i> <?= date('F j, Y', strtotime($blog->created_at)) ?>
+            </div>
+
+            <!-- Tags & Location -->
+            <div class="d-flex flex-wrap justify-content-start gap-2 mt-2">
+                <?php foreach (explode(',', $blog->tags) as $tag): ?>
+                    <span class="text-primary fw-semibold">#<?= htmlspecialchars(trim($tag)) ?></span>
+                <?php endforeach; ?>
+
+                <span class="text-primary fw-semibold">#<?= htmlspecialchars($blog->location) ?></span>
             </div>
 
         </div>
     </div>
 </section>
+
 
 <?php include('includes/components/footer.php'); // Partials ?>
 <?php include('includes/partials/footer.php'); // Partials ?>
