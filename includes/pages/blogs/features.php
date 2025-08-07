@@ -22,7 +22,7 @@ if (empty($blogs)) {
 ?>
 
 <section class="blogs-page-features">
-    <div class="container-fluid px-5">
+    <div id="majorBlogs" class="container-fluid px-5">
         <div class="row">
 
             <?php foreach ($blogs as $blog): ?>

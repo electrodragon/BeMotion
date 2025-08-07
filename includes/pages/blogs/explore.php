@@ -66,6 +66,8 @@ if (empty($blogs)) {
                     </div>
                 </div>
             </div>
+
+        </a>
         <?php endforeach; ?>
 
         <div class="load-more-button-container mt-5" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
