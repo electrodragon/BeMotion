@@ -1,4 +1,7 @@
 <?php
+
+use RedBeanPHP\R;
+
 if (!file_exists($dbFile)) {
     die("Database file not found: " . $dbFile);
 }

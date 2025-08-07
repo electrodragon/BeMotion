@@ -11,10 +11,6 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 ?>
 
-<?php
-require_once 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; // if not already included
-?>
-
 <?php include('includes/partials/header.php'); page_header('BeMotion - Home');// Partials ?>
 
     <?php include('includes/components/header.php'); // Component ?>

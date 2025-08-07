@@ -1,6 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-
 use RedBeanPHP\R;
 
 $dbFile = __DIR__ . "/xyz__.sqlite";
@@ -14,7 +13,6 @@ header("Pragma: no-cache");
 
 <?php include('includes/partials/header.php');
 page_header('BeMotion - Home');// Partials ?>
-<?php require 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; ?>
 
 <?php include('includes/components/header.php'); // Component ?>
 

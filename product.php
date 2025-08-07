@@ -1,4 +1,5 @@
 <?php
+
 require 'vendor/autoload.php';
 use RedBeanPHP\R;
 
@@ -10,9 +11,6 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
-?>
-<?php
-require_once 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; // if not already included
 ?>
 
 <?php include('includes/partials/header.php'); page_header('BeMotion - Product');// Partials ?>
