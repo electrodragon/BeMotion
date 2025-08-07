@@ -34,7 +34,7 @@ if (isset($_POST['update_product'])) {
             $product->$field = $_POST[$field];
         }
 
-        $uploadDir = __DIR__ . '/upload_images/products_images';
+        $uploadDir = __DIR__ . '/upload_images/products_images/';
         if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
 
         foreach (['image_1', 'image_2', 'image_3', 'image_4'] as $field) {
