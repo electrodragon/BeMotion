@@ -23,15 +23,32 @@
 </section>
 
 <?php
-use RedBeanPHP\R;
+if (!file_exists($dbFile)) {
+    die("Database file not found: " . $dbFile);
+}
 
-$dbFile = __DIR__ . "/xyz__.sqlite";
 R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-$products = R::findAll('products', 'ORDER BY id DESC LIMIT 6');
+R::freeze(true); // ✅ freeze true in production
 
-// Unique titles for filters
-$titles = R::getCol('SELECT DISTINCT title FROM products');
+$tables = R::inspect();
+if (!in_array('products', $tables)) {
+    die("Table 'products' does not exist in the SQLite database.");
+}
+
+$products = R::find('products', ' ORDER BY id DESC ');
+
+
+if (empty($products)) {
+    die("No products found in the database.");
+}
+
+$titles = [];
+foreach ($products as $product) {
+    $titles[] = $product->title;
+}
+$titles = array_unique($titles);
+
+
 ?>
 
 
@@ -50,7 +67,7 @@ $titles = R::getCol('SELECT DISTINCT title FROM products');
                         class="btn btn-pills btn-outline-dark rounded-pill px-4 py-2 filter-btn"
                         data-title="<?= htmlspecialchars($title) ?>"
                         data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
-                    <?= htmlspecialchars($title) ?>
+                    <?= htmlspecialchars(strtok($title, ' ')) ?>
                 </button>
             <?php endforeach; ?>
         </div>

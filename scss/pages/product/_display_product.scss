@@ -99,6 +99,7 @@
   overflow: hidden;
 
   .button-slider {
+    padding: 6px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -116,6 +117,9 @@
       scroll-snap-align: start;
       white-space: nowrap;
     }
+
+    scrollbar-width: none;         // Firefox
+    -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
       display: none;

@@ -1,4 +1,8 @@
 <?php
+require 'vendor/autoload.php';
+use RedBeanPHP\R;
+
+$dbFile = __DIR__ . "/xyz__.sqlite";
 // Force cache to clear every time
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
