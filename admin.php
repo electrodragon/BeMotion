@@ -1,4 +1,7 @@
 <?php
+require 'vendor/autoload.php';
+use RedBeanPHP\R;
+
 // Force cache to clear every time
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -13,7 +16,7 @@ header("Pragma: no-cache");
 <?php
 $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-require 'RedBeanPHP5_7_5-mysql/rb-mysql.php';
+$dbFile = __DIR__ . "/xyz__.sqlite";
 ?>
 
 <div class="d-flex min-vh-100" id="admin-layout">

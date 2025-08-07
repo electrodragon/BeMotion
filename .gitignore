@@ -1,2 +1,8 @@
 /css/app.css
 /css/app.css.*
+
+/vendor/
+/xyz__.sqlite
+
+/includes/pages/admin/upload_blogs
+/includes/pages/admin/upload_images

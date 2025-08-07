@@ -1,6 +1,8 @@
 <?php
-// RedBean connection setup
-R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
+use RedBeanPHP\R;
+
+R::setup('sqlite:' . $dbFile);
+R::freeze(false);
 
 // Table name
 $tableName = 'dealership';

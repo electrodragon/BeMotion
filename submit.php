@@ -1,8 +1,17 @@
 <?php
-require 'RedBeanPHP5_7_5-mysql/rb-mysql.php'; // Make sure this file is in your project
+require 'vendor/autoload.php';
+use RedBeanPHP\R;
+
+$dbFile = __DIR__ . "/xyz__.sqlite";
 
 // === DB CONNECTION ===
-R::setup('mysql:host=localhost;dbname=bemotion', 'root', '');
+R::setup('sqlite:' . $dbFile);
+R::freeze(false);
+
+// Check if DB is connected
+if (!R::testConnection()) {
+    die('Failed to connect to database');
+}
 
 // Optional: Freeze schema in production
 // R::freeze(true);
