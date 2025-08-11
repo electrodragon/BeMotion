@@ -8,6 +8,14 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
+
+session_start();
+
+// Redirect to login page if not logged in
+if (empty($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header('Location: /admin_login.php');
+    exit;
+}
 ?>
 <?php include('includes/partials/header.php'); page_header('BeMotion - Home');// Partials ?>
 
@@ -46,8 +54,9 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
     <!-- Main Content -->
     <div class="flex-grow-1">
         <!-- Top Navbar -->
-        <header class="navbar navbar-light bg-light justify-content-end px-4">
+        <header class="navbar navbar-light bg-light justify-content-between px-4">
             <img src="/assets/images/main-logo.png" alt="Logo" class="logo">
+            <a href="/admin_logout.php" class="btn btn-outline-danger btn-sm">Logout</a>
         </header>
 
         <!-- Content Area -->
