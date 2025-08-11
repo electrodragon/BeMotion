@@ -1,6 +1,5 @@
-<?php
-use RedBeanPHP\R;
-?>
+<?php use RedBeanPHP\R; ?>
+
 <section class="product-hero-section position-relative">
     <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
@@ -26,13 +25,6 @@ use RedBeanPHP\R;
 </section>
 
 <?php
-if (!file_exists($dbFile)) {
-    die("Database file not found: " . $dbFile);
-}
-
-R::setup('sqlite:' . $dbFile);
-R::freeze(true); // ✅ freeze true in production
-
 $tables = R::inspect();
 if (!in_array('products', $tables)) {
     die("Table 'products' does not exist in the SQLite database.");
@@ -40,18 +32,17 @@ if (!in_array('products', $tables)) {
 
 $products = R::find('products', ' ORDER BY id DESC ');
 
-
 if (empty($products)) {
     die("No products found in the database.");
 }
 
 $titles = [];
+
 foreach ($products as $product) {
     $titles[] = $product->title;
 }
+
 $titles = array_unique($titles);
-
-
 ?>
 
 

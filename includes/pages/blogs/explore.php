@@ -1,25 +1,11 @@
 <?php
-
 use RedBeanPHP\R;
 
-if (!file_exists($dbFile)) {
-    die("Database file not found: " . $dbFile);
-}
-
-R::freeze(true); // ✅ freeze true in production
-
-$tables = R::inspect();
-if (!in_array('blogs', $tables)) {
-    die("Table 'blogs' does not exist in the SQLite database.");
-}
-
 $blogs = R::find('blogs', ' ORDER BY id DESC ');
-
 
 if (empty($blogs)) {
     die("No blogs found in the database.");
 }
-
 ?>
 
 <section class="blog-explore-section">

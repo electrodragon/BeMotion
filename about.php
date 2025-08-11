@@ -1,4 +1,7 @@
 <?php
+require "connection.php";
+//use RedBeanPHP\R;
+
 // Force cache to clear every time
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -15,7 +18,7 @@ header("Pragma: no-cache");
     <?php include('includes/pages/about/what_we_do.php'); ?>
     <?php include('includes/pages/about/construction_solution.php'); ?>
     <?php include('includes/pages/about/our_team_display.php'); ?>
-    <?php include('includes/pages/about/about_blogs.php'); ?>
+    <?php  include('includes/pages/about/about_blogs.php'); ?>
 
     <?php include('includes/components/footer.php'); // Component ?>
 

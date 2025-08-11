@@ -1,14 +1,6 @@
 <?php
 use RedBeanPHP\R;
 
-R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-
-// Check if DB is connected
-if (!R::testConnection()) {
-    die('Failed to connect to database');
-}
-
 // DELETE functionality
 if (isset($_GET['page']) && $_GET['page'] === 'products' && isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
@@ -57,7 +49,6 @@ if (isset($_POST['update_product'])) {
 }
 
 // ADD NEW product
-
 if (isset($_POST['add_product'])) {
     $uploadDir = __DIR__ . '/upload_images/products_images/';
 
@@ -98,7 +89,7 @@ if (isset($_POST['add_product'])) {
     exit;
 }
 
-$products = R::find('products', ' ORDER BY `id` ASC ');
+$products = R::find('products', ' ORDER BY `id` ASC');
 
 $editMode = false;
 $editProduct = null;

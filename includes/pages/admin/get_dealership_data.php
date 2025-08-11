@@ -1,43 +1,12 @@
 <?php
 use RedBeanPHP\R;
 
-R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-
 // Table name
 $tableName = 'dealership';
 
 // Fetch data using RedBean
 $rows = R::findAll($tableName, ' ORDER BY created_at DESC ');
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Submitted Form Data</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        h2 {
-            margin-bottom: 30px;
-        }
-
-        table {
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .table th {
-            background-color: #343a40;
-            color: #fff;
-        }
-
-        .table tbody tr:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
-</head>
-<body>
 
 <div class="container">
     <h2 class="text-center">Submitted Contact Form Data</h2>
@@ -74,6 +43,3 @@ $rows = R::findAll($tableName, ' ORDER BY created_at DESC ');
     <?php endif; ?>
 
 </div>
-
-</body>
-</html>

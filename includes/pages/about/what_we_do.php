@@ -37,7 +37,7 @@
                     <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200" data-aos-easing="ease-in-out">Ipsam voluptatem lorem</li>
                 </ul>
 
-                <a href="#" class="btn btn-primary px-4 py-3 mt-3">More Explore</a>
+                <a href="/product.php" class="btn btn-primary px-4 py-3 mt-3">More Explore</a>
             </div>
         </div>
 

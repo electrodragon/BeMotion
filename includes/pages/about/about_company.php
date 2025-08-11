@@ -53,7 +53,7 @@
 
                 <!-- CTA and Contact -->
                 <div class="d-flex flex-column flex-md-row align-items-md-center gap-5">
-                    <a href="#" class="btn px-4 py-3 fw-semibold">Learn More</a>
+                    <a href="/contact.php" class="btn px-4 py-3 fw-semibold">Learn More</a>
                     <div class="d-flex align-items-center gap-3">
                         <span class="phone-icon">
                             <i class="fas fa-phone-volume"></i>

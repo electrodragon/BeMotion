@@ -1,13 +1,5 @@
 <?php
-
 use RedBeanPHP\R;
-
-if (!file_exists($dbFile)) {
-    die("Database file not found: " . $dbFile);
-}
-
-R::setup('sqlite:' . $dbFile);
-R::freeze(true); // ✅ freeze true in production
 
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     header("Location: /product.php?status=notfound");

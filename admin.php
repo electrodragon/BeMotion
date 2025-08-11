@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require 'connection.php';
 use RedBeanPHP\R;
 
 // Force cache to clear every time
@@ -15,8 +15,6 @@ header("Pragma: no-cache");
 
 <?php
 $current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
-$dbFile = __DIR__ . "/xyz__.sqlite";
 ?>
 
 <div class="d-flex min-vh-100" id="admin-layout">

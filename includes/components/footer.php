@@ -37,11 +37,11 @@
             <div class="footer-col col-4 col-lg-3">
                 <h3>Resources</h3>
                 <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Dealership</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/about.php">About Us</a></li>
+                    <li><a href="/product.php">Products</a></li>
+                    <li><a href="/index.php?#dealership-section">Dealership</a></li>
+                    <li><a href="/blogs.php">Blog</a></li>
+                    <li><a href="/contact.php">Contact</a></li>
                 </ul>
             </div>
 

@@ -1,10 +1,6 @@
 <?php
-require 'vendor/autoload.php';
+require "connection.php";
 use RedBeanPHP\R;
-
-$dbFile = __DIR__ . "/xyz__.sqlite";
-R::setup('sqlite:' . $dbFile);
-R::freeze(true);
 
 // Force cache to clear every time
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");

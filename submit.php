@@ -1,20 +1,6 @@
 <?php
-require 'vendor/autoload.php';
+require "connection.php";
 use RedBeanPHP\R;
-
-$dbFile = __DIR__ . "/xyz__.sqlite";
-
-// === DB CONNECTION ===
-R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-
-// Check if DB is connected
-if (!R::testConnection()) {
-    die('Failed to connect to database');
-}
-
-// Optional: Freeze schema in production
-// R::freeze(true);
 
 // === FORM ROUTER ===
 $formType = $_POST['form'] ?? '';

@@ -1,14 +1,6 @@
 <?php
 use RedBeanPHP\R;
 
-R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-
-// Check if DB is connected
-if (!R::testConnection()) {
-    die('Failed to connect to database');
-}
-
 // DELETE blog
 if (isset($_GET['page']) && $_GET['page'] === 'blogs' && isset($_GET['delete'])) {
     $id = intval($_GET['delete']);

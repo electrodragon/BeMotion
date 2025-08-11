@@ -37,7 +37,7 @@
         color: var(--light);
 
         h1 {
-          font-size: 2rem;
+          font-size: 2.5rem;
           @include font-exo-bold();
         }
 
@@ -53,9 +53,9 @@
 
         .long-button {
           width: 100%;
-          padding: 24px 16px;
+          padding: 24px 32px;
           background: var(--light);
-          border-radius: 32px;
+          border-radius: 100px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -65,8 +65,8 @@
           .chip-button {
             background: var(--orange);
             color: var(--light);
-            padding: 16px 20px;
-            border-radius: 15px;
+            padding: 16px 24px;
+            border-radius: 50px;
             text-transform: uppercase;
             transition: transform 0.3s ease-in;
             @include font-exo-regular();

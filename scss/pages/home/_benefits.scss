@@ -1,6 +1,6 @@
 .benefits {
   background: url('/assets/images/loving-hens.webp') center/cover no-repeat;
-  height: 900px; // previously 100vh
+  height: 800px; // previously 100vh
   position: relative;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
   .benefits-overlay {
     background: rgba(0, 0, 0, 0.5); // dark overlay
     width: 100%;
-    height: 900px; // previously 100vh
+    height: 800px; // previously 100vh
     display: flex;
     flex-direction: column;
     align-items: center;
