@@ -1,6 +1,5 @@
 <?php
-require 'vendor/autoload.php';
-use RedBeanPHP\R;
+require '../connection.php';
 
 // Force cache to clear every time
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
@@ -9,15 +8,9 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 ?>
-<?php include('includes/partials/header.php'); page_header('BeMotion - Home');// Partials ?>
+<?php include('../includes/partials/header.php'); page_header('BeMotion - Home');// Partials ?>
 
-<?php //include('includes/components/header.php'); // Component ?>
-
-<?php
-$current_page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
-$dbFile = __DIR__ . "/xyz__.sqlite";
-?>
+<?php $current_page = isset($_GET['page']) ? $_GET['page'] : 'home'; ?>
 
 <div class="d-flex min-vh-100" id="admin-layout">
     <!-- Sidebar -->
@@ -25,19 +18,19 @@ $dbFile = __DIR__ . "/xyz__.sqlite";
         <h4 class="mb-4">Admin</h4>
         <ul class="nav flex-column gap-2">
             <li>
-                <a href="admin.php?page=dealership"
+                <a href="/admin/index.php?page=dealership"
                    class="nav-link text-white <?php echo ($current_page == 'dealership') ? 'active-link' : ''; ?>">
                     Dealership data
                 </a>
             </li>
             <li>
-                <a href="admin.php?page=products"
+                <a href="/admin/index.php?page=products"
                    class="nav-link text-white <?php echo ($current_page == 'products') ? 'active-link' : ''; ?>">
                     Products Entry
                 </a>
             </li>
             <li>
-                <a href="admin.php?page=blogs"
+                <a href="/admin/index.php?page=blogs"
                    class="nav-link text-white <?php echo ($current_page == 'blogs') ? 'active-link' : ''; ?>">
                     Blogs Entry
                 </a>
@@ -81,13 +74,13 @@ $dbFile = __DIR__ . "/xyz__.sqlite";
 
             switch ($page) {
                 case 'dealership':
-                    include('includes/pages/admin/get_dealership_data.php');
+                    require '../includes/pages/admin/get_dealership_data.php';
                     break;
                 case 'products':
-                    include('includes/pages/admin/products_entry.php');
+                    require '../includes/pages/admin/products_entry.php';
                     break;
                 case 'blogs':
-                    include('includes/pages/admin/blogs_entry.php');
+                    require '../includes/pages/admin/blogs_entry.php';
                     break;
                 default:
                     echo "<h2>Welcome to Admin Panel</h2><p>This is your dashboard content.</p>";

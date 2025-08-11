@@ -1,14 +1,6 @@
 <?php
 use RedBeanPHP\R;
 
-R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-
-// Check if DB is connected
-if (!R::testConnection()) {
-    die('Failed to connect to database');
-}
-
 // DELETE functionality
 if (isset($_GET['page']) && $_GET['page'] === 'products' && isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
@@ -16,10 +8,10 @@ if (isset($_GET['page']) && $_GET['page'] === 'products' && isset($_GET['delete'
 
     if ($product->id > 0) {
         R::trash($product);
-        header("Location: admin.php?page=products&status=deleted&source=product");
+        header("Location: index.php?page=products&status=deleted&source=product");
         exit;
     } else {
-        header("Location: admin.php?page=products&status=failed&source=product");
+        header("Location: index.php?page=products&status=failed&source=product");
         exit;
     }
 }
@@ -51,7 +43,7 @@ if (isset($_POST['update_product'])) {
         }
 
         R::store($product);
-        header("Location: admin.php?page=products&status=updated&source=product");
+        header("Location: index.php?page=products&status=updated&source=product");
         exit;
     }
 }
@@ -92,8 +84,8 @@ if (isset($_POST['add_product'])) {
 
     R::store($product); // Final save with image names
 
-    header("Location: admin.php?page=products&status=success&source=product");
-//    header("Location: admin.php?page=products&status=success&source=product&view=list");
+    header("Location: index.php?page=products&status=success&source=product");
+//    header("Location: index.php?page=products&status=success&source=product&view=list");
 
     exit;
 }

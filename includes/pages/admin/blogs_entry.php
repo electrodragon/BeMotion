@@ -1,14 +1,6 @@
 <?php
 use RedBeanPHP\R;
 
-R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-
-// Check if DB is connected
-if (!R::testConnection()) {
-    die('Failed to connect to database');
-}
-
 // DELETE blog
 if (isset($_GET['page']) && $_GET['page'] === 'blogs' && isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
@@ -20,10 +12,10 @@ if (isset($_GET['page']) && $_GET['page'] === 'blogs' && isset($_GET['delete']))
         if (file_exists($contentPath)) unlink($contentPath);
 
         R::trash($blog);
-        header("Location: admin.php?page=blogs&status=deleted&source=blog");
+        header("Location: index.php?page=blogs&status=deleted&source=blog");
         exit;
     } else {
-        header("Location: admin.php?page=blogs&status=failed&source=blog");
+        header("Location: index.php?page=blogs&status=failed&source=blog");
         exit;
     }
 }
@@ -61,7 +53,7 @@ if (isset($_POST['update_blog'])) {
         }
 
         R::store($blog);
-        header("Location: admin.php?page=blogs&status=updated&source=blog");
+        header("Location: index.php?page=blogs&status=updated&source=blog");
         exit;
     }
 }
@@ -98,7 +90,7 @@ if (isset($_POST['add_blog'])) {
     }
 
     R::store($blog);
-    header("Location: admin.php?page=blogs&status=success&source=blog");
+    header("Location: index.php?page=blogs&status=success&source=blog");
     exit;
 }
 

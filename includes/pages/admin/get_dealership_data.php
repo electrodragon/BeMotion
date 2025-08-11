@@ -1,9 +1,6 @@
 <?php
 use RedBeanPHP\R;
 
-R::setup('sqlite:' . $dbFile);
-R::freeze(false);
-
 // Table name
 $tableName = 'dealership';
 

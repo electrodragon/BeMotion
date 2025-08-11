@@ -1,10 +1,5 @@
 <?php
-require 'vendor/autoload.php';
-use RedBeanPHP\R;
-
-$dbFile = __DIR__ . "/xyz__.sqlite";
-R::setup('sqlite:' . $dbFile);
-R::freeze(true);
+require 'connection.php';
 
 // Force cache to clear every time
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
@@ -27,7 +22,7 @@ if (!$blog || $blog->id == 0) {
 }
 
 // Read blog content file
-$contentPath = __DIR__ . '/includes/pages/admin/upload_blogs/' . $blog->content;
+$contentPath = __DIR__ . '/uploads/blogs/' . $blog->content;
 $blogContent = file_exists($contentPath) ? file_get_contents($contentPath) : 'No content available.';
 ?>
 
